@@ -1,0 +1,28 @@
+import {GalleryItem} from "../Gallery";
+
+export const gallery2023Items: GalleryItem[] = [
+    '/static/cat0.jpg',
+    '/static/cat1.jpg',
+    '/static/cat2.jpg',
+    '/static/cat3.jpg',
+    '/static/cat4.jpg',
+    '/static/cat5.jpg',
+    '/static/cat6.jpg',
+    '/static/cat7.jpg',
+    '/static/cat8.jpg',
+    '/static/cat9.jpg',
+    '/static/cat10.jpg',
+    '/static/cat11.jpg',
+    '/static/cat0.jpg',
+    '/static/cat1.jpg',
+    '/static/cat2.jpg',
+    '/static/cat3.jpg',
+    '/static/cat4.jpg',
+    '/static/cat5.jpg',
+    '/static/cat6.jpg',
+    '/static/cat7.jpg',
+    '/static/cat8.jpg',
+    '/static/cat9.jpg',
+    '/static/cat10.jpg',
+    '/static/cat11.jpg',
+];
