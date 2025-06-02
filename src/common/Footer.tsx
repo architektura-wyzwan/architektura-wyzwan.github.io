@@ -21,15 +21,12 @@ type SponsorsStackProps = {
 }
 
 function SponsorsStack(props: SponsorsStackProps) {
-    const theme = useTheme();
     return (
         <Grid>
             <Translation pl={props.title_pl} en={props.title_en}/>
             <Grid container
                 direction="row"
                 width="100%"
-                justifyContent="space-evenly"
-                alignItems="center"
                 spacing={5}
                 sx={{pt: 1}}>
                 {props.list.map((sponsor) => (
@@ -38,7 +35,9 @@ function SponsorsStack(props: SponsorsStackProps) {
                         borderRadius={0}
                         sx={{
                             height: {
-                                xs: '40px',
+                                xs: '30px',
+                                md: '3vw',
+                                lg: '2vw',
                             },
                         }}/></Grid>
                 ))}
@@ -67,16 +66,18 @@ function Footer() {
                 <Grid container
                       spacing={3}
                 >
+                    <SponsorsStack title_pl={"Patronat honorowy"} title_en={"Honorary patronage"} list={patronage}/>
                     <SponsorsStack title_pl={"Partnerzy"} title_en={"Partners"} list={partners}/>
                     <SponsorsStack title_pl={"Partner merytoryczny"} title_en={"Content partner"} list={content_partner}/>
                     <SponsorsStack title_pl={"Sponsorzy główni"} title_en={"Main sponsors"} list={main_sponsors}/>
-                    <SponsorsStack title_pl={"Patronat honorowy"} title_en={"Honorary patronage"} list={patronage}/>
-                    <SponsorsStack title_pl={"Patronat medialny"} title_en={"Media patronage"} list={media_patronage}/>
                     <SponsorsStack title_pl={"Patronat wydawniczy"} title_en={"Publishing patronage"}
                                    list={publishing_patronage}/>
+                    <SponsorsStack title_pl={"Patronat medialny"} title_en={"Media patronage"} list={media_patronage}/>
                 </Grid>
             </Grid>
-            <Grid size="auto">
+            <Grid size="auto" sx={{
+                pt: vertical ? 5 : 0,
+            }}>
                 <Contact inverted={dark_mode}/>
             </Grid>
         </Grid>
