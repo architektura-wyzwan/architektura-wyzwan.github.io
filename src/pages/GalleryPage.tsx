@@ -17,6 +17,10 @@ function GalleryPage() {
         return <NotFoundPage/>
     }
     const galleryItem = galleryList[galleryNumber];
+    const galleryFirstColumn = galleryItem.items.filter((_ , id) => id % 3 == 0);
+    const gallerySecondColumn = galleryItem.items.filter((_ , id) => id % 3 == 1);
+    const galleryThirdColumn = galleryItem.items.filter((_ , id) => id % 3 == 2);
+    const galleryItemList = ([] as string[]).concat(galleryFirstColumn, gallerySecondColumn, galleryThirdColumn);
     return (
         <PageLayout
             title_pl={"Galeria " + galleryItem.year}
@@ -27,7 +31,7 @@ function GalleryPage() {
                 {galleryItem.authors}
             </Typography>
             <ImageList variant="masonry" cols={3} gap={8}>
-                {galleryItem.items.map((item) => (
+                {galleryItemList.map((item) => (
                     <ImageListItem
                         key={item}
                     >

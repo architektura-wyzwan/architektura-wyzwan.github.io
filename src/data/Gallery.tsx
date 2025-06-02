@@ -13,11 +13,11 @@ export const galleryList: Gallery[] = [
     {
         year: 2023,
         items: gallery2023Items,
-        authors: "autorzy",
+        authors: "Anita Kasprzyk, Krzysztof Koszewski, Bartosz Kucharski, Damian Miszewski",
     },
     {
         year: 2024,
         items: gallery2024Items,
-        authors: "autorzy",
+        authors: "Artur Brzozowski",
     },
 ];
