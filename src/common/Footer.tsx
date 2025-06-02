@@ -22,7 +22,6 @@ type SponsorsStackProps = {
 
 function SponsorsStack(props: SponsorsStackProps) {
     const theme = useTheme();
-    const dark_mode = theme.palette.mode !== "dark";
     return (
         <Grid>
             <Translation pl={props.title_pl} en={props.title_en}/>
@@ -41,7 +40,6 @@ function SponsorsStack(props: SponsorsStackProps) {
                             height: {
                                 xs: '40px',
                             },
-                            // filter: dark_mode && sponsor.invertColorInDarkMode ? "invert(100%)" : "invert(0%)",
                         }}/></Grid>
                 ))}
             </Grid>
@@ -68,9 +66,6 @@ function Footer() {
             <Grid size="grow">
                 <Grid container
                       spacing={3}
-                    // direction="column"
-                    // justifyContent="space-evenly"
-                    // alignItems="center"
                 >
                     <SponsorsStack title_pl={"Partnerzy"} title_en={"Partners"} list={partners}/>
                     <SponsorsStack title_pl={"Partner merytoryczny"} title_en={"Content partner"} list={content_partner}/>
