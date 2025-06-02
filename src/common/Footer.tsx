@@ -41,7 +41,7 @@ function SponsorsStack(props: SponsorsStackProps) {
                             height: {
                                 xs: '40px',
                             },
-                            filter: dark_mode && sponsor.invertColorInDarkMode ? "invert(100%)" : "invert(0%)",
+                            // filter: dark_mode && sponsor.invertColorInDarkMode ? "invert(100%)" : "invert(0%)",
                         }}/></Grid>
                 ))}
             </Grid>
@@ -52,12 +52,13 @@ function SponsorsStack(props: SponsorsStackProps) {
 function Footer() {
     const theme = useTheme();
     const vertical = useVertical();
+    const dark_mode = theme.palette.mode === "dark";
     return (
         <Grid container
               direction={vertical ? "column" : "row"}
               sx={{
-                  color: theme.palette.primary.contrastText,
-                  backgroundColor: theme.palette.primary.main,
+                  color: dark_mode ? theme.palette.primary.contrastText : "initial",
+                  backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
                   pt: 1,
                   pl: 3,
                   pr: vertical ? 3 : 0,
@@ -71,7 +72,8 @@ function Footer() {
                     // justifyContent="space-evenly"
                     // alignItems="center"
                 >
-                    <SponsorsStack title_pl={"Partnerzy"} title_en={"Partners"} list={partners}/>                    <SponsorsStack title_pl={"Partner merytoryczny"} title_en={"Content partner"} list={content_partner}/>
+                    <SponsorsStack title_pl={"Partnerzy"} title_en={"Partners"} list={partners}/>
+                    <SponsorsStack title_pl={"Partner merytoryczny"} title_en={"Content partner"} list={content_partner}/>
                     <SponsorsStack title_pl={"Sponsorzy główni"} title_en={"Main sponsors"} list={main_sponsors}/>
                     <SponsorsStack title_pl={"Patronat honorowy"} title_en={"Honorary patronage"} list={patronage}/>
                     <SponsorsStack title_pl={"Patronat medialny"} title_en={"Media patronage"} list={media_patronage}/>
@@ -80,7 +82,7 @@ function Footer() {
                 </Grid>
             </Grid>
             <Grid size="auto">
-                <Contact inverted={true}/>
+                <Contact inverted={dark_mode}/>
             </Grid>
         </Grid>
     );
