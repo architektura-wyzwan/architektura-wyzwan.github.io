@@ -1,0 +1,1 @@
+# Konferencja architektura wyzwań - architecture of challenges
