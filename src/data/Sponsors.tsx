@@ -71,7 +71,7 @@ export const partners: SponsorProps[] = [
         name_pl: "Narodowa Akademia Sztuk Pięknych i Architektury, Kijów, Ukraina",
         name_en: "National Academy of Fine Arts and Architecture, Kyiv, Ukraine",
         image: "/static/Logo_sponsorzy/National_Academy_of_Fine_Arts_and_Architecture_Kyiv_Ukraine.png",
-        invertColorInDarkMode: true,
+        invertColorInDarkMode: false,
     },
 
 ];
