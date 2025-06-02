@@ -17,9 +17,9 @@ function GalleryPage() {
         return <NotFoundPage/>
     }
     const galleryItem = galleryList[galleryNumber];
-    const galleryFirstColumn = galleryItem.items.filter((_ , id) => id % 3 == 0);
-    const gallerySecondColumn = galleryItem.items.filter((_ , id) => id % 3 == 1);
-    const galleryThirdColumn = galleryItem.items.filter((_ , id) => id % 3 == 2);
+    const galleryFirstColumn = galleryItem.items.filter((_ , id) => id % 3 === 0);
+    const gallerySecondColumn = galleryItem.items.filter((_ , id) => id % 3 === 1);
+    const galleryThirdColumn = galleryItem.items.filter((_ , id) => id % 3 === 2);
     const galleryItemList = ([] as string[]).concat(galleryFirstColumn, gallerySecondColumn, galleryThirdColumn);
     return (
         <PageLayout
