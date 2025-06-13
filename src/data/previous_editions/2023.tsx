@@ -29,7 +29,7 @@ export const edition_2023: ArticleContent = {
             "Odbudowa Ukrainy dotyczy wszystkich aspektów środowiska życia: architektury, infrastruktury, w skali miast, miasteczek, wsi. Odnowa obejmuje zarówno rozległe krajobrazy, jak i poszczególne miejsca. Wymaga przemyślenia, współdziałania i solidarności ludzkiej na skalę międzynarodową. Czas nie stoi w miejscu. Odbudowa i inne działania architektoniczne odpowiadające na skutki wojny dzieją się już teraz. Dostarczają wielu wzorów do naśladowania, ale także wyzwań do uwzględnienia.",
             "Ukraine’s reconstruction encompasses all aspects of the living environment: architecture and infrastructure, at the scale of cities, towns and villages. This renewal encompasses both vast landscapes and individual places. It requires consideration, cooperation and human solidarity on an international scale. Time does not stand still. Reconstruction and other architectural actions in response to the efects of war already take place. They bring examples of good practices, but also the challenges to be taken in account.",
         ),
-        two_images("/static/PreviousEditions/2023/04.07 konferencja ukraina 1.jpg", "/static/PreviousEditions/2023/04.07 konferencja ukraina 8.JPG"),
+        two_images("/static/PreviousEditions/2023/04.07 konferencja ukraina 1.jpg", "/static/PreviousEditions/2023/04.07 konferencja ukraina 8.jpg"),
         paragraph(
             "Jak kształtować środowisko życia wobec zagrożeń wojennych?",
             "How to shape the living environment in the face of war threats?",
