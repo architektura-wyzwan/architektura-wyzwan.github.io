@@ -20,7 +20,7 @@ export const speakers: Speaker[] = [
     },
     {
         image: "/static/cat2.jpg",
-        name: "Puszek",
+        name: "Puszek z bardzo długim imieniem które na pewno nie wybuchnie",
         description_pl: "Trochę dłuższy opis tego pięknego kotka",
         description_en: "A description of this beautiful kitten",
     },

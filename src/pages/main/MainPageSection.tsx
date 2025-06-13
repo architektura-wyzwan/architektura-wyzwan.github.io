@@ -7,20 +7,22 @@ export type MainPageSectionProps = {
     children: React.ReactNode | React.ReactNode[],
     title_pl: string,
     title_en: string,
+    wide?: boolean,
 }
 
 export default function MainPageSection(props: MainPageSectionProps) {
+    const wide = props.wide !== undefined ? props.wide : false;
     return (
         <Box sx={{
             pl: {
-                xs: '15%',
-                sm: '10%',
-                lg: '12.5%',
+                xs: wide ? '5%' : '15%',
+                sm: wide ? '5%' : '10%',
+                lg: wide ? '5%' : '12.5%',
             },
             pr: {
-                xs: '15%',
-                sm: '10%',
-                lg: '12.5%',
+                xs: wide ? '5%' : '15%',
+                sm: wide ? '5%' : '10%',
+                lg: wide ? '5%' : '12.5%',
             },
         }}>
             <SectionHeading>
