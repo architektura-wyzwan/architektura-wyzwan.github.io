@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
 	<React.StrictMode>
-		<ThemeProvider theme={theme} defaultMode="system">
+		<ThemeProvider theme={theme} defaultMode="light">
 			<CssBaseline/>
 			<App/>
 		</ThemeProvider>
