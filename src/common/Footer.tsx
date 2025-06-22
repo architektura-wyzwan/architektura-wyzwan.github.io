@@ -53,6 +53,7 @@ function Footer() {
     return (
         <Grid container
               direction={vertical ? "column" : "row"}
+              columns={vertical ? 1 : 12}
               sx={{
                   color: dark_mode ? theme.palette.primary.contrastText : "initial",
                   backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
@@ -62,7 +63,7 @@ function Footer() {
                   pb: vertical ? 5 : 3,
               }}
         >
-            <Grid size="grow">
+            <Grid size={vertical ? 1 : "grow"}>
                 <Grid container
                       spacing={3}
                 >
@@ -75,7 +76,7 @@ function Footer() {
                     <SponsorsStack title_pl={"Patronat medialny"} title_en={"Media patronage"} list={media_patronage}/>
                 </Grid>
             </Grid>
-            <Grid size="auto" sx={{
+            <Grid size={vertical ? 1 : "auto"} sx={{
                 pt: vertical ? 5 : 0,
             }}>
                 <Contact inverted={dark_mode}/>
