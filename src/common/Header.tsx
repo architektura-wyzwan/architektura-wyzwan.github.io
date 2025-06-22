@@ -38,11 +38,17 @@ function Header() {
                         {burger
                             ? <ImageCard
                                 image={dark_mode ? "/static/logo/white_plain.png" : "/static/logo/black_plain.png"}
-                                sx={{height: 40}}
+                                sx={{
+                                    height: 40,
+                                    objectFit: "contain",
+                                }}
                             />
                             : <ImageCard
                                 image={dark_mode ? "/static/logo/white_text_left.png" : "/static/logo/black_text_left.png"}
-                                sx={{height: xl ? 57 : 40}}
+                                sx={{
+                                    height: xl ? 57 : 40,
+                                    objectFit: "contain",
+                                }}
                             />
                         }
                     </CardActionArea>

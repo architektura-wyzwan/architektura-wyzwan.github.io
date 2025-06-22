@@ -39,6 +39,7 @@ function SponsorsStack(props: SponsorsStackProps) {
                                 md: '3vw',
                                 lg: '2vw',
                             },
+                            objectFit: "contain",
                         }}/></Grid>
                 ))}
             </Grid>
