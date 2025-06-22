@@ -28,8 +28,6 @@ function ImageCard(props: ImageCardProps & CardMediaProps) {
 				mb: "-" + cropBottom,
 				ml: "-" + cropLeft,
 				mr: "-" + cropRight,
-				width: "100%",
-				height: "100%",
 				aspectRatio: "attr(width) / attr(height)",
 			}}
 			{...(props as CardMediaProps)}
