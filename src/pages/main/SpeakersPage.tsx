@@ -1,33 +1,25 @@
 import * as React from "react";
-import {Box, Grid} from "@mui/material";
+import {Grid} from "@mui/material";
 import {StandardCircleCard} from "../../common/StandardCard";
 import {Translation} from "../../common/Translation";
 import {speakers} from "../../data/Speakers";
-import SectionHeading from "../../common/SectionHeading";
+import MainPageSection from "./MainPageSection";
+import useVertical from "../../utils/UseVertical";
 
 export default function SpeakersPage() {
+    const vertical = useVertical();
     return (
-        <Box>
-            <Box sx={{
-                pl: {
-                    xs: '15%',
-                    sm: '10%',
-                    lg: '12.5%',
-                },
-                pr: {
-                    xs: '15%',
-                    sm: '10%',
-                    lg: '12.5%',
-                },
-            }}>
-                <SectionHeading>
-                    <Translation pl="PRELEGENCI" en="SPEAKERS"/>
-                </SectionHeading>
-            </Box>
+        <MainPageSection title_pl="PRELEGENCI" title_en="SPEAKERS" wide={true}>
             <Grid container
                   spacing={{
                       xs: 2,
                       md: 4,
+                  }}
+                  columns={{
+                      xs: 2,
+                      sm: vertical ? 3 : 4,
+                      md: 5,
+                      lg: 6,
                   }}
                   direction="row"
                   sx={{
@@ -35,7 +27,7 @@ export default function SpeakersPage() {
                   }}
             >
                 {speakers.map((speaker, _) => (
-                    <Grid>
+                    <Grid size={1}>
                         <StandardCircleCard
                             image={speaker.image}
                             textInCenter={true}
@@ -45,6 +37,6 @@ export default function SpeakersPage() {
                     </Grid>
                 ))}
             </Grid>
-        </Box>
+        </MainPageSection>
     );
 }

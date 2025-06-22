@@ -1,7 +1,6 @@
 import * as React from "react";
 import {Box, Card, CardActionArea, CardContent, CardMedia, CardMediaProps, Typography} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import useVertical from "../utils/UseVertical";
 
 type StandardCardProps = {
     url?: string;
@@ -97,23 +96,20 @@ export function StandardRectangleCard(props: StandardSpecializedCardProps & Card
 }
 
 export function StandardCircleCard(props: StandardSpecializedCardProps & CardMediaProps) {
-    const vertical = useVertical();
     return (
         <StandardCard
             cardWidth={{
                 xs: "40vw",
-                sm: vertical ? "35vw" : "20vw",
-                md: "15vw",
-                lg: "15vw",
+                sm: "100%",
             }}
-            cardImageHeight={{
-                xs: "40vw",
-                sm: vertical ? "35vw" : "20vw",
-                md: "15vw",
-                lg: "15vw",
-            }}
+            cardImageHeight={{}}
             sx={{
                 borderRadius: '50%',
+                aspectRatio: '1 / 1',
+                width: {
+                    xs: "40vw",
+                    sm: "100%",
+                },
             }}
             {...props}
         />
