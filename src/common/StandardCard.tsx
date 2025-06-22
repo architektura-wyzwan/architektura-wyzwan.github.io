@@ -1,7 +1,6 @@
 import * as React from "react";
 import {Box, Card, CardActionArea, CardContent, CardMedia, CardMediaProps, Typography} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import useVertical from "../utils/UseVertical";
 
 type StandardCardProps = {
     url?: string;
