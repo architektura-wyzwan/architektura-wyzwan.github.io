@@ -87,11 +87,16 @@ let theme = createTheme({
         },
     },
     components: {
-        // Name of the component
         MuiButtonBase: {
             defaultProps: {
-                // The props to change the default for.
-                disableRipple: true, // No more ripple, on the whole application 💣!
+                disableRipple: true,
+            },
+        },
+        MuiCardMedia: {
+            styleOverrides: {
+                img: {
+                    // width: "unset",
+                },
             },
         },
     },

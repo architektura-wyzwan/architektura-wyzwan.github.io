@@ -58,7 +58,8 @@ function SecondPage() {
                         md: "60vw",
                         lg: "40vw",
                         xl: "30vw",
-                    }
+                    },
+                    objectFit: "contain",
                 }}/>
             </Grid>
         </Grid>
