@@ -32,6 +32,7 @@ function OrganizerItem({organizer}: { organizer: Organizer }) {
                             sm: vertical ? '15vw' : '10vw',
                             md: '10vw',
                         },
+                        width: "unset",
                         filter: dark_mode && organizer.invertColorInDarkMode ? "invert(100%)" : "invert(0%)",
                     }} src={organizer.image}/>
                 </Box>

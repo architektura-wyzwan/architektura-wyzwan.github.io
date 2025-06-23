@@ -92,13 +92,6 @@ let theme = createTheme({
                 disableRipple: true,
             },
         },
-        MuiCardMedia: {
-            styleOverrides: {
-                img: {
-                    // width: "unset",
-                },
-            },
-        },
     },
     breakpoints: {
         values: {
