@@ -32,6 +32,7 @@ function OrganizerItem({organizer}: { organizer: Organizer }) {
                             sm: vertical ? '15vw' : '10vw',
                             md: '10vw',
                         },
+                        width: "unset",
                         filter: dark_mode && organizer.invertColorInDarkMode ? "invert(100%)" : "invert(0%)",
                     }} src={organizer.image}/>
                 </Box>
@@ -54,7 +55,7 @@ export function OrganizersPage() {
     return (
         <PageLayout title_pl="Organizatorzy" title_en="Organizers" wide={true}>
             <List sx={{width: '100%', backgroundColor: 'background.paper'}}>
-                {organizers.map((organizer, id) => {
+                {organizers.map((organizer) => {
                     return (<>
                         <OrganizerItem organizer={organizer}/>
                     </>);

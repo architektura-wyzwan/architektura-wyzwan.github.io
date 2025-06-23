@@ -41,6 +41,7 @@ function Header() {
                                 sx={{
                                     height: 40,
                                     objectFit: "contain",
+                                    width: "unset",
                                 }}
                             />
                             : <ImageCard
@@ -48,6 +49,7 @@ function Header() {
                                 sx={{
                                     height: xl ? 57 : 40,
                                     objectFit: "contain",
+                                    width: "unset",
                                 }}
                             />
                         }
