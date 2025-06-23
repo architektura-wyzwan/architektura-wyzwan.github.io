@@ -40,6 +40,7 @@ function SponsorsStack(props: SponsorsStackProps) {
                                 lg: '2vw',
                             },
                             objectFit: "contain",
+                            width: "unset",
                         }}/></Grid>
                 ))}
             </Grid>

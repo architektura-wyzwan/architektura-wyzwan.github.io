@@ -54,7 +54,7 @@ export function OrganizersPage() {
     return (
         <PageLayout title_pl="Organizatorzy" title_en="Organizers" wide={true}>
             <List sx={{width: '100%', backgroundColor: 'background.paper'}}>
-                {organizers.map((organizer, id) => {
+                {organizers.map((organizer) => {
                     return (<>
                         <OrganizerItem organizer={organizer}/>
                     </>);
