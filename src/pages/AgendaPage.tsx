@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Divider, List, ListItem, ListItemText, Tab} from "@mui/material";
+import {Divider, Grid, Tab, Typography} from "@mui/material";
 import {Translation} from "../common/Translation";
 import {agenda} from "../data/Agenda";
 import {TabContext, TabList, TabPanel} from "@mui/lab";
@@ -24,20 +24,48 @@ export default function AgendaPage() {
                     <TabPanel
                         value={index}
                     >
-                        <List>
-                            {agenda.items.map((item, id) => (
+                        <Grid container
+                              spacing={2}
+                              columns={16}
+                        >
+                            {agenda.items.map((item) => (
                                 <>
-                                <ListItem>
-                                    <ListItemText
-                                        id={index + "_" + id}
-                                        primary={item.time}
-                                        secondary={<Translation pl={item.description_pl} en={item.description_en}/>}
-                                    />
-                                </ListItem>
-                                <Divider component="li" />
+                                    <Grid size={2}>
+                                        <Typography variant="bold">{item.time}</Typography>
+                                    </Grid>
+                                    <Grid size={14}>
+                                        <Typography variant="bold">
+                                            <Translation pl={item.description_pl} en={item.description_en}/>
+                                        </Typography>
+                                    </Grid>
+                                    {item.items.map((item) => (
+                                        <>
+                                            <Grid size={2}/>
+                                            <Grid size={7}>
+                                                <Typography variant="bolder">
+                                                    {item.title !== undefined ? item.title :
+                                                        <Translation pl={item.title_pl} en={item.title_en}/>}
+                                                </Typography>
+                                            </Grid>
+                                            <Grid size={3}>
+                                                <Typography variant="body1">
+                                                    {item.speaker !== undefined ? item.speaker :
+                                                        <Translation pl={item.speaker_pl} en={item.speaker_en}/>}
+                                                </Typography>
+                                            </Grid>
+                                            <Grid size={4}>
+                                                <Typography variant="body1">
+                                                    <Translation pl={item.institution_pl} en={item.institution_en}/>
+                                                </Typography>
+                                            </Grid>
+                                        </>
+                                    ))}
+                                    <Grid size={16}>
+                                        <Divider/>
+                                    </Grid>
                                 </>
                             ))}
-                        </List>
+                        </Grid>
                     </TabPanel>))}
             </TabContext>
         </PageLayout>
