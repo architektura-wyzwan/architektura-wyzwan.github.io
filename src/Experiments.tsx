@@ -25,5 +25,5 @@ export const speakers_experiment: Experiment = {
     enabled: false,
 }
 export const agenda_experiment: Experiment = {
-    enabled: false,
+    enabled: true,
 }
