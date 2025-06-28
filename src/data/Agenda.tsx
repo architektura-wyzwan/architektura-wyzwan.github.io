@@ -236,7 +236,197 @@ export const agenda: Agenda[] = [
         date_pl: "1 lipca",
         date_en: "July 1",
         items: [
+            {
+                time: "9:00-9:30",
+                description_pl: "Rejestracja i poranna kawa",
+                description_en: "Registration and Welcome Coffe",
+                items: []
+            },
+            {
+                time: "9:30-10:50",
+                description_pl: "Blok 5 - Architektura Wspólnoty",
+                description_en: "Block 5 - Architecture of Community",
+                items: [
+                    {
+                        title: "Don’t Hate the Player: Resident-led Housing in the Age of Developers",
+                        speaker: "Małgorzata Mader",
+                        institution_pl: "Politechnika Łódzka, Instytut Architektury i Urbanistyki, Polska",
+                        institution_en: "Lodz University of Technology, Institute of Architecture and Urban Planning, Poland",
+                    },
+                    {
+                        title: "Infrastructures of Wildness: The Making of Warsaw’s Fourth Nature Parks as Hybrid Commons",
+                        speaker: "Maciej Kaufman",
+                        institution_pl: "Politechnika Warszawska, Wydział Architektury, Polska",
+                        institution_en: "Warsaw University of Technology, Faculty of Architecture, Poland",
+                    },
+                    {
+                        title: "Architecture to Support the Process of Creating a School Community",
+                        speaker: "Piotr Trębacz, Paweł Trębacz",
+                        institution_pl: "Politechnika Warszawska, Wydział Architektury, Polska",
+                        institution_en: "Warsaw University of Technology, Faculty of Architecture, Warsaw",
+                    },
+                    {
+                        title: "CITY LIGHTS - The Creation of a New Space Perception through Light",
+                        speaker: "Liberty Peterson",
+                        institution_pl: "Ateńska Szkoła Sztuk Pięknych, Grecja",
+                        institution_en: "Athens School of Fine Arts, Greece",
+                    },
+                    {
+                        title: "A Strategy of Short-Term Actions and Tactical Urban Planning Tools for Cre- ating Community and Development Urban Spaces in Zaporizhia (Ukraine)",
+                        speaker: "Yuriy Kryvoruchko, Joanna Kopacz-Gruźlewska",
+                        institution_pl: "Politechnika Białostocka, Polska i Politechnika Lwowska, Ukraina / Politechnika Śląska, Polska",
+                        institution_en: "Bialystok University of Technology, Poland and Lviv Polytechnic National University, Ukraine / Silesian University of Technology, Poland",
+                    },
 
+                ]
+            },
+            {
+                time: "10:50-11:20",
+                description_pl: "Przerwa Kawowa",
+                description_en: "Coffee Break",
+                items: []
+            },
+            {
+                time: "11:20-12:40",
+                description_pl: "Blok 6 - Architektura Wspólnoty",
+                description_en: "Block 6 - Architecture of Community",
+                items: [
+                    {
+                        title: "Inclusive Placemaking as a Catalyst for Social Engagement and Fair Communities: Reflections from A-Place",
+                        speaker: "Spela Verovsek",
+                        institution_pl: "Uniwersytet w Lublanie, Wydział Architektury, Słowenia",
+                        institution_en: "University of Ljubljana, Faculty of Architecture, Slovenia",
+                    },
+                    {
+                        title: "Reinhabiting Abandonment. Architectural Reuse for Enhancement of Alpine Communities in Trentino",
+                        speaker: "Alisia Tognon, Dominika Komisarczyk",
+                        institution_pl: "Politecnico di Milano, Wydział Architektury i Urbanistyki, Włochy",
+                        institution_en: "Politecnico di Milano, Department of Architecture and Urban Studies, Italy",
+                    },
+                    {
+                        title: "New European Bauhaus – Four Years of Building Community",
+                        speaker: "Hubert Trammer",
+                        institution_pl: "Nowy Europejski Bauhaus (2021-2024)",
+                        institution_en: "New European Bauhaus (2021-2024)",
+                    },
+                    {
+                        title: "Growing Our Cities from Within: A Collaborative Approach to Urban Densification",
+                        speaker: "Daan Roggeveen",
+                        institution_pl: "MORE Architecture, Amsterdam, Niderlandy",
+                        institution_en: "MORE Architecture, Amsterdam, Netherlands",
+                    },
+                    {
+                        title: "Cartographies of Care: Community Knowledge and Environmental Agency in Post-War Housing Estates",
+                        speaker: "Damian Poklewski-Kozieł, Eliza Szczerek",
+                        institution_pl: "Politechnika Krakowska, Wydział Architektury, Polska",
+                        institution_en: "Cracow University of Technology, Faculty of Architecture, Poland",
+                    },
+                ]
+            },
+            {
+                time: "12:40-13:40",
+                description_pl: "Przerwa obiadowa",
+                description_en: "Lunch Break",
+                items: []
+            },
+            {
+                time: "13:40-15:10",
+                description_pl: "Blok 7 - Architektura Wspólnoty",
+                description_en: "Block 7 - Architecture of Community",
+                items: [
+                    {
+                        title: "Empowering Communities of Professionals and the Role of the New European Bauhaus",
+                        speaker: "Roberto Cavallo",
+                        institution_pl: "Uniwersytet Techniczny w Delft, Wydział Architektury, Niderlandy/European Association for Architectural Education",
+                        institution_en: "Delft University of Technology, Department of Architecture, Netherlands/European Association for Architectural Education",
+                    },
+                    {
+                        title: "Wayfinding as Community Building: The Case of the Warsaw University of Technology Central Campus",
+                        speaker: "Krzysztof Koszewski, Stefan Drewiczewski, Jacek Kopczewski, Karolina Dąbrowska-Żółtak, Hanna Malik-Trocha, Marta Żak, Konrad Szumiński",
+                        institution_pl: "Politechnika Warszawska, Wydział Architektury i Biuro Komunikacji i Promocji, Polska",
+                        institution_en: "Warsaw University of Technology, Faculty of Architecture and Communication and Promotion Office, Poland",
+                    },
+                    {
+                        title: "Social Responsibility of Universities in Shaping Public Spaces",
+                        speaker: "Krystyna Solarek",
+                        institution_pl: "Politechnika Warszawska, Wydział Architektury, Polska",
+                        institution_en: "Warsaw University of Technology, Faculty of Architecture, Poland",
+                    },
+                    {
+                        title: "Research by Design as a Tool for Building Community: Lessons from Athens Lycabettus Hill",
+                        speaker: "Athanosios Pagonis",
+                        institution_pl: "Politechnika Narodowa w Atenach, Szkoła Architektury, Grecja",
+                        institution_en: "National Technical University of Athens, School of Architecture, Greece",
+                    },
+                    {
+                        title: "Embracing Beauty, Sustainability, and Community: The New European Bauhaus Initiative",
+                        speaker: "Anna Maria Wierzbicka",
+                        institution_pl: "Politechnika Warszawska, Wydział Architektury, Polska",
+                        institution_en: "Warsaw University of Technology, Faculty of Architecture, Poland",
+                    },
+                    {
+                        title: "The New European Bauhaus as a Catalyst for Sustainable Senior Cohousing: A Case Study of Building Revitalisation in Imperia",
+                        speaker: "Agata Bonnenberg",
+                        institution_pl: "Politechnika Poznańska, Wydział Architektury, Polska",
+                        institution_en: "Poznan University of Technology, Faculty of Architecture, Poland",
+                    },
+                ]
+            },
+            {
+                time: "15:10-15:40",
+                description_pl: "Przerwa Kawowa",
+                description_en: "Coffee Break",
+                items: []
+            },
+            {
+                time: "15:40-17:10",
+                description_pl: "Blok 8 - Zaangaźowanie Społeczne",
+                description_en: "Block 8 - Social Engagement",
+                items: [
+                    {
+                        title: "Learning by Building with Wood: Prototyping for Emergency Housing in Universitat Politècnica de València and Universidad Nacional de Guinea Ecuatorial",
+                        speaker: "Apolonia Begoña Serrano Lanzarote, Alberto Rubio, Garrido Joan Romero Clausell, Isaac Villanova Civera",
+                        institution_pl: "Politechnika w Walencji, Zakład Mechaniki Ośrodków Ciągłych i Teorii Struktur, Hiszpania",
+                        institution_en: "Polytechnic University of Valencia Dept. of Mechanics of Continuous Media and Theory of Structures, Spain",
+                    },
+                    {
+                        title: "Architecture as a Space Integrating Scientific, Social, and Technological Functions. Revitalization of the Historic Campus of Łukasiewicz Research Network – PORT as an Example of Synergy Between Research Activities, Cross-Sectoral Collaboration, and the Formation of a Local Community",
+                        speaker: "Elżbieta Kocowska-Siekierka",
+                        institution_pl: "Sieć Badawcza Łukasiewicz - PORT Polski Ośrodek Rozwoju Technologii, Wrocław, Polska",
+                        institution_en: "Łukasiewicz – PORT Polish Center for Technology Development, Wrocław, Poland",
+                    },
+                    {
+                        title: "Strategies for Integrating Urban Sports into Public Spaces",
+                        speaker: "Monika Wróbel",
+                        institution_pl: "Skwer Sportów Miejskich, Warszawa, Polska",
+                        institution_en: "Urban Sports Square Foundation, Warsaw, Poland",
+                    },
+                    {
+                        title: "An Interdisciplinary and Process-Oriented Approach to Diagnosing Urban Public Spaces with Community Involvement",
+                        speaker: "Joanna Mędrzec-Stefańska, Andrzej Jaworski, Aleksandra Wiktorko-Rakoczy, Anna Wieczorek, Marianna Waśniewska",
+                        institution_pl: "ThinkTankMiasto Foundation, JAZ+Architekci sp. z o.o. i Szelest, Warszawa, Polska",
+                        institution_en: "ThinkTankMiasto Foundation, JAZ+Architekci sp. z o.o. and Szelest, Warsaw, Poland",
+                    },
+                    {
+                        title: "Innovative Materials for Modern and Sustainable Architecture - Technolo- gies Developed in the Łukasiewicz Research Network",
+                        speaker: "Katarzyna Jodko-Piórecka",
+                        institution_pl: "Łukasiewicz - ITECH Instytut Innowacji i Technologii, Warszawa, Polska",
+                        institution_en: "Łukasiewicz – ITECH Institute of Innovation and Technology, Warsaw, Poland",
+                    },
+                    {
+                        title: "System for Parametric Retainers - Overgrowable Urban Tissue (SPROUT). Experimental Apparatus for Bioreceptive Architecture",
+                        speaker: "Marcin Strzała",
+                        institution_pl: "Politechnika Warszawska, Wydział Architektury, Polska",
+                        institution_en: "Warsaw University of Technology, Faculty of Architecture Poland",
+                    },
+                ]
+            },
+            {
+                time: "17:10-18:00",
+                description_pl: "Dyskusja",
+                description_en: "General Discussion",
+                items: []
+            },
         ]
     },
 
