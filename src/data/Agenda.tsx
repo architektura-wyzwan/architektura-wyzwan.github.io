@@ -150,7 +150,7 @@ export const agenda: Agenda[] = [
                         institution_en: "ETH Zurich, Department of Architecture, Switzerland",
                     },
                     {
-                        title: "The Evolution of Public Spaces in Bar- celona - the Superblocks as an Element Building the Community",
+                        title: "The Evolution of Public Spaces in Barcelona - the Superblocks as an Element Building the Community",
                         speaker: "Mateusz Gyurkovich",
                         institution_pl: "Politechnika Krakowska, Wydział Architektury, Polska",
                         institution_en: "Cracow University of Technology, Faculty of Architecture, Poland",
@@ -168,7 +168,7 @@ export const agenda: Agenda[] = [
                         institution_en: "Cracow University of Technology, Faculty of Architecture, Poland",
                     },
                     {
-                        title: "Models of Public Spacesa as a Rep- resentation of the Images of the Cities – The Case Study of Metropolis GZM Models and Game’s Cards",
+                        title: "Models of Public Spacesa as a Representation of the Images of the Cities – The Case Study of Metropolis GZM Models and Game’s Cards",
                         speaker: "Tomasz Bradecki, Paulina Siudyka, Amelia Gałas, Magdalena Fijał",
                         institution_pl: "Politechnika Śląska, Wydział Architektury, Polska",
                         institution_en: "Silesian University of Technology, Faculty of Architecture, Poland",
@@ -205,7 +205,7 @@ export const agenda: Agenda[] = [
                         institution_en: "Cracow University of Technology, Faculty of Architecture, Poland",
                     },
                     {
-                        title: "Contemporary Methods of Design- ing Residential Courtyard Spaces of the 19th–20th Centuries in Lviv in the Context of Social Philosophy",
+                        title: "Contemporary Methods of Designing Residential Courtyard Spaces of the 19th–20th Centuries in Lviv in the Context of Social Philosophy",
                         speaker: "Oresta Remeshylo-Rybchynska, Adrian Rybchynskyi",
                         institution_pl: "Politechnika Lwowska, Wydział Architektury, Ukraina",
                         institution_en: "Lviv Polytechnic National University, Department of Architecture and Design, Ukraine",
@@ -272,7 +272,7 @@ export const agenda: Agenda[] = [
                         institution_en: "Athens School of Fine Arts, Greece",
                     },
                     {
-                        title: "A Strategy of Short-Term Actions and Tactical Urban Planning Tools for Cre- ating Community and Development Urban Spaces in Zaporizhia (Ukraine)",
+                        title: "A Strategy of Short-Term Actions and Tactical Urban Planning Tools for Creating Community and Development Urban Spaces in Zaporizhia (Ukraine)",
                         speaker: "Yuriy Kryvoruchko, Joanna Kopacz-Gruźlewska",
                         institution_pl: "Politechnika Białostocka, Polska i Politechnika Lwowska, Ukraina / Politechnika Śląska, Polska",
                         institution_en: "Bialystok University of Technology, Poland and Lviv Polytechnic National University, Ukraine / Silesian University of Technology, Poland",
@@ -408,10 +408,10 @@ export const agenda: Agenda[] = [
                         institution_en: "ThinkTankMiasto Foundation, JAZ+Architekci sp. z o.o. and Szelest, Warsaw, Poland",
                     },
                     {
-                        title: "Innovative Materials for Modern and Sustainable Architecture - Technolo- gies Developed in the Łukasiewicz Research Network",
+                        title: "Innovative Materials for Modern and Sustainable Architecture - Technologies Developed in the Łukasiewicz Research Network",
                         speaker: "Katarzyna Jodko-Piórecka",
                         institution_pl: "Łukasiewicz - ITECH Instytut Innowacji i Technologii, Warszawa, Polska",
-                        institution_en: "Łukasiewicz – ITECH Institute of Innovation and Technology, Warsaw, Poland",
+                        institution_en: "Łukasiewicz - ITECH Institute of Innovation and Technology, Warsaw, Poland",
                     },
                     {
                         title: "System for Parametric Retainers - Overgrowable Urban Tissue (SPROUT). Experimental Apparatus for Bioreceptive Architecture",
