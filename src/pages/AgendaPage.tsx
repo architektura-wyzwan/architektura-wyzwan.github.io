@@ -48,9 +48,12 @@ export default function AgendaPage() {
                                     </Grid>
                                     {item.items.map((item) => (
                                         <>
-                                            <Grid size={2}/>
                                             <Grid size={{
-                                                xs: 14,
+                                                xs: 3,
+                                                sm: 2,
+                                            }}/>
+                                            <Grid size={{
+                                                xs: 13,
                                                 sm: 7,
                                             }}>
                                                 <Typography variant="bolder">
@@ -58,9 +61,9 @@ export default function AgendaPage() {
                                                         <Translation pl={item.title_pl} en={item.title_en}/>}
                                                 </Typography>
                                             </Grid>
-                                            {smallOrLarger ? <></> : <Grid size={2}/>}
+                                            {smallOrLarger ? <></> : <Grid size={3}/>}
                                             <Grid size={{
-                                                xs: 7,
+                                                xs: 6,
                                                 sm: 3,
                                             }}>
                                                 <Typography variant="body1">
