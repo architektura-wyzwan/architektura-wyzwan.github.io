@@ -21,8 +21,8 @@ export const speakers: Speaker[] = [
     {
         image: "/static/About/Speakers/KEES_CHRISTIAANSE.png",
         name: "Kees Christiaanse",
-        description_pl: "Współzałożyciel KCAP Architects & Planners oraz były profesor zwyczajny architektury i urbanistyki na ETH w Zurychu",
-        description_en: "Founding partner of KCAP Architects & Planners, and former Full Professor of Architecture and Urban Design at ETH Zurich",
+        description_pl: "Profesor emerytowany, dr hab. Instytut Projektowania i Architektury, Wydział Architektury ETH Zürich",
+        description_en: "Professor Emeritus, Ph.D. Institute of Design and Architecture Department of Architecture ETH Zürich",
     },
     {
         image: "/static/About/Speakers/MICHAEL_J_CROSBIE.png",
@@ -45,8 +45,8 @@ export const speakers: Speaker[] = [
     {
         image: "/static/About/Speakers/APOLONIA_BEGONA_SERRANO_LANZAROTE.png",
         name: "Apolonia Begoña Serrano Lanzarote",
-        description_pl: "Doktor Architekt z Universitat Politècnica de València (UPV)\n",
-        description_en: "Doctor Architect from the Universitat Politècnica de València (UPV)",
+        description_pl: "Doktor nauk w zakresie architektury na Politechnice w Walencji oraz Dyrektor Katedry Maderamen",
+        description_en: "PhD in Architecture from the Polytechnic University of Valencia and Director of the Maderamen Chair",
     },
     {
         image: "/static/About/Speakers/SPELA_VEROVSEK.png",
