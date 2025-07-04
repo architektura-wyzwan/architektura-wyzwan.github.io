@@ -22,8 +22,8 @@ export const pavilion_of_freedom_award: ArticleContent = {
         ),
         two_images("/static/About/News/The Pavilion of Freedom with an international award/pawilon_male-29.jpg", "/static/About/News/The Pavilion of Freedom with an international award/pawilon_male-41.jpg"),
         paragraph(
-            "Pierwotnie Pawilon stanął w Łazienkach Królewskich, w sąsiedztwie historycznego Ermitażu. W 2024 roku, po przekazaniu go do Zarządu Zieleni Warszawy, zyskał nowe, nadwiślańskie oblicze. Obecnie można go odwiedzić na Bulwarach Wiślanych, tuż przy Płycie Desantu, pomiędzy Mostem Łazienkowskim a Mostem Poniatowskiego.",
-            "Originally, the Pavilion was installed in the Royal Łazienki Park, near the historic Hermitage. In 2024, after being transferred to the Warsaw Greenery Management Board, it gained a new riverside identity. It can now be visited on the Vistula Boulevards, right by the Landing Stage, between the Łazienkowski Bridge and the Poniatowski Bridge."
+            "Pierwotnie Pawilon stanął w Muzeum Łazienkach Królewskich, w sąsiedztwie historycznego Ermitażu. W 2024 roku, po przekazaniu go do Zarządu Zieleni Warszawy, zyskał nowe, nadwiślańskie oblicze. Obecnie można go odwiedzić na Bulwarach Wiślanych, tuż przy Płycie Desantu, pomiędzy Mostem Łazienkowskim a Mostem Poniatowskiego.",
+            "Originally, the Pavilion was installed in the Royal Łazienki Museum, near the historic Hermitage. In 2024, after being transferred to the Warsaw Greenery Management Board, it gained a new riverside identity. It can now be visited on the Vistula Boulevards, right by the Landing Stage, between the Łazienkowski Bridge and the Poniatowski Bridge."
         ),
         paragraph(
             "Zapraszamy do odwiedzenia Pawilonu.",

@@ -8,9 +8,9 @@ export default function AgendaPage() {
     return (
         <PageLayout title_pl="Kontakt" title_en="Contact" wide={false}>
             <Box sx={{pl: 4}}>
-                <Translation pl="Sekretarz Konferencji" en="Secretary of the Conference"/>
+                <Translation pl="Profesor Arch. Anna Maria Wierzbicka" en="Professor Arch. Anna Maria Wierzbicka"/>
                 <br/>
-                <Translation pl="mgr inż. arch. Magdalena Duda" en="MSc. Eng. Arch. Magdalena Duda"/>
+                <Translation pl="arch. Magdalena Duda" en="Arch. Magdalena Duda"/>
             </Box>
             <Contact inverted={false}/>
         </PageLayout>

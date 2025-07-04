@@ -4,13 +4,13 @@ import {big_image, paragraph, two_images} from "../../common/ArticleParts";
 export const opening_pavilion_of_future: ArticleContent =  {
     title_pl: "Otwarcie Pawilonu Przyszłości",
     title_en: "Opening of the Pavilion of the Future",
-    subtitle_pl: "Pawilon Przyszłości – nowa wizja architektury już zaprezentowana w Łazienkach Królewskich",
-    subtitle_en: "Pavilion of the Future – a new vision of architecture already showcased in the Royal Łazienki Park",
+    subtitle_pl: "Pawilon Przyszłości – nowa wizja architektury już zaprezentowana w Muzeum Łazienki Królewskie",
+    subtitle_en: "Pavilion of the Future – a new vision of architecture already showcased in the Royal Łazienki Museum",
     image: "static/About/News/Opening of the Pavilion of the Future/pawilon-przyszlosci-fot-Artur-Brzozowski-13-lyaaikmr.jpg",
     content: [
         paragraph(
-            "16 czerwca 2024 roku w Łazienkach Królewskich miało miejsce uroczyste otwarcie wyjątkowego Pawilonu Przyszłości – kolejnego, po ubiegłorocznym sukcesie, autorskiego projektu studentów i wykładowców Wydziału Architektury Politechniki Warszawskiej. Wydarzenie zgromadziło miłośników architektury, środowiska akademickie oraz ekspertów, którzy wspólnie świętowali efekt pracy pełnej pasji i innowacyjnych pomysłów.",
-            "On June 16, 2024, the Royal Łazienki Park hosted the ceremonial opening of the exceptional Pavilion of the Future – the latest original project by students and faculty from the Faculty of Architecture at the Warsaw University of Technology, following last year’s success. The event brought together architecture enthusiasts, academic communities, and experts who jointly celebrated the result of passionate work and innovative ideas.:"
+            "16 czerwca 2024 roku w Muzeum Łazienki Królewskie miało miejsce uroczyste otwarcie wyjątkowego Pawilonu Przyszłości – kolejnego, po ubiegłorocznym sukcesie, autorskiego projektu studentów i wykładowców Wydziału Architektury Politechniki Warszawskiej. Wydarzenie zgromadziło miłośników architektury, środowiska akademickie oraz ekspertów, którzy wspólnie świętowali efekt pracy pełnej pasji i innowacyjnych pomysłów.",
+            "On June 16, 2024, the Royal Łazienki Museum hosted the ceremonial opening of the exceptional Pavilion of the Future – the latest original project by students and faculty from the Faculty of Architecture at the Warsaw University of Technology, following last year’s success. The event brought together architecture enthusiasts, academic communities, and experts who jointly celebrated the result of passionate work and innovative ideas.:"
         ),
         paragraph(
             "Pawilon został stworzony w ramach projektu „Stawiamy_” przez studentów specjalności Architektura Technologii i Struktury, pod opieką dr hab. inż. arch. Anny Wierzbickiej, prof. PW oraz interdyscyplinarnego zespołu dydaktyków: m.in.: mgr inż. arch. Macieja Kaufmana, mgr inż. arch. Szymona Kalaty (architektura), dr inż. arch. kraj. Kingi Zinowiec-Cieplik (integracja z otoczeniem), mgr inż. Mariusza Wrony (konstrukcja) oraz dr inż. arch. Paweła Trębacza (konsultacje). To nie tylko budowla – to symbol nadchodzących wyzwań i nadziei związanych z przyszłością architektury. Studenci podjęli się zadania stworzenia obiektu, który łączy nowoczesność z troską o środowisko, a także odpowiada na potrzeby zdrowia i komfortu użytkowników.",

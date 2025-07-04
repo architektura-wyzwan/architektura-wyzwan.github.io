@@ -48,7 +48,7 @@ export const agenda: Agenda[] = [
             {
                 time: "11:30-13:00",
                 description_pl: "Blok 1 - Wspólnota Kultury - Różnorodność Kultur",
-                description_en: "Block 1 - Community od Culture - Diversity of Cultures",
+                description_en: "Block 1 - Community of Culture - Diversity of Cultures",
                 items: [
                     {
                         title: "Spatial Justice in the Realm of Sacred Space",
@@ -98,7 +98,7 @@ export const agenda: Agenda[] = [
             {
                 time: "14:00-15:20",
                 description_pl: "Blok 2 - Wspólnota Kultury - Różnorodność Kultur",
-                description_en: "Block 2 - Community od Culture - Diversity of Cultures",
+                description_en: "Block 2 - Community of Culture - Diversity of Cultures",
                 items: [
                     {
                         title: "Reciprocal Urban Design: The Prospect of Another History",
@@ -403,7 +403,7 @@ export const agenda: Agenda[] = [
                     },
                     {
                         title: "An Interdisciplinary and Process-Oriented Approach to Diagnosing Urban Public Spaces with Community Involvement",
-                        speaker: "Joanna Mędrzec-Stefańska, Andrzej Jaworski, Aleksandra Wiktorko-Rakoczy, Anna Wieczorek, Marianna Waśniewska",
+                        speaker: "Joanna Mędrzecka-Stefańska, Andrzej Jaworski, Aleksandra Wiktorko-Rakoczy, Anna Wieczorek, Marianna Waśniewska",
                         institution_pl: "ThinkTankMiasto Foundation, JAZ+Architekci sp. z o.o. i Szelest, Warszawa, Polska",
                         institution_en: "ThinkTankMiasto Foundation, JAZ+Architekci sp. z o.o. and Szelest, Warsaw, Poland",
                     },

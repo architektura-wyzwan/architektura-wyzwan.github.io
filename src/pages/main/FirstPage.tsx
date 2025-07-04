@@ -14,7 +14,7 @@ function CenteredJustified(props: CenteredJustifiedProps & TypographyProps) {
                        justifyContent: "space-between",
                        alignItems: "center",
                    }}>
-        {props.text.map((item, index) => (<Typography {...props}>{item}</Typography>))}
+        {props.text.map((item) => (<Typography {...props}>{item}</Typography>))}
     </Stack>)
 }
 
@@ -140,7 +140,7 @@ function FirstPage() {
             }}>
                 <Translation
                     pl="Pałac na Wyspie, Muzeum Łazienki Królewskie w Warszawie i Pałac Czapskich, Akademia Sztuk Pięknych w Warszawie"
-                    en="Pałac na Wyspie, Muzeum Łazienki Królewskie w Warszawie i Pałac Czapskich, Akademia Sztuk Pięknych w Warszawie"/>
+                    en="Palace on the Isle, Royal Łazienki Museum in Warsaw and Czapski Palace, The Academy of Fine Arts in Warsaw"/>
             </Typography>
         </Box>
         {logos}

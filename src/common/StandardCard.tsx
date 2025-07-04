@@ -59,11 +59,16 @@ export function StandardCard(props: StandardCardProps & CardMediaProps) {
                 />
             </Box>
             <CardContent>
-                <Box display="flex" justifyContent={textInCenter ? "center" : "initial"} alignItems={textInCenter ? "center" : "initial"} flexDirection="column">
-                    <Typography gutterBottom variant="cardTitle" component="div" sx={{textAlign: textInCenter ? "center" : "initial"}}>
+                <Box display="flex" justifyContent={textInCenter ? "center" : "initial"}
+                     alignItems={textInCenter ? "center" : "initial"} flexDirection="column">
+                    <Typography gutterBottom variant="cardTitle" component="div"
+                                sx={{textAlign: textInCenter ? "center" : "initial"}}>
                         {props.cardTitle}
                     </Typography>
-                    <Typography variant="body2" sx={{textAlign: textInCenter ? "center" : "initial"}}>
+                    <Typography variant="body2" sx={{
+                        textAlign: textInCenter ? "center" : "justify",
+                        textJustify: textInCenter ? "initial" : "inter-word",
+                    }}>
                         {props.cardDescription}
                     </Typography>
                 </Box>

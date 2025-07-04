@@ -15,7 +15,7 @@ function NewsPage() {
                 {news.map((news, index) => (
                     <Grid size={1}>
                         <StandardRectangleCard
-                            url={"/article/" + (articles.length - numberOfNews + index)}
+                            url={"/article/" + (index)}
                             image={news.image}
                             cardTitle={<Translation pl={news.title_pl} en={news.title_en}/>}
                             cardDescription={<Translation pl={news.subtitle_pl} en={news.subtitle_en}/>}

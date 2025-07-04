@@ -23,20 +23,28 @@ export default function Contact({inverted}: {inverted: boolean}) {
         <List dense={true}>
             <ListItem>
                 <Tooltip title={<Translation pl="Skopiuj do schowka" en="Copy to clipboard"/>}>
-                    <ListItemButton onClick={handleCopy("+48 509 202 263")}>
+                    <ListItemButton onClick={handleCopy("(22) 234 5565")}>
                         <ListItemIcon>
                             <LocalPhoneIcon color={inverted ? "secondary" : "primary"}/>
                         </ListItemIcon>
-                        <ListItemText>+48 509 202 263</ListItemText>
+                        <ListItemText>(22) 234 5565</ListItemText>
                     </ListItemButton>
                 </Tooltip>
             </ListItem>
             <ListItem>
-                <ListItemButton onClick={navigateTo("mailto://konferencja.wapw2025@pw.edu.pl", false)}>
+                <ListItemButton onClick={navigateTo("mailto://Anna.Wierzbicka@pw.edu.pl", false)}>
                     <ListItemIcon>
                         <MailIcon color={inverted ? "secondary" : "primary"}/>
                     </ListItemIcon>
-                    <ListItemText>konferencja.wapw2025@pw.edu.pl</ListItemText>
+                    <ListItemText>Anna.Wierzbicka@pw.edu.pl</ListItemText>
+                </ListItemButton>
+            </ListItem>
+            <ListItem>
+                <ListItemButton onClick={navigateTo("mailto://Magdalena.Duda@pw.edu.pl", false)}>
+                    <ListItemIcon>
+                        <MailIcon color={inverted ? "secondary" : "primary"}/>
+                    </ListItemIcon>
+                    <ListItemText>Magdalena.Duda@pw.edu.pl</ListItemText>
                 </ListItemButton>
             </ListItem>
             <ListItem>
