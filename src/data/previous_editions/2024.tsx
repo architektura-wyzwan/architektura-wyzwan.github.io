@@ -6,8 +6,8 @@ export const edition_2024: ArticleContent = {
     title_en: "Architecture of Challenges - Materials for the Future",
     content: [
         paragraph(
-            "W dniach 17-18 czerwca 2024 roku w Łazienkach Królewskich oraz Pałacu Czapskich w Warszawie odbyła się konferencja poświęcona innowacyjnym materiałom budowlanym i ich wpływowi na rozwój współczesnej architektury. Tematem przewodnim była ich rola w kształtowaniu estetyki i funkcjonalności przestrzeni, a także wyzwań związanych z technologicznym rozwojem i zrównoważonym podejściem do budownictwa.",
-            "On June 17-18, 2024, a conference dedicated to innovative building materials and their impact on the development of contemporary architecture was held at the Łazienki Królewskie and Czapski Palace in Warsaw. The main theme was their role in shaping the aesthetics and functionality of spaces, as well as the challenges associated with technological development and a sustainable approach to construction.",
+            "W dniach 17-18 czerwca 2024 roku w Muzeum Łazienki Królewskie oraz Pałacu Czapskich w Warszawie odbyła się konferencja poświęcona innowacyjnym materiałom budowlanym i ich wpływowi na rozwój współczesnej architektury. Tematem przewodnim była ich rola w kształtowaniu estetyki i funkcjonalności przestrzeni, a także wyzwań związanych z technologicznym rozwojem i zrównoważonym podejściem do budownictwa.",
+            "On June 17-18, 2024, a conference dedicated to innovative building materials and their impact on the development of contemporary architecture was held at the Royal Łazienki Museum and Czapski Palace in Warsaw. The main theme was their role in shaping the aesthetics and functionality of spaces, as well as the challenges associated with technological development and a sustainable approach to construction.",
         ),
         big_image("/static/POSTER_2024.jpg", false),
         paragraph(
