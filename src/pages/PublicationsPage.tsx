@@ -5,6 +5,7 @@ import {StandardRectangleCard} from "../common/StandardCard";
 import {publications} from "../data/Publications";
 import PageLayout from "../common/PageLayout";
 import StandardGrid from "../common/StandardGrid";
+import urls from "../Urls";
 
 function PublicationsPage() {
     return (<PageLayout title_pl="Publikacje" title_en="Publications" wide={true}>
@@ -13,7 +14,7 @@ function PublicationsPage() {
                 <Grid size={1}>
                     <a href={publication.url} download style={{textDecoration: "none"}}>
                     <StandardRectangleCard
-                        // url={publication.url}
+                        url={urls.publications}
                         image={publication.image}
                         cardTitle={publication.title}
                         cardDescription={<Translation pl={publication.description_pl} en={publication.description_en}/>}

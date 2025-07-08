@@ -8,6 +8,13 @@ export type Publication = {
 
 export const publications: Publication[] = [
     {
+        url: "/static/About/Publications/Tom 2025 Building Community.pdf",
+        image: "/static/About/Publications/2025_okladka.png",
+        title: "Architecture of Challenges - New European Bauhaus - Building Community",
+        description_pl: "Od czasów Arystotelesa podkreślano, że człowiek jest istotą społeczną. Tworzenie więzi i budowanie relacji wpływają na różnorodne aspekty ludzkiego doświadczenia. Niezaprzeczalnie wiąże się to z interakcjami człowieka z otoczeniem, które przejawiają się w różnych formach działań architektonicznych. Fundamentem współpracy w obszarze kształtowania architektury są relacje międzyludzkie, które, jak zauważa Scott, rodzą się w określonej „przestrzeni i miejscu\", stanowiąc istotę życia społecznego. Miejsce, w zależności od kontekstu kulturowego, może pomagać wspierać lub osłabiać te relacje.",
+        description_en: "Since the time of Aristotle, it has been emphasised that humans are social beings. The formation of bonds and the building of relationships influence various aspects of the human experience. It undeniably involves human interactions with the environment, manifested by participation in various architectural activities. As Scott notes, the foundation of this collaboration in shaping architecture is human relationships, which are born in a particular ‘space and place’, constituting the essence of social life. Depending on the cultural context, place can help support or undermine these relationships.",
+    },
+    {
         url: "/static/About/Publications/Tom 2024 Materials for the Future.pdf",
         image: "/static/About/Publications/2024_okladka.png",
         title: "Architecture of Challenges - Materials for the Future",

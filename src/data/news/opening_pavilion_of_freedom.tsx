@@ -4,14 +4,14 @@ import {paragraph, two_images} from "../../common/ArticleParts";
 export const opening_pavilion_of_freedom: ArticleContent = {
     title_pl: "Otwarcie Pawilonu Wolności",
     title_en: "Opening of the Pavilion of Freedom",
-    subtitle_pl: "Pawilon Wolności w Łazienkach Królewskich – symbol jedności i solidarności z Ukrainą",
-    subtitle_en: "Pavilion of Freedom in the Royal Łazienki – a symbol of unity and solidarity with Ukraine",
+    subtitle_pl: "Pawilon Wolności w Muzeum Łazienki Królewskie – symbol jedności i solidarności z Ukrainą",
+    subtitle_en: "Pavilion of Freedom in the Royal Łazienki Museum – a symbol of unity and solidarity with Ukraine",
     image: "/static/About/News/Opening of the Pavilion of Freedom/pawilon_male-5.jpg",
     content: [
 
         paragraph(
-            "1 lipca 2023 roku w Łazienkach Królewskich w Warszawie odbyło się uroczyste otwarcie Pawilonu Wolności – wyjątkowej instalacji plenerowej stworzonej przez studentów Wydziału Architektury Politechniki Warszawskiej. Projekt ten jest nie tylko miejscem wypoczynku i kontemplacji, ale także silnym symbolem pokoju, jedności oraz wsparcia dla walczącej o wolność Ukrainy.",
-            "On July 1, 2023, the Royal Łazienki Park in Warsaw hosted the ceremonial opening of the Pavilion of Freedom – a unique outdoor installation created by students from the Faculty of Architecture at the Warsaw University of Technology. This project serves not only as a place for relaxation and contemplation but also as a powerful symbol of peace, unity, and support for Ukraine in its fight for freedom.",
+            "1 lipca 2023 roku w Muzeum Łazienki Królewskie w Warszawie odbyło się uroczyste otwarcie Pawilonu Wolności – wyjątkowej instalacji plenerowej stworzonej przez studentów Wydziału Architektury Politechniki Warszawskiej. Projekt ten jest nie tylko miejscem wypoczynku i kontemplacji, ale także silnym symbolem pokoju, jedności oraz wsparcia dla walczącej o wolność Ukrainy.",
+            "On July 1, 2023, the Royal Łazienki Museum in Warsaw hosted the ceremonial opening of the Pavilion of Freedom – a unique outdoor installation created by students from the Faculty of Architecture at the Warsaw University of Technology. This project serves not only as a place for relaxation and contemplation but also as a powerful symbol of peace, unity, and support for Ukraine in its fight for freedom.",
         ),
         paragraph(
             "Pawilon, usytuowany w pobliżu Ermitażu, nawiązuje formą i treścią do wartości uniwersalnych, które zyskały szczególne znaczenie w kontekście trwającego konfliktu za naszą wschodnią granicą. Okrągła forma konstrukcji odnosi się do idei wspólnoty i bezpieczeństwa, a wnętrze wypełnione słonecznikami symbolizuje solidarność z Ukrainą, przywołując kolory jej flagi. Zadaszenie z białego płótna przypomina żagiel – metaforę wolności i nadziei. Całość harmonijnie wpisuje się w historyczny krajobraz łazienkowskich ogrodów, dokładnie w miejscu dawnej okrągłej rabaty kwiatowej.",
