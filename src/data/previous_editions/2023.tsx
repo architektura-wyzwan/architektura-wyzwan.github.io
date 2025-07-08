@@ -1,5 +1,6 @@
 import {ArticleContent} from "../Articles";
 import {big_image, group, list, paragraph, styled_text, two_images} from "../../common/ArticleParts";
+// import {Translation} from "../../common/Translation";
 
 export const edition_2023: ArticleContent = {
     title_pl: "Architektura Wyzwań - Odbudowa Ukrainy",
@@ -12,6 +13,7 @@ export const edition_2023: ArticleContent = {
             "W dniach 3 i 4 lipca 2023 r. w Muzeum Łazienki Królewskie odbyła się międzynarodowa konferencja pod hasłem Architektura Wyzwań - Odbudowa Ukrainy, organizowana przez Wydział Architektury Politechniki Warszawskiej, Muzeum Łazienki Królewskie w Warszawie i Narodowy Instytut Dziedzictwa. Konferencja była przestrzenią wymiany myśli na temat roli architektury, planowania przestrzennego i projektowania krajobrazu w obliczu zniszczeń wojennych oraz przyszłej odbudowy. Jej celem było wspólne poszukiwanie odpowiedzi na pytania, jak kształtować środowisko życia wobec zagrożeń wojennych i jaką przyszłość powinna mieć Ukraina po zakończeniu działań zbrojnych.",
             "On July 3–4, 2023, the international conference titled Architecture of Challenges – Rebuilding Ukraine was held at the Royal Łazienki Museum in Warsaw. The event was organized by the Faculty of Architecture of the Warsaw University of Technology, the Royal Łazienki Museum in Warsaw, and the National Heritage Board of Poland. The conference served as a platform for the exchange of ideas on the role of architecture, spatial planning, and landscape design in the context of war-related destruction and future reconstruction. Its aim was to collectively seek answers to the questions of how to shape living environments in the face of wartime threats and what kind of future Ukraine should have after the end of military operations."
         ),
+        // big_image("/static/POSTER_2023.png", false, "poster by Foo"),
         big_image("/static/POSTER_2023.png", false),
         paragraph(
             "24 lutego 2022 r. Ukraina znów została zaatakowana przez Rosję – wojna dotknęła cały kraj",
@@ -71,6 +73,7 @@ export const edition_2023: ArticleContent = {
             "The conference aims to bring together the academic community and the cultural, scientific, technical, economic, social activists, self-governmental, governmental and other circles engaged in rebuilding Ukraine. The subjects of the common discussion - in the context of the effects of war in Ukraine - are to be: the protection of the surviving and the reconstruction of the lost architectural heritage, the possibility of creating new living conditions, the importance of architecture in shaping identity and security. This discussion should go in line with the New European Bauhaus’s ideas, basing on the quality of space, supporting the complexity of the natural environment and creating a democratic human community.",
         ),
         two_images("/static/PreviousEditions/2023/DSC02234.JPG", "/static/PreviousEditions/2023/DSC02238.JPG"),
+        // two_images("/static/PreviousEditions/2023/DSC02234.JPG", "/static/PreviousEditions/2023/DSC02238.JPG", <Translation pl="podpis1" en="subtext1"/>, styled_text("bold", "podpis2", "subtext2")),
         group([
             styled_text("regular",
                 "Konferencja odbyła się pod przewodnictwem międzynarodowego Komitetu Naukowego w składzie:",
