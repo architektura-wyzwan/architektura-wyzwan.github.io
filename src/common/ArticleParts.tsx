@@ -4,6 +4,8 @@ import * as React from "react";
 import ImageCard from "./ImageCard";
 import CircleIcon from '@mui/icons-material/Circle';
 import useVertical from "../utils/UseVertical";
+import {Speaker} from "../data/Speakers";
+import {StandardCircleCard} from "./StandardCard";
 
 export function big_image(src: string, crop?: boolean) {
     return (vertical: boolean) => (
@@ -124,6 +126,38 @@ export function group(items: ((vertical: boolean) => React.ReactNode)[]) {
             {items.map((item, _) => item(vertical))}
         </Box>;
     };
+}
+
+export function speakers_grid(items: Speaker[], wide: boolean = false) {
+    return (vertical: boolean) => {
+        return <Grid container
+                     spacing={{
+                         xs: 2,
+                         md: 4,
+                     }}
+                     columns={{
+                         xs: 2,
+                         sm: vertical ? 3 : (wide ? 4 : 2),
+                         md: (wide ? 5 : 3),
+                         lg: (wide ? 6 : 4),
+                     }}
+                     direction="row"
+                     sx={{
+                         justifyContent: "center",
+                     }}
+        >
+            {items.map((speaker, _) => (
+                <Grid size={1}>
+                    <StandardCircleCard
+                        image={speaker.image}
+                        textInCenter={true}
+                        cardTitle={speaker.name}
+                        cardDescription={<Translation pl={speaker.description_pl} en={speaker.description_en}/>}
+                    />
+                </Grid>
+            ))}
+        </Grid>
+    }
 }
 
 export function custom(item: React.ReactNode) {
