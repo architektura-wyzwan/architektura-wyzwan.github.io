@@ -1,5 +1,6 @@
 import {gallery2023Items} from "./gallery/2023";
 import {gallery2024Items} from "./gallery/2024";
+import {gallery2025Items} from "./gallery/2025";
 
 export type GalleryItem = string
 
@@ -11,13 +12,18 @@ export type Gallery = {
 
 export const galleryList: Gallery[] = [
     {
-        year: 2023,
-        items: gallery2023Items,
-        authors: "Anita Kasprzyk, Krzysztof Koszewski, Bartosz Kucharski, Damian Miszewski",
+        year: 2025,
+        items: gallery2025Items,
+        authors: "Artur Brzozowski",
     },
     {
         year: 2024,
         items: gallery2024Items,
         authors: "Artur Brzozowski",
+    },
+    {
+        year: 2023,
+        items: gallery2023Items,
+        authors: "Anita Kasprzyk, Krzysztof Koszewski, Bartosz Kucharski, Damian Miszewski",
     },
 ];
