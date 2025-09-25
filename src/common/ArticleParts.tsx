@@ -4,12 +4,67 @@ import * as React from "react";
 import ImageCard from "./ImageCard";
 import CircleIcon from '@mui/icons-material/Circle';
 import useVertical from "../utils/UseVertical";
+import {Speaker} from "../data/Speakers";
+import {StandardCircleCard} from "./StandardCard";
 
-export function big_image(src: string, crop?: boolean) {
+export type ArticlePartReturnType = (vertical: boolean) => React.ReactNode;
+export type ListItemType = React.ReactNode | ArticlePartReturnType;
+export type ImageLabelType = string | React.ReactNode | ArticlePartReturnType;
+
+function image_label(vertical: boolean, label?: ImageLabelType) {
+    const get_inner = () => {
+        if (label === undefined) {
+            return <></>
+        } else if (typeof label === "string") {
+            return <>{label}</>
+        } else if (label instanceof Function) {
+            return label(vertical);
+        } else {
+            return label;
+        }
+    };
+    return <Box sx={{
+        p: 1,
+        display: "flex",
+        justifyContent: "right",
+    }}>
+        {get_inner()}
+    </Box>
+}
+
+export function big_image(src: string, crop?: boolean, label?: ImageLabelType) {
     return (vertical: boolean) => (
-        <ImageCard
+        <><ImageCard
             sx={crop ? {maxHeight: vertical ? '40vw' : '30vw'} : {}}
             src={src}/>
+            {image_label(vertical, label)}
+        </>
+    );
+}
+
+export function two_images(src_1: string, src_2: string, label1?: ImageLabelType, label2?: ImageLabelType) {
+    return (vertical: boolean) => (
+        <Grid container columns={2}
+              spacing={2}
+              sx={{
+                  justifyContent: "center",
+                  alignItems: "flex-start",
+              }}>
+            <Grid size={1}>
+                <ImageCard sx={{
+                    height: vertical ? '40vw' : '30vw',
+                    minWidth: vertical ? '40vw' : '30vw',
+                }} src={src_1}/>
+                {image_label(vertical, label1)}
+            </Grid>
+            <Grid size={1}>
+                <ImageCard sx={{
+                    height: vertical ? '40vw' : '30vw',
+                    minWidth: vertical ? '40vw' : '30vw',
+                }} src={src_2}/>
+                {image_label(vertical, label2)}
+            </Grid>
+        </Grid>
     );
 }
 
@@ -41,30 +96,6 @@ export function Paragraph({text_pl, text_en}: ParagraphProps) {
 
 export function break_line() {
     return custom(<br/>);
-}
-
-export function two_images(src_1: string, src_2: string) {
-    return (vertical: boolean) => (
-        <Grid container columns={2}
-              spacing={2}
-              sx={{
-                  justifyContent: "center",
-                  alignItems: "flex-start",
-              }}>
-            <Grid size={1}>
-                <ImageCard sx={{
-                    height: vertical ? '40vw' : '30vw',
-                    minWidth: vertical ? '40vw' : '30vw',
-                }} src={src_1}/>
-            </Grid>
-            <Grid size={1}>
-                <ImageCard sx={{
-                    height: vertical ? '40vw' : '30vw',
-                    minWidth: vertical ? '40vw' : '30vw',
-                }} src={src_2}/>
-            </Grid>
-        </Grid>
-    );
 }
 
 export type TypographyVariant =
@@ -101,8 +132,6 @@ export function styled_text(
     </Typography>);
 }
 
-export type ListItemType = React.ReactNode | ((vertical: boolean) => React.ReactNode);
-
 export function list(items: ListItemType[]) {
     return (vertical: boolean) => {
         return <List dense={true}>
@@ -118,12 +147,44 @@ export function list(items: ListItemType[]) {
     };
 }
 
-export function group(items: ((vertical: boolean) => React.ReactNode)[]) {
+export function group(items: ArticlePartReturnType[]) {
     return (vertical: boolean) => {
         return <Box>
             {items.map((item, _) => item(vertical))}
         </Box>;
     };
+}
+
+export function speakers_grid(items: Speaker[], wide: boolean = false) {
+    return (vertical: boolean) => {
+        return <Grid container
+                     spacing={{
+                         xs: 2,
+                         md: 4,
+                     }}
+                     columns={{
+                         xs: 2,
+                         sm: vertical ? 3 : (wide ? 4 : 2),
+                         md: (wide ? 5 : 3),
+                         lg: (wide ? 6 : 4),
+                     }}
+                     direction="row"
+                     sx={{
+                         justifyContent: "center",
+                     }}
+        >
+            {items.map((speaker, _) => (
+                <Grid size={1}>
+                    <StandardCircleCard
+                        image={speaker.image}
+                        textInCenter={true}
+                        cardTitle={speaker.name}
+                        cardDescription={<Translation pl={speaker.description_pl} en={speaker.description_en}/>}
+                    />
+                </Grid>
+            ))}
+        </Grid>
+    }
 }
 
 export function custom(item: React.ReactNode) {
