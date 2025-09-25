@@ -1,10 +1,13 @@
 import PageLayout from "../common/PageLayout";
 import {Box, List, ListItem, Stack, Typography, useTheme} from "@mui/material";
-import {Organizer, organizers} from "../data/Organizers";
+import {Organizer, organizers, organizers_committee} from "../data/Organizers";
 import ImageCard from "../common/ImageCard";
 import {Translation} from "../common/Translation";
 import useVertical from "../utils/UseVertical";
 import * as React from "react";
+import {speakers_grid} from "../common/ArticleParts";
+import {speakers} from "../data/Speakers";
+import SectionHeading from "../common/SectionHeading";
 
 function OrganizerItem({organizer}: { organizer: Organizer }) {
     const vertical = useVertical();
@@ -53,8 +56,27 @@ function OrganizerItem({organizer}: { organizer: Organizer }) {
 }
 
 export function OrganizersPage() {
+    const vertical = useVertical();
     return (
         <PageLayout title_pl="Organizatorzy" title_en="Organizers" wide={true}>
+            <Typography variant="h3"
+                        sx={{
+                            mt:{
+                                xs: 0,
+                                sm: 8,
+                            },
+                            mb: 8
+                        }}>
+                <Translation pl={"Komitet organizacyjny konferecji"} en={"Conference organising committee"}/>
+            </Typography>
+            {speakers_grid(organizers_committee, true)(vertical)},
+            <Typography variant="h3"
+                        sx={{
+                            mt: 4,
+                            mb: 8
+                        }}>
+                <Translation pl={"Instytucje"} en={"Institutions"}/>
+            </Typography>
             <List sx={{width: '100%', backgroundColor: 'background.paper'}}>
                 {organizers.map((organizer) => {
                     return (<>

@@ -1,5 +1,6 @@
 import React from "react";
 import {paragraph} from "../common/ArticleParts";
+import {Speaker} from "./Speakers";
 
 export type Organizer = {
     name_pl: string;
@@ -71,3 +72,138 @@ export const organizers: Organizer[] = [
         invertColorInDarkMode: true,
     },
 ]
+
+export const organizers_committee: Speaker[] = [
+    {
+        image: "/static/About/Organizers/Anna_Maria_Wierzbicka.JPG",
+        name: "Anna Maria Wierzbicka",
+        description_pl: "dr hab. inż. arch., prof. PW; Wydział Architektury Politechniki Warszawskiej – przewodnicząca komitetu organizacyjnego",
+        description_en: "dr hab. Eng. arch., prof. of Warsaw University of Technology, the Faculty of Architecture – chairwoman",
+    },
+    {
+        image: "/static/About/Organizers/Konrad_Kucza-Kuczynski.jpg",
+        name: "Konrad Kucza-Kuczyński",
+        description_pl: "prof. dr hab. inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/brak_zdjecia.jpg",
+        name: "Karolina Tulkowska-Słyk",
+        description_pl: "dr hab. inż. arch., prof. PW; Wydział Architektury Politechniki Warszawski",
+        description_en: "DSc, PhD, Eng. Arch., Associate Professor; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/brak_zdjecia.jpg",
+        name: "Anita Orchowska",
+        description_pl: "dr inż. arch.; Prodziekan ds. Studenckich Wydziału Architektury Politechniki Warszawskiej",
+        description_en: "PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Maria_Arno.jpeg",
+        name: "Maria Arno",
+        description_pl: "dr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Ewelina_Gawell.jpg",
+        name: "Ewelina Gawell",
+        description_pl: "dr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Renata_Jozwik.jpg",
+        name: "Renata Jóźwik",
+        description_pl: "dr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+   {
+        image: "/static/About/Organizers/Maciej_Skaza.jpg",
+        name: "Maciej Skaza",
+        description_pl: "dr inż. arch.; Wydział Architektury Politechniki Krakowskiej",
+        description_en: "PhD, Eng. Arch.; Faculty of Architecture, Cracow University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Anna_Tofiluk.jpeg",
+        name: "Anna Tofiluk",
+        description_pl: "dr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/brak_zdjecia.jpg",
+        name: "Paweł Trębacz",
+        description_pl: "dr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/brak_zdjecia.jpg",
+        name: "Kinga Zinowiec-Cieplik",
+        description_pl: "dr inż. arch.; krajobrazu; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "PhD, Eng. in landscape arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/brak_zdjecia.jpg",
+        name: "Magdalena Duda",
+        description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej, sekretarz konferencji",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Szymon_Kalata.jpg",
+        name: "Szymon Kalata",
+        description_pl: "mgr inż. arch.; Doktorant PW, Wydział Architektury Politechniki Warszawskiej",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Maciej_Kaufman.jpg",
+        name: "Maciej Kaufman",
+        description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Martyna_Kedrzynska.jpg",
+        name: "Martyna Kędrzyńska",
+        description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Malgorzata_Neumann.jpg",
+        name: "Małgorzata Neumann",
+        description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Malgorzata_Nowak-Pienkowska.jpeg",
+        name: "Małgorzata Nowak-Pieńkowska",
+        description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/brak_zdjecia.jpg",
+        name: "Jakub Pieńkowski",
+        description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Ewa_Rombalska.jpg",
+        name: "Ewa Rombalska",
+        description_pl: "mgr inż. arch.; pełnomocnik Dyrektora Narodowego Instytutu Architektury i Urbanistyki",
+        description_en: "MSc. Eng. Arch.; director's proxy of the National Institute of Architecture and Urban Planning",
+    },
+    {
+        image: "/static/About/Organizers/Martyna_Rowicka-Michalowska.webp",
+        name: "Martyna Rowicka-Michałowska",
+        description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/brak_zdjecia.jpg",
+        name: "Ewa Stankiewicz-Świniarska",
+        description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+    {
+        image: "/static/About/Organizers/Filip_Strzelecki.jpeg",
+        name: "Filip Strzelecki",
+        description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
+        description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology",
+    },
+];

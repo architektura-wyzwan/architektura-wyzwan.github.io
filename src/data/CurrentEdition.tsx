@@ -191,7 +191,7 @@ export const aboutPage: ArticleContent = {
                     "Ewa Rombalska – MSc. Eng. Arch.; director's proxy of the National Institute of Architecture and Urban Planning"),
                 styled_text("regular", "Martyna Rowicka-Michałowska – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
                     "Martyna Rowicka-Michałowska – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"),
-                styled_text("regular", "Ewa Stankiewicz-Świniarska - mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej.",
+                styled_text("regular", "Ewa Stankiewicz-Świniarska - mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
                     "Ewa Stankiewicz-Świniarska - MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"),
                 styled_text("regular", "Filip Strzelecki – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej",
                     "Filip Strzelecki – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"),
