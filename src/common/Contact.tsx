@@ -3,7 +3,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailIcon from '@mui/icons-material/Mail';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import {Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Tooltip, Typography} from "@mui/material";
+import {List, ListItem, ListItemButton, ListItemIcon, ListItemText, Tooltip, Typography} from "@mui/material";
 import {Translation} from "./Translation";
 import theme from "../Theme";
 
