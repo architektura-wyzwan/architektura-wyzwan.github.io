@@ -34,6 +34,27 @@ function FirstPage() {
             fontSize: '16px',
         },
     };
+    const verticalTitleSmallSxPl = {
+        fontSize: '10px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '16px',
+        },
+    };
+    const horizontalTitleSmallSxPl = {
+        fontSize: '6px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '10px',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '16px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '22px',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '32px',
+        },
+    };
 
     const logos = (<Stack direction="row" justifyContent="space-between" alignItems="center">
         <ImageCard
@@ -124,8 +145,12 @@ function FirstPage() {
                 image={dark_mode ? "/static/logo/white_text_bottom.png" : "/static/logo/black_text_bottom.png"}
                 sx={{pb: 1}}
             />
-            <CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSx : {}}
-                               text={["NEW", "EUROPEAN", "BAUHAUS", "-", "BUILDING", "COMMUNITY"]}/>
+            <Translation
+            en={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSx : {}}
+                               text={["NEW", "EUROPEAN", "BAUHAUS", "-", "BUILDING", "COMMUNITY"]}/>}
+            pl={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSxPl : horizontalTitleSmallSxPl}
+                                   text={["NOWY", "EUROPEJSKI", "BAUHAUS", "-", "BUDOWANIE", "WSPÓLNOTY"]}/>}
+            />
         </Box>
         <Box>
             <Translation

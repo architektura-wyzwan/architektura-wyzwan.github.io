@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Grid, useTheme} from "@mui/material";
+import {Box, Divider, Grid, Typography, useTheme} from "@mui/material";
 import Contact from "./Contact";
 import ImageCard from "./ImageCard";
 import {Translation} from "./Translation";
@@ -25,10 +25,10 @@ function SponsorsStack(props: SponsorsStackProps) {
         <Grid>
             <Translation pl={props.title_pl} en={props.title_en}/>
             <Grid container
-                direction="row"
-                width="100%"
-                spacing={5}
-                sx={{pt: 1}}>
+                  direction="row"
+                  width="100%"
+                  spacing={5}
+                  sx={{pt: 1}}>
                 {props.list.map((sponsor) => (
                     <Grid><ImageCard
                         image={sponsor.image}
@@ -53,37 +53,63 @@ function Footer() {
     const vertical = useVertical();
     const dark_mode = theme.palette.mode === "dark";
     return (
-        <Grid container
-              direction={vertical ? "column" : "row"}
-              columns={vertical ? 1 : 12}
-              sx={{
-                  color: dark_mode ? theme.palette.primary.contrastText : "initial",
-                  backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
-                  pt: 1,
-                  pl: 3,
-                  pr: vertical ? 3 : 0,
-                  pb: vertical ? 5 : 3,
-              }}
-        >
-            <Grid size={vertical ? 1 : "grow"}>
-                <Grid container
-                      spacing={3}
-                >
-                    <SponsorsStack title_pl={"Patronat honorowy"} title_en={"Honorary patronage"} list={patronage}/>
-                    <SponsorsStack title_pl={"Partnerzy"} title_en={"Partners"} list={partners}/>
-                    <SponsorsStack title_pl={"Partner merytoryczny"} title_en={"Content partner"} list={content_partner}/>
-                    <SponsorsStack title_pl={"Sponsorzy główni"} title_en={"Main sponsors"} list={main_sponsors}/>
-                    <SponsorsStack title_pl={"Patronat wydawniczy"} title_en={"Publishing patronage"}
-                                   list={publishing_patronage}/>
-                    <SponsorsStack title_pl={"Patronat medialny"} title_en={"Media patronage"} list={media_patronage}/>
+        <>
+            <Box sx={{
+                color: dark_mode ? theme.palette.primary.contrastText : "initial",
+                backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
+                mt: 10,
+            }}>
+                <Divider variant="middle"/>
+            </Box>
+            <Grid container
+                  direction={vertical ? "column-reverse" : "row"}
+                  columns={vertical ? 1 : 12}
+                  sx={{
+                      color: dark_mode ? theme.palette.primary.contrastText : "initial",
+                      backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
+                      // mt: 10,
+                      pt: vertical ? 1 : 4,
+                      pl: 3,
+                      pr: vertical ? 3 : 0,
+                      pb: vertical ? 5 : 3,
+                  }}
+            >
+                <Grid size={vertical ? 1 : "grow"}>
+                    <Grid container
+                          spacing={3}
+                    >
+                        <SponsorsStack title_pl={"Patronat honorowy"} title_en={"Honorary patronage"} list={patronage}/>
+                        <SponsorsStack title_pl={"Partnerzy"} title_en={"Partners"} list={partners}/>
+                        <SponsorsStack title_pl={"Partner merytoryczny"} title_en={"Content partner"}
+                                       list={content_partner}/>
+                        <SponsorsStack title_pl={"Sponsorzy główni"} title_en={"Main sponsors"} list={main_sponsors}/>
+                        <SponsorsStack title_pl={"Patronat wydawniczy"} title_en={"Publishing patronage"}
+                                       list={publishing_patronage}/>
+                        <SponsorsStack title_pl={"Patronat medialny"} title_en={"Media patronage"}
+                                       list={media_patronage}/>
+                    </Grid>
+                </Grid>
+                <Grid size={vertical ? 1 : "auto"} sx={{
+                    pb: vertical ? 4 : 0,
+                }}>
+                    <Contact inverted={dark_mode} light={true}/>
                 </Grid>
             </Grid>
-            <Grid size={vertical ? 1 : "auto"} sx={{
-                pt: vertical ? 5 : 0,
+            <Box sx={{
+                color: dark_mode ? theme.palette.primary.contrastText : "initial",
+                backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
+                pl: 3,
+                pr: 3,
+                pb: 2,
             }}>
-                <Contact inverted={dark_mode}/>
-            </Grid>
-        </Grid>
+                <Typography variant="body1">
+                    Copyright © 2025 International Conference – ARCHITECURE OF CHALLENGES – NEW EUROPEAN BAUHAUS –
+                    BUILDING
+                    COMMUNITY. All rights reserved.
+                </Typography>
+            </Box>
+
+        </>
     );
 }
 
