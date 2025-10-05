@@ -36,6 +36,9 @@ function SponsorsList(props: SponsorsListProps) {
                       xs: 2,
                       sm: 3,
                   }}
+                  sx={{
+                      mb: 5,
+                  }}
                   justifyContent="flex-start"
                   alignItems="center"
                   direction={vertical ? "column" : "row"}
@@ -48,13 +51,12 @@ function SponsorsList(props: SponsorsListProps) {
                             lg: "13vw",
                         },
                     }}>
-                        {/*<Box >*/}
                             <StandardCard
                                 cardWidth={{}}
                                 cardImageHeight={{
                                     xs: "17.5vw",
-                                    sm: vertical ? "20vw" : "13vw",
-                                    md: "10vw",
+                                    sm: vertical ? "13vw" : "13vh",
+                                    md: "10vh",
                                 }}
                                 sx={{
                                     objectFit: 'contain',
@@ -65,7 +67,6 @@ function SponsorsList(props: SponsorsListProps) {
                                 cardTitle={<Translation pl={sponsor.name_pl} en={sponsor.name_en}/>}
                                 cardDescription=""
                             />
-                        {/*</Box>*/}
                     </Grid>
                 ))}
             </Grid>
