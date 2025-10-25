@@ -35,11 +35,14 @@ export type TypographyVariant =
 	| 'cardTitle';
 export function Translation(props: TranslationProps) {
 	const language = useLanguage();
-	const variant = props.variant ?? "regular";
+	const translation = <>{language === "pl" ? props.pl : props.en}</>
+	if (props.variant === undefined) {
+		return translation;
+	}
 	return (
 		<Typography
-			variant={variant as TypographyVariant}>
-			{language === "pl" ? props.pl : props.en}
+			variant={props.variant as TypographyVariant}>
+			{translation}
 		</Typography>
 	)
 }
