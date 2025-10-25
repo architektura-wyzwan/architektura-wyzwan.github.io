@@ -4,22 +4,13 @@ import {Box, Grid, useTheme} from "@mui/material";
 import SectionHeading from "../components/SectionHeading";
 import {Translation} from "../components/Translation";
 import {StandardCard} from "../components/StandardCard";
-import {
-    content_partner,
-    main_sponsors,
-    media_patronage,
-    partners,
-    patronage,
-    publishing_patronage,
-    SponsorProps,
-    sponsors
-} from "../data/Sponsors";
+import {sponsors_list, SponsorType} from "../data/Sponsors";
 import useVertical from "../hooks/UseVertical";
 
 type SponsorsListProps = {
     title_pl: string,
     title_en: string,
-    list: SponsorProps[],
+    list: SponsorType[],
 }
 
 function SponsorsList(props: SponsorsListProps) {
@@ -48,24 +39,22 @@ function SponsorsList(props: SponsorsListProps) {
                             lg: "13vw",
                         },
                     }}>
-                        {/*<Box >*/}
-                            <StandardCard
-                                cardWidth={{}}
-                                cardImageHeight={{
-                                    xs: "17.5vw",
-                                    sm: vertical ? "20vw" : "13vw",
-                                    md: "10vw",
-                                }}
-                                sx={{
-                                    objectFit: 'contain',
-                                    filter: dark_mode && sponsor.invertColorInDarkMode ? "invert(100%)" : "invert(0%)",
-                                }}
-                                image={sponsor.image}
-                                textInCenter={true}
-                                cardTitle={<Translation pl={sponsor.name_pl} en={sponsor.name_en}/>}
-                                cardDescription=""
-                            />
-                        {/*</Box>*/}
+                        <StandardCard
+                            cardWidth={{}}
+                            cardImageHeight={{
+                                xs: "17.5vw",
+                                sm: vertical ? "20vw" : "13vw",
+                                md: "10vw",
+                            }}
+                            sx={{
+                                objectFit: 'contain',
+                                filter: dark_mode && sponsor.invertColorInDarkMode ? "invert(100%)" : "invert(0%)",
+                            }}
+                            image={sponsor.image}
+                            textInCenter={true}
+                            cardTitle={<Translation pl={sponsor.name_pl} en={sponsor.name_en}/>}
+                            cardDescription=""
+                        />
                     </Grid>
                 ))}
             </Grid>
@@ -76,14 +65,10 @@ function SponsorsList(props: SponsorsListProps) {
 function SponsorsPage() {
     return (
         <PageLayout title_pl="" title_en="" wide={true}>
-            <SponsorsList title_pl={"Partnerzy"} title_en={"Partners"} list={partners}/>
-            <SponsorsList title_pl={"Partner merytoryczny"} title_en={"Content partner"} list={content_partner}/>
-            <SponsorsList title_pl={"Patronat honorowy"} title_en={"Honorary patronage"} list={patronage}/>
-            <SponsorsList title_pl={"Sponsorzy główni"} title_en={"Main sponsors"} list={main_sponsors}/>
-            <SponsorsList title_pl={"Sponsorzy"} title_en={"Sponsors"} list={sponsors}/>
-            <SponsorsList title_pl={"Patronat wydawniczy"} title_en={"Publishing patronage"}
-                          list={publishing_patronage}/>
-            <SponsorsList title_pl={"Patronat medialny"} title_en={"Media patronage"} list={media_patronage}/>
+            {sponsors_list.map((sponsor_list) =>
+                <SponsorsList title_pl={sponsor_list.name_pl}
+                              title_en={sponsor_list.name_en}
+                              list={sponsor_list.sponsors}/>)}
         </PageLayout>
     );
 }

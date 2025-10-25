@@ -4,20 +4,15 @@ import Contact from "../components/Contact";
 import ImageCard from "../components/ImageCard";
 import {Translation} from "../components/Translation";
 import {
-    content_partner,
-    main_sponsors,
-    media_patronage,
-    partners,
-    patronage,
-    publishing_patronage,
-    SponsorProps
+    sponsors_list,
+    SponsorType
 } from "../data/Sponsors";
 import useVertical from "../hooks/UseVertical";
 
 type SponsorsStackProps = {
     title_pl: string,
     title_en: string,
-    list: SponsorProps[],
+    list: SponsorType[],
 }
 
 function SponsorsStack(props: SponsorsStackProps) {
@@ -67,7 +62,6 @@ function Footer() {
                   sx={{
                       color: dark_mode ? theme.palette.primary.contrastText : "initial",
                       backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
-                      // mt: 10,
                       pt: vertical ? 1 : 4,
                       pl: 3,
                       pr: vertical ? 3 : 0,
@@ -78,15 +72,7 @@ function Footer() {
                     <Grid container
                           spacing={3}
                     >
-                        <SponsorsStack title_pl={"Patronat honorowy"} title_en={"Honorary patronage"} list={patronage}/>
-                        <SponsorsStack title_pl={"Partnerzy"} title_en={"Partners"} list={partners}/>
-                        <SponsorsStack title_pl={"Partner merytoryczny"} title_en={"Content partner"}
-                                       list={content_partner}/>
-                        <SponsorsStack title_pl={"Sponsorzy główni"} title_en={"Main sponsors"} list={main_sponsors}/>
-                        <SponsorsStack title_pl={"Patronat wydawniczy"} title_en={"Publishing patronage"}
-                                       list={publishing_patronage}/>
-                        <SponsorsStack title_pl={"Patronat medialny"} title_en={"Media patronage"}
-                                       list={media_patronage}/>
+                        {sponsors_list.map((sponsor_list) => <SponsorsStack title_pl={sponsor_list.name_pl} title_en={sponsor_list.name_en} list={sponsor_list.sponsors}/>)}
                     </Grid>
                 </Grid>
                 <Grid size={vertical ? 1 : "auto"} sx={{
@@ -103,7 +89,7 @@ function Footer() {
                 pb: 2,
             }}>
                 <Typography variant="body1">
-                    Copyright © 2025 International Conference – ARCHITECURE OF CHALLENGES – NEW EUROPEAN BAUHAUS –
+                    Copyright © 2025 International Conference – ARCHITECTURE OF CHALLENGES – NEW EUROPEAN BAUHAUS –
                     BUILDING
                     COMMUNITY. All rights reserved.
                 </Typography>

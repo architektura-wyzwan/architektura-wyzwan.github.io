@@ -1,9 +1,9 @@
 import {ArticleMetadata} from "../../layout/Article";
 import {Paragraph} from "../../components/Paragraph";
-import TwoImages from "../../layout/article/TwoImages";
+import TwoImages from "../../components/TwoImages";
 import {Box} from "@mui/material";
 import {Translation} from "../../components/Translation";
-import BigImage from "../../layout/article/BigImage";
+import BigImage from "../../components/BigImage";
 
 export const edition_2024: ArticleMetadata = {
     title_pl: "Architektura Wyzwań – Materiały dla Przyszłości",

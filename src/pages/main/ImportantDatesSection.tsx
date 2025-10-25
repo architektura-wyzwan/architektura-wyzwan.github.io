@@ -11,7 +11,7 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import {important_dates, ImportantDate} from "../../data/ImportantDates";
 
-function ImportantDatesPage() {
+function ImportantDatesSection() {
     const dateComponent = (date: ImportantDate) => (
         <Typography variant={date.important ? "bold" : "regular"}>
             <Translation pl={date.date_pl} en={date.date_en}/>
@@ -78,4 +78,4 @@ function ImportantDatesPage() {
     );
 }
 
-export default ImportantDatesPage;
+export default ImportantDatesSection;

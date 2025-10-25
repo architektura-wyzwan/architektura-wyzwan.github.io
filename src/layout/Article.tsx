@@ -3,7 +3,7 @@ import * as React from "react";
 import PageLayout from "./PageLayout";
 import {Translation} from "../components/Translation";
 import {useLanguage} from "../hooks/UseLanguage";
-import BigImage from "./article/BigImage";
+import BigImage from "../components/BigImage";
 
 export type ArticleMetadata = {
     title_pl: string;

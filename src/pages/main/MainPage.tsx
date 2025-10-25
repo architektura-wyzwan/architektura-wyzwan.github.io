@@ -1,10 +1,10 @@
 import {Stack} from "@mui/material";
 import * as React from "react";
-import FirstPage from "./FirstPage";
-import SecondPage from "./SecondPage";
-import SpeakersPage from "./SpeakersPage";
-import ImportantDatesPage from "./ImportantDates";
-import NewsPage from "./NewsPage";
+import FirstSection from "./FirstSection";
+import SecondSection from "./SecondSection";
+import SpeakersSection from "./SpeakersSection";
+import ImportantDatesSection from "./ImportantDatesSection";
+import CurrentNewsSection from "./CurrentNewsSection";
 import {ExperimentGuard, speakers_experiment} from "../../Experiments";
 
 function MainPage() {
@@ -20,11 +20,11 @@ function MainPage() {
 				pb: 10
 			}}
 		>
-			<FirstPage/>
-			<SecondPage/>
-			<ExperimentGuard experiment={speakers_experiment} enabled={<SpeakersPage/>}/>
-			<ImportantDatesPage/>
-			<NewsPage/>
+			<FirstSection/>
+			<SecondSection/>
+			<ExperimentGuard experiment={speakers_experiment} enabled={<SpeakersSection/>}/>
+			<ImportantDatesSection/>
+			<CurrentNewsSection/>
 		</Stack>);
 }
 

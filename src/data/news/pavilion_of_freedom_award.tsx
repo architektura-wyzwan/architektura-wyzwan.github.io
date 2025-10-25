@@ -1,6 +1,6 @@
 import {ArticleMetadata} from "../../layout/Article";
 import {Paragraph} from "../../components/Paragraph";
-import TwoImages from "../../layout/article/TwoImages";
+import TwoImages from "../../components/TwoImages";
 
 export const pavilion_of_freedom_award: ArticleMetadata = {
     title_pl: "Pawilon Wolności z międzynarodową nagrodą",

@@ -6,7 +6,7 @@ import {articles} from "../../data/Articles";
 import StandardGrid from "../../components/StandardGrid";
 import MainPageSection from "./MainPageSection";
 
-function NewsPage() {
+function CurrentNewsSection() {
     const numberOfNews = Math.min(articles.length, 3)
     const news = articles.slice(0, numberOfNews);
     return (
@@ -27,4 +27,4 @@ function NewsPage() {
     );
 }
 
-export default NewsPage;
+export default CurrentNewsSection;

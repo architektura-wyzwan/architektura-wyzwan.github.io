@@ -7,7 +7,7 @@ import StandardGrid from "../components/StandardGrid";
 import PageLayout from "../layout/PageLayout";
 import urls from "../Urls";
 
-function AllNewsPage() {
+function NewsPage() {
 	return (
 		<PageLayout title_pl="Aktualności" title_en="News" wide={true}>
 			<StandardGrid>
@@ -26,4 +26,4 @@ function AllNewsPage() {
 	);
 }
 
-export default AllNewsPage;
+export default NewsPage;

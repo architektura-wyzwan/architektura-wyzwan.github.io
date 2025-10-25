@@ -8,7 +8,7 @@ import {Citation} from "../../components/Citation";
 import useWindowDimensions from "../../hooks/UseWindowDimensions";
 import { Paragraph } from "../../components/Paragraph";
 
-function SecondPage() {
+function SecondSection() {
     const {width} = useWindowDimensions();
     const vertical = width < 900;
     return (
@@ -66,4 +66,4 @@ function SecondPage() {
     );
 }
 
-export default SecondPage;
+export default SecondSection;

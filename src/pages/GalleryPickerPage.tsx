@@ -6,7 +6,7 @@ import PageLayout from "../layout/PageLayout";
 import urls from "../Urls";
 import {galleryList} from "../data/Gallery";
 
-function AllGalleryPage() {
+function GalleryPickerPage() {
     return (
         <PageLayout title_pl="Galeria" title_en="Gallery" wide={true}>
             <StandardGrid>
@@ -25,4 +25,4 @@ function AllGalleryPage() {
     );
 }
 
-export default AllGalleryPage;
+export default GalleryPickerPage;

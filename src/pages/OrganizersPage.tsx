@@ -5,7 +5,7 @@ import ImageCard from "../components/ImageCard";
 import {Translation} from "../components/Translation";
 import useVertical from "../hooks/UseVertical";
 import * as React from "react";
-import {speakers_grid} from "../layout/ArticleParts";
+import {SpeakersGrid} from "../components/SpeakersGrid";
 
 function OrganizerItem({organizer}: { organizer: Organizer }) {
     const vertical = useVertical();
@@ -54,7 +54,6 @@ function OrganizerItem({organizer}: { organizer: Organizer }) {
 }
 
 export function OrganizersPage() {
-    const vertical = useVertical();
     return (
         <PageLayout title_pl="Organizatorzy" title_en="Organizers" wide={true}>
             <Typography variant="h3"
@@ -67,7 +66,7 @@ export function OrganizersPage() {
                         }}>
                 <Translation pl={"Komitet organizacyjny konferecji"} en={"Conference organising committee"}/>
             </Typography>
-            {speakers_grid(organizers_committee, true)(vertical)},
+            <SpeakersGrid items={organizers_committee} wide={true}/>
             <Typography variant="h3"
                         sx={{
                             mt: 4,

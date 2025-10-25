@@ -1,7 +1,7 @@
 import {Paragraph} from "../../components/Paragraph";
 import {ArticleMetadata} from "../../layout/Article";
-import BigImage from "../../layout/article/BigImage";
-import TwoImages from "../../layout/article/TwoImages";
+import BigImage from "../../components/BigImage";
+import TwoImages from "../../components/TwoImages";
 
 export const opening_pavilion_of_community: ArticleMetadata = {
     title_pl: "Otwarcie Pawilonu Wspólnoty",

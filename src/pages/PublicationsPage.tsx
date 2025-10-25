@@ -10,7 +10,7 @@ import urls from "../Urls";
 function PublicationsPage() {
     return (<PageLayout title_pl="Publikacje" title_en="Publications" wide={true}>
         <StandardGrid>
-            {publications.map((publication, _) => (
+            {publications.map((publication) => (
                 <Grid size={1}>
                     <a href={publication.url} download style={{textDecoration: "none"}}>
                     <StandardRectangleCard

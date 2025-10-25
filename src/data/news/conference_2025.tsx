@@ -1,6 +1,6 @@
 import {ArticleMetadata} from "../../layout/Article";
 import {Paragraph} from "../../components/Paragraph";
-import BigImage from "../../layout/article/BigImage";
+import BigImage from "../../components/BigImage";
 
 export const conference_2025: ArticleMetadata = {
     title_pl: "III Międzynarodowa Konferecja już za nami",

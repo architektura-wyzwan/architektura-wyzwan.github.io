@@ -19,7 +19,7 @@ function CenteredJustified(props: CenteredJustifiedProps & TypographyProps) {
 }
 
 
-function FirstPage() {
+function FirstSection() {
     const theme = useTheme();
     const dark_mode = theme.palette.mode === "dark";
     const {height, width} = useWindowDimensions();
@@ -258,4 +258,4 @@ function FirstPage() {
     }
 }
 
-export default FirstPage;
+export default FirstSection;

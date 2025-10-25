@@ -12,7 +12,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import ScrollTop from "./components/ScrollToTop";
 import PublicationsPage from "./pages/PublicationsPage";
 import ArticlePage from "./pages/ArticlePage";
-import AllNewsPage from "./pages/AllNewsPage";
+import NewsPage from "./pages/NewsPage";
 import {aboutPage} from "./data/CurrentEdition";
 import {previousEditions} from "./data/PreviousEditions";
 import AgendaPage from "./pages/AgendaPage";
@@ -23,7 +23,7 @@ import {articles} from "./data/Articles";
 import {Box} from "@mui/material";
 import SponsorsPage from "./pages/SponsorsPage";
 import {OrganizersPage} from "./pages/OrganizersPage";
-import AllGalleryPage from "./pages/AllGalleryPage";
+import GalleryPickerPage from "./pages/GalleryPickerPage";
 import GalleryPage from "./pages/GalleryPage";
 import {LanguageContextProvider} from './hooks/UseLanguage';
 import {Article} from './layout/Article';
@@ -41,11 +41,11 @@ function App() {
                     <Box sx={{flex: "1 0 auto"}}>
                         <Routes>
                             <Route path={urls.main} element={<MainPage/>}/>
-                            <Route path={urls.news} element={<AllNewsPage/>}/>
+                            <Route path={urls.news} element={<NewsPage/>}/>
                             <Route path={urls.current_edition} element={<Article article={aboutPage}/>}/>
                             <Route path={urls.previous_editions()}
                                    element={<ArticlePage articleList={previousEditions}/>}/>
-                            <Route path={urls.all_galleries} element={<AllGalleryPage/>}/>
+                            <Route path={urls.all_galleries} element={<GalleryPickerPage/>}/>
                             <Route path={urls.gallery()} element={<GalleryPage/>}/>
                             <Route path={urls.agenda} element={
                                 <ExperimentGuard experiment={agenda_experiment}

@@ -1,6 +1,6 @@
 import {Paragraph} from "../../components/Paragraph";
-import TwoImages from "../../layout/article/TwoImages";
-import BigImage from "../../layout/article/BigImage";
+import TwoImages from "../../components/TwoImages";
+import BigImage from "../../components/BigImage";
 import {ArticleMetadata} from "../../layout/Article";
 
 export const pavilion_of_future_new_location: ArticleMetadata = {
