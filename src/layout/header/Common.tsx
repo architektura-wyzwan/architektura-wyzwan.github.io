@@ -1,7 +1,7 @@
 import {Paper, PaperProps, styled} from "@mui/material";
 import * as React from "react";
 import {MenuTreeItem, SubMenuTreeItem} from "../../data/Menu";
-import {Translation} from "../Translation";
+import {Translation} from "../../components/Translation";
 
 export const Item = styled((props: PaperProps) => (<Paper elevation={0} {...props}/>))(({theme}) => ({
     ...theme.typography.body1,

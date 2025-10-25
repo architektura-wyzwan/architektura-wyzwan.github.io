@@ -1,8 +1,8 @@
 import * as React from "react";
 import {Grid} from "@mui/material";
-import {StandardRectangleCard} from "../common/StandardCard";
-import StandardGrid from "../common/StandardGrid";
-import PageLayout from "../common/PageLayout";
+import {StandardRectangleCard} from "../components/StandardCard";
+import StandardGrid from "../components/StandardGrid";
+import PageLayout from "../layout/PageLayout";
 import urls from "../Urls";
 import {galleryList} from "../data/Gallery";
 

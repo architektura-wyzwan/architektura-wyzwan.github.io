@@ -1,8 +1,8 @@
 import * as React from "react";
 import {Box, Divider, Grid, Typography, useTheme} from "@mui/material";
-import Contact from "./Contact";
-import ImageCard from "./ImageCard";
-import {Translation} from "./Translation";
+import Contact from "../components/Contact";
+import ImageCard from "../components/ImageCard";
+import {Translation} from "../components/Translation";
 import {
     content_partner,
     main_sponsors,
@@ -12,7 +12,7 @@ import {
     publishing_patronage,
     SponsorProps
 } from "../data/Sponsors";
-import useVertical from "../utils/UseVertical";
+import useVertical from "../hooks/UseVertical";
 
 type SponsorsStackProps = {
     title_pl: string,

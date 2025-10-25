@@ -1,6 +1,6 @@
 import {Stack, Typography} from '@mui/material';
 import * as React from 'react';
-import {Translation} from "../common/Translation";
+import {Translation} from "../components/Translation";
 
 function NotFoundPage() {
     return (

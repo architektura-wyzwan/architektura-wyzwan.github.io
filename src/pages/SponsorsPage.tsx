@@ -1,9 +1,9 @@
 import * as React from "react";
-import PageLayout from "../common/PageLayout";
+import PageLayout from "../layout/PageLayout";
 import {Box, Grid, useTheme} from "@mui/material";
-import SectionHeading from "../common/SectionHeading";
-import {Translation} from "../common/Translation";
-import {StandardCard} from "../common/StandardCard";
+import SectionHeading from "../components/SectionHeading";
+import {Translation} from "../components/Translation";
+import {StandardCard} from "../components/StandardCard";
 import {
     content_partner,
     main_sponsors,
@@ -14,7 +14,7 @@ import {
     SponsorProps,
     sponsors
 } from "../data/Sponsors";
-import useVertical from "../utils/UseVertical";
+import useVertical from "../hooks/UseVertical";
 
 type SponsorsListProps = {
     title_pl: string,

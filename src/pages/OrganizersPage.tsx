@@ -1,13 +1,11 @@
-import PageLayout from "../common/PageLayout";
+import PageLayout from "../layout/PageLayout";
 import {Box, List, ListItem, Stack, Typography, useTheme} from "@mui/material";
 import {Organizer, organizers, organizers_committee} from "../data/Organizers";
-import ImageCard from "../common/ImageCard";
-import {Translation} from "../common/Translation";
-import useVertical from "../utils/UseVertical";
+import ImageCard from "../components/ImageCard";
+import {Translation} from "../components/Translation";
+import useVertical from "../hooks/UseVertical";
 import * as React from "react";
-import {speakers_grid} from "../common/ArticleParts";
-import {speakers} from "../data/Speakers";
-import SectionHeading from "../common/SectionHeading";
+import {speakers_grid} from "../layout/ArticleParts";
 
 function OrganizerItem({organizer}: { organizer: Organizer }) {
     const vertical = useVertical();
@@ -46,8 +44,8 @@ function OrganizerItem({organizer}: { organizer: Organizer }) {
                     <Typography variant="h6" sx={{pb: 2}}>
                         <Translation pl={organizer.name_pl} en={organizer.name_en}/>
                     </Typography>
-                    <Box>
-                        {organizer.description.map(content => <Box sx={{mt: 3}}>{content(vertical)}</Box>)}
+                    <Box sx={{mt: 3}}>
+                        <Translation pl={organizer.description_pl} en={organizer.description_en}/>
                     </Box>
                 </Box>
             </Stack>

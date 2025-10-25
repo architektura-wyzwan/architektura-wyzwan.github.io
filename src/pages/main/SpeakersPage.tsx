@@ -1,8 +1,8 @@
 import * as React from "react";
 import {speakers} from "../../data/Speakers";
 import MainPageSection from "./MainPageSection";
-import useVertical from "../../utils/UseVertical";
-import {speakers_grid} from "../../common/ArticleParts";
+import useVertical from "../../hooks/UseVertical";
+import {speakers_grid} from "../../layout/ArticleParts";
 
 export default function SpeakersPage() {
     const vertical = useVertical();

@@ -6,15 +6,15 @@ export type Experiment = {
 
 export type ExperimentGuardProps = {
     experiment: Experiment,
-    children: React.ReactNode;
-    alternative?: React.ReactNode;
+    enabled: React.ReactNode;
+    disabled?: React.ReactNode;
 }
 
 export function ExperimentGuard(props: ExperimentGuardProps) {
     if (!props.experiment.enabled) {
-        return <>{props.alternative !== undefined ? props.alternative : null}</>;
+        return <>{props.disabled !== undefined ? props.disabled : null}</>;
     } else {
-        return (<>{props.children}</>);
+        return (<>{props.enabled}</>);
     }
 }
 

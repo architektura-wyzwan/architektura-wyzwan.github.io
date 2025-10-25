@@ -1,12 +1,12 @@
 import * as React from "react";
 import {Grid, Typography} from "@mui/material";
-import ImageCard from "../../common/ImageCard";
-import {Translation} from "../../common/Translation";
-import {Link} from "../../common/Link";
+import ImageCard from "../../components/ImageCard";
+import {Translation} from "../../components/Translation";
+import {Link} from "../../components/Link";
 import urls from "../../Urls";
-import {Citation} from "../../common/Citation";
-import {Paragraph} from "../../common/ArticleParts";
-import useWindowDimensions from "../../utils/UseWindowDimensions";
+import {Citation} from "../../components/Citation";
+import useWindowDimensions from "../../hooks/UseWindowDimensions";
+import { Paragraph } from "../../components/Paragraph";
 
 function SecondPage() {
     const {width} = useWindowDimensions();

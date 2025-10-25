@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Box, Typography} from "@mui/material";
-import {Translation} from "../../common/Translation";
+import {Translation} from "../../components/Translation";
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';

@@ -2,15 +2,14 @@ import * as React from 'react';
 
 import {HashRouter, Route, Routes} from "react-router-dom";
 
-import MainPage from "./pages/MainPage";
-import Header from './common/Header';
-import Footer from './common/Footer';
-import {LanguageContextProvider} from './common/Translation';
+import MainPage from "./pages/main/MainPage";
+import Header from './layout/header/Header';
+import Footer from './layout/Footer';
 import urls from "./Urls";
 import RegisterPage from "./pages/RegisterPage";
 import WorkInProgressPage from "./pages/WorkInProgressPage";
 import NotFoundPage from './pages/NotFoundPage';
-import ScrollTop from "./common/ScrollToTop";
+import ScrollTop from "./components/ScrollToTop";
 import PublicationsPage from "./pages/PublicationsPage";
 import ArticlePage from "./pages/ArticlePage";
 import AllNewsPage from "./pages/AllNewsPage";
@@ -26,6 +25,8 @@ import SponsorsPage from "./pages/SponsorsPage";
 import {OrganizersPage} from "./pages/OrganizersPage";
 import AllGalleryPage from "./pages/AllGalleryPage";
 import GalleryPage from "./pages/GalleryPage";
+import {LanguageContextProvider} from './hooks/UseLanguage';
+import {Article} from './layout/Article';
 
 function App() {
     return (
@@ -41,22 +42,19 @@ function App() {
                         <Routes>
                             <Route path={urls.main} element={<MainPage/>}/>
                             <Route path={urls.news} element={<AllNewsPage/>}/>
-                            <Route path={urls.current_edition} element={<ArticlePage article={aboutPage}/>}/>
+                            <Route path={urls.current_edition} element={<Article article={aboutPage}/>}/>
                             <Route path={urls.previous_editions()}
                                    element={<ArticlePage articleList={previousEditions}/>}/>
                             <Route path={urls.all_galleries} element={<AllGalleryPage/>}/>
                             <Route path={urls.gallery()} element={<GalleryPage/>}/>
                             <Route path={urls.agenda} element={
                                 <ExperimentGuard experiment={agenda_experiment}
-                                                 alternative={<ArticlePage
-                                                     article={agendaWorkInProgressPage}/>}>
-                                    <AgendaPage/>
-                                </ExperimentGuard>}/>
+                                                 enabled={<AgendaPage/>}
+                                                 disabled={<Article article={agendaWorkInProgressPage}/>}/>}/>
                             <Route path={urls.publications} element={
                                 <ExperimentGuard experiment={publications_experiment}
-                                                 alternative={<WorkInProgressPage/>}>
-                                    <PublicationsPage/>
-                                </ExperimentGuard>}/>
+                                                 enabled={<PublicationsPage/>}
+                                                 disabled={<WorkInProgressPage/>}/>}/>
                             <Route path={urls.contact} element={<ContactPage/>}/>
                             <Route path={urls.register} element={<RegisterPage/>}/>
                             <Route path={urls.article()} element={<ArticlePage articleList={articles}/>}/>

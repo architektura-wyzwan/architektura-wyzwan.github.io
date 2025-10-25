@@ -1,7 +1,7 @@
 import {Box, Typography} from "@mui/material";
 import * as React from "react";
-import {Translation} from "./Translation";
-import useVertical from "../utils/UseVertical";
+import {Translation} from "../components/Translation";
+import useVertical from "../hooks/UseVertical";
 
 export type PageLayoutProps = {
     children: React.ReactNode | React.ReactNode[],

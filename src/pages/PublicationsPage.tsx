@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {Grid} from "@mui/material";
-import {Translation} from "../common/Translation";
-import {StandardRectangleCard} from "../common/StandardCard";
+import {Translation} from "../components/Translation";
+import {StandardRectangleCard} from "../components/StandardCard";
 import {publications} from "../data/Publications";
-import PageLayout from "../common/PageLayout";
-import StandardGrid from "../common/StandardGrid";
+import PageLayout from "../layout/PageLayout";
+import StandardGrid from "../components/StandardGrid";
 import urls from "../Urls";
 
 function PublicationsPage() {

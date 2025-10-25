@@ -1,6 +1,6 @@
 import * as React from "react";
-import PageLayout from "../common/PageLayout";
-import Contact from "../common/Contact";
+import PageLayout from "../layout/PageLayout";
+import Contact from "../components/Contact";
 
 export default function AgendaPage() {
     return (
