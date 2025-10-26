@@ -3,11 +3,9 @@ import {Box, Divider, Grid, Typography, useTheme} from "@mui/material";
 import Contact from "../components/Contact";
 import ImageCard from "../components/ImageCard";
 import {Translation} from "../components/Translation";
-import {
-    sponsors_list,
-    SponsorType
-} from "../data/Sponsors";
+import {sponsors_list, SponsorType} from "../data/Sponsors";
 import useVertical from "../hooks/UseVertical";
+import {Carousel} from "../components/Carousel";
 
 type SponsorsStackProps = {
     title_pl: string,
@@ -68,12 +66,28 @@ function Footer() {
                       pb: vertical ? 5 : 3,
                   }}
             >
-                <Grid size={vertical ? 1 : "grow"}>
-                    <Grid container
-                          spacing={3}
-                    >
-                        {sponsors_list.map((sponsor_list) => <SponsorsStack title_pl={sponsor_list.name_pl} title_en={sponsor_list.name_en} list={sponsor_list.sponsors}/>)}
-                    </Grid>
+                <Grid
+                    size={vertical ? 1 : "grow"}
+                    sx={{
+                        pl: vertical ? 0 : 3,
+                        pr: vertical ? 0 : 3,
+                    }}
+                >
+                    <Carousel
+                        autoPlay={true}
+                        hideButtons={true}
+                        autoPlayInterval={1000}
+                        space={vertical ? 25 : 50}
+                        numberOfSlides={{
+                            xs: 1,
+                            sm: vertical ? 2 : 1,
+                            md: 2,
+                            lg: 5,
+                            xl: 6,
+                        }}
+                        imageList={sponsors_list.map((sponsor_list) => sponsor_list.sponsors).flat().map((sponsor) =>
+                            sponsor.image)}
+                    />
                 </Grid>
                 <Grid size={vertical ? 1 : "auto"} sx={{
                     pb: vertical ? 4 : 0,
