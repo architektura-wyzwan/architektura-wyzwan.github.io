@@ -15,81 +15,81 @@ export const edition_2023: ArticleMetadata = {
 function Content() {
     return (<>
         <Paragraph
-            text_pl={"W dniach 3 i 4 lipca 2023 r. w Muzeum Łazienki Królewskie odbyła się międzynarodowa konferencja pod hasłem Architektura Wyzwań - Odbudowa Ukrainy, organizowana przez Wydział Architektury Politechniki Warszawskiej, Muzeum Łazienki Królewskie w Warszawie i Narodowy Instytut Dziedzictwa. Konferencja była przestrzenią wymiany myśli na temat roli architektury, planowania przestrzennego i projektowania krajobrazu w obliczu zniszczeń wojennych oraz przyszłej odbudowy. Jej celem było wspólne poszukiwanie odpowiedzi na pytania, jak kształtować środowisko życia wobec zagrożeń wojennych i jaką przyszłość powinna mieć Ukraina po zakończeniu działań zbrojnych."}
-            text_en={
+            pl={"W dniach 3 i 4 lipca 2023 r. w Muzeum Łazienki Królewskie odbyła się międzynarodowa konferencja pod hasłem Architektura Wyzwań - Odbudowa Ukrainy, organizowana przez Wydział Architektury Politechniki Warszawskiej, Muzeum Łazienki Królewskie w Warszawie i Narodowy Instytut Dziedzictwa. Konferencja była przestrzenią wymiany myśli na temat roli architektury, planowania przestrzennego i projektowania krajobrazu w obliczu zniszczeń wojennych oraz przyszłej odbudowy. Jej celem było wspólne poszukiwanie odpowiedzi na pytania, jak kształtować środowisko życia wobec zagrożeń wojennych i jaką przyszłość powinna mieć Ukraina po zakończeniu działań zbrojnych."}
+            en={
                 "On July 3–4, 2023, the international conference titled Architecture of Challenges – Rebuilding Ukraine was held at the Royal Łazienki Museum in Warsaw. The event was organized by the Faculty of Architecture of the Warsaw University of Technology, the Royal Łazienki Museum in Warsaw, and the National Heritage Board of Poland. The conference served as a platform for the exchange of ideas on the role of architecture, spatial planning, and landscape design in the context of war-related destruction and future reconstruction. Its aim was to collectively seek answers to the questions of how to shape living environments in the face of wartime threats and what kind of future Ukraine should have after the end of military operations."
             }/>
         <BigImage src={"/static/POSTER_2023.png"}/>
         <Paragraph
-            text_pl={"24 lutego 2022 r. Ukraina znów została zaatakowana przez Rosję – wojna dotknęła cały kraj"}
-            text_en={
+            pl={"24 lutego 2022 r. Ukraina znów została zaatakowana przez Rosję – wojna dotknęła cały kraj"}
+            en={
                 "24 February 2022. Russia has attacked Ukraine again - the war has affected the whole country."
             }/>
         <Paragraph
-            text_pl={"Wojna niszczy dorobek cywilizacji, kultury, człowieczeństwo. Walka o ocalenie życia swojego i osób najbliższych, domu, wreszcie Ojczyzny - jest oczywistą reakcją każdego człowieka. O jego tożsamości stanowi przynależność do miejsca życia, przywiązanie do krajobrazu, wartości wyrosłych z rodzimości miejsca – do dziedzictwa, dla którego znaczenie i pamięć są podstawą."}
-            text_en={
+            pl={"Wojna niszczy dorobek cywilizacji, kultury, człowieczeństwo. Walka o ocalenie życia swojego i osób najbliższych, domu, wreszcie Ojczyzny - jest oczywistą reakcją każdego człowieka. O jego tożsamości stanowi przynależność do miejsca życia, przywiązanie do krajobrazu, wartości wyrosłych z rodzimości miejsca – do dziedzictwa, dla którego znaczenie i pamięć są podstawą."}
+            en={
                 "War destroys the achievements of civilisation, culture, and humanity. Fighting to save one’s life and that of one’s loved ones, one’s home, and finally one’s homeland - is the obvious reaction of every human being. One’s identity is determined by one belonging to the place where one’s lives, one’s attachment to the landscape, to the values that grow out of the indigenousness of the place - to the heritage for which meaning and memory are the basis."
             }/>
         <Paragraph
-            text_pl={"Po wojnie przyjdzie czas pokoju. Odbudowa ma jednak miejsce już teraz"}
-            text_en={
+            pl={"Po wojnie przyjdzie czas pokoju. Odbudowa ma jednak miejsce już teraz"}
+            en={
                 "After the war comes a time of peace. Reconstruction has, however, already started."
             }/>
         <Paragraph
-            text_pl={"Odbudowa Ukrainy dotyczy wszystkich aspektów środowiska życia: architektury, infrastruktury, w skali miast, miasteczek, wsi. Odnowa obejmuje zarówno rozległe krajobrazy, jak i poszczególne miejsca. Wymaga przemyślenia, współdziałania i solidarności ludzkiej na skalę międzynarodową. Czas nie stoi w miejscu. Odbudowa i inne działania architektoniczne odpowiadające na skutki wojny dzieją się już teraz. Dostarczają wielu wzorów do naśladowania, ale także wyzwań do uwzględnienia."}
-            text_en={
+            pl={"Odbudowa Ukrainy dotyczy wszystkich aspektów środowiska życia: architektury, infrastruktury, w skali miast, miasteczek, wsi. Odnowa obejmuje zarówno rozległe krajobrazy, jak i poszczególne miejsca. Wymaga przemyślenia, współdziałania i solidarności ludzkiej na skalę międzynarodową. Czas nie stoi w miejscu. Odbudowa i inne działania architektoniczne odpowiadające na skutki wojny dzieją się już teraz. Dostarczają wielu wzorów do naśladowania, ale także wyzwań do uwzględnienia."}
+            en={
                 "Ukraine’s reconstruction encompasses all aspects of the living environment: architecture and infrastructure, at the scale of cities, towns and villages. This renewal encompasses both vast landscapes and individual places. It requires consideration, cooperation and human solidarity on an international scale. Time does not stand still. Reconstruction and other architectural actions in response to the efects of war already take place. They bring examples of good practices, but also the challenges to be taken in account."
             }/>
         <TwoImages src_1={"/static/PreviousEditions/2023/04.07 konferencja ukraina 1.jpg"}
                    src_2={"/static/PreviousEditions/2023/04.07 konferencja ukraina 8.jpg"}/>
         <Paragraph
-            text_pl={"Jak kształtować środowisko życia wobec zagrożeń wojennych?"}
-            text_en={
+            pl={"Jak kształtować środowisko życia wobec zagrożeń wojennych?"}
+            en={
                 "How to shape the living environment in the face of war threats?"
             }/>
         <Paragraph
-            text_pl={"Zakończenie wojny nie oznacza uwolnienia się od wszystkich zagrożeń z nią związanych. Doświadczenie ograniczonego dostępu do podstawowych zasobów zapewniających przetrwanie, jak : woda, energia i żywność powoduje, że na nowo pojawia się pytanie o sposób kształtowania zabudowy mieszkaniowej, gwarantujący dostęp do tych składników w najbliższym sąsiedztwie. Podobnie, kluczowym zagadnieniem staje się ochrona mieszkańców przed nagłym atakiem z miejsc oddalonych czasami o setki kilometrów, zagwarantowanie odpowiednio wyposażonych , bezpiecznych miejsc przebywania. Jednym z kluczowych problemów dla projektantów jest odpowiedź na problem natychmiastowej pomocy w obliczu klęski humanitarnej (braku domu, wody, pożywienia, energii...}/> w kontekście perspektywy długoterminowej, bowiem projekt i budowa środowiska zamieszkiwania zawsze rozważane są w szerszych skalach urbanistycznych i krajobrazowych. Jak pogodzić dwie perspektywy, jakie przyjąć kierunki i rozwiązania, aby maksymalnie wykorzystać zaangażowaną energię w osiągnięcie kluczowych celów krótkoterminowych, które mogą stać się podwaliną do osiągnięcia założeń długoterminowych - odbudowy rezylientnego, regeneratywnego środowiska."}
-            text_en={
+            pl={"Zakończenie wojny nie oznacza uwolnienia się od wszystkich zagrożeń z nią związanych. Doświadczenie ograniczonego dostępu do podstawowych zasobów zapewniających przetrwanie, jak : woda, energia i żywność powoduje, że na nowo pojawia się pytanie o sposób kształtowania zabudowy mieszkaniowej, gwarantujący dostęp do tych składników w najbliższym sąsiedztwie. Podobnie, kluczowym zagadnieniem staje się ochrona mieszkańców przed nagłym atakiem z miejsc oddalonych czasami o setki kilometrów, zagwarantowanie odpowiednio wyposażonych , bezpiecznych miejsc przebywania. Jednym z kluczowych problemów dla projektantów jest odpowiedź na problem natychmiastowej pomocy w obliczu klęski humanitarnej (braku domu, wody, pożywienia, energii...}/> w kontekście perspektywy długoterminowej, bowiem projekt i budowa środowiska zamieszkiwania zawsze rozważane są w szerszych skalach urbanistycznych i krajobrazowych. Jak pogodzić dwie perspektywy, jakie przyjąć kierunki i rozwiązania, aby maksymalnie wykorzystać zaangażowaną energię w osiągnięcie kluczowych celów krótkoterminowych, które mogą stać się podwaliną do osiągnięcia założeń długoterminowych - odbudowy rezylientnego, regeneratywnego środowiska."}
+            en={
                 "The end of war does not mean freedom from all its associated risks. The experience of limited access to basic survival resources, such as water, energy and food, raises the question of how to shape housing developments that guarantee access to these components in the immediate vicinity. Similarly, protecting residents against sudden attacks from places sometimes hundreds of kilometres away, guaranteeing adequately equipped, safe places to stay, is becoming a key issue. One of the key problems for designers is to respond to the problem of immediate relief in the face of a humanitarian disaster (lack of homes, water, food, energy...}/> in the context of a long-term perspective since the design and construction of the living environment is always considered at wider urban and landscape scales. How to reconcile the two perspectives, what directions and solutions to adopt to maximise the energy involved in achieving the key short-term goals that can become the foundation for achieving the long-term objectives - the reconstruction of a resilient, regenerative environment."
             }/>
         <Paragraph
-            text_pl={"Jaka ma być Ukraina po odbudowie? Jak kształtować środowisko życia wobec zagrożeń wojennych? Jak powinno wyglądać współczesne środowisko zamieszkiwania?"}
-            text_en={
+            pl={"Jaka ma być Ukraina po odbudowie? Jak kształtować środowisko życia wobec zagrożeń wojennych? Jak powinno wyglądać współczesne środowisko zamieszkiwania?"}
+            en={
                 "What should Ukraine be like after reconstruction? How to shape the living environment in the face of war threats? What should a contemporary living environment look like?"
             }/>
         <Paragraph
-            text_pl={"Czas jest czynnikiem determinującym działania związane z odbudową ze zniszczeń. Działania te dotyczyć będą jednak dziesięcioleci i sięgać następnych pokoleń. Racjonalne rozplanowanie podejmowanych inwestycji, wykorzystanie infrastruktury, zastosowanie dostępnych materiałów, również tych pochodzących z recyclingu, a także znalezienie właściwej odpowiedzi zarówno funkcji jak i formy staje się ważnym problemem odbudowy."}
-            text_en={
+            pl={"Czas jest czynnikiem determinującym działania związane z odbudową ze zniszczeń. Działania te dotyczyć będą jednak dziesięcioleci i sięgać następnych pokoleń. Racjonalne rozplanowanie podejmowanych inwestycji, wykorzystanie infrastruktury, zastosowanie dostępnych materiałów, również tych pochodzących z recyclingu, a także znalezienie właściwej odpowiedzi zarówno funkcji jak i formy staje się ważnym problemem odbudowy."}
+            en={
                 "Time is a determining factor in reconstruction activities from the devastation. However, these activities will concern decades and reach into the next generations. The rational planning of the investments to be made, the use of infrastructure, the use of available materials, including recycled ones, and finding the right answer to both function and form become important reconstruction issues."
             }/>
         <Paragraph
-            text_pl={"Jak ochronić ponadczasowe wartości środowiska umożliwiające kontynuacje życia biologicznego?"}
-            text_en={
+            pl={"Jak ochronić ponadczasowe wartości środowiska umożliwiające kontynuacje życia biologicznego?"}
+            en={
                 "How do we protect the timeless values of the environment that allow biological life to continue?"
             }/>
         <Paragraph
-            text_pl={"Odbudowa Ukrainy wpisuje się w szereg działań stanowiących wyzwania o skali globalnej. Jednym z najistotniejszych są zapewnienie dostępu do kurczących się zasobów areału ziem uprawnych, wody, utrzymanie bioróżnorodności. Kolejny stanowią problemy z uzyskaniem źródeł energii, które nie będą wpływać niekorzystnie na zmiany klimatu oraz powodować zanieczyszczania środowiska. W konsekwencji rodzi się pytanie o współczesne technologie wznoszenia oraz materiały, których produkcja wpływa na ograniczenie śladu węglowego. Nowe środowisko zamieszkiwania powinno zapewnić racjonalne gospodarowanie retencjonowaną wodą, zachowanie korytarzy ekologicznych i ochronę najbardziej wartościowych warstw gleby."}
-            text_en={
+            pl={"Odbudowa Ukrainy wpisuje się w szereg działań stanowiących wyzwania o skali globalnej. Jednym z najistotniejszych są zapewnienie dostępu do kurczących się zasobów areału ziem uprawnych, wody, utrzymanie bioróżnorodności. Kolejny stanowią problemy z uzyskaniem źródeł energii, które nie będą wpływać niekorzystnie na zmiany klimatu oraz powodować zanieczyszczania środowiska. W konsekwencji rodzi się pytanie o współczesne technologie wznoszenia oraz materiały, których produkcja wpływa na ograniczenie śladu węglowego. Nowe środowisko zamieszkiwania powinno zapewnić racjonalne gospodarowanie retencjonowaną wodą, zachowanie korytarzy ekologicznych i ochronę najbardziej wartościowych warstw gleby."}
+            en={
                 "The reconstruction of Ukraine is part of a series of activities that represent global challenges. One of the most important is ensuring access to dwindling resources of arable land and water and maintaining biodiversity. Another is the problem of obtaining energy sources that will not adversely affect climate change or cause environmental pollution. This raises the question of modern construction technologies and materials whose production contributes to reducing the carbon footprint. The new living environment should ensure the rational management of retained water, the preservation of ecological corridors and the protection of the most valuable soil layers."
             }/>
         <Paragraph
-            text_pl={"Jak wspierać społeczność tworzoną z osób, które pozostawiły swoje dotychczasowe miejsca zamieszkiwania, a ich rodzinne korzenie zostały bezpowrotnie utracone?"}
-            text_en={
+            pl={"Jak wspierać społeczność tworzoną z osób, które pozostawiły swoje dotychczasowe miejsca zamieszkiwania, a ich rodzinne korzenie zostały bezpowrotnie utracone?"}
+            en={
                 "How can we support a community of people who have left their previous places of residence and whose family roots have been irretrievably lost?"
             }/>
         <Paragraph
-            text_pl={"Każdy człowiek wychowywał się w konkretnych warunkach, w rozpoznawalnym dla niego środowisku kulturowym. Wojna burzy strukturę społeczną, przynosi śmierć członków rodziny, zmusza do podejmowania trudnych, a czasami dramatycznych decyzji dotyczących losu własnego i swoich bliskich. Znalezienie odpowiedniej formy przestrzennej i funkcji, służących odbudowie relacji społecznych stanowi jedno z najistotniejszych zagadnień czasów powojennych. Oprócz oczywistych, funkcjonalnych odpowiedzi na te pytania pojawia się głębsza, dotykające podstaw ludzkiej tożsamości, rozumienia znaczeń form przestrzennych i kodu kulturowego."}
-            text_en={
+            pl={"Każdy człowiek wychowywał się w konkretnych warunkach, w rozpoznawalnym dla niego środowisku kulturowym. Wojna burzy strukturę społeczną, przynosi śmierć członków rodziny, zmusza do podejmowania trudnych, a czasami dramatycznych decyzji dotyczących losu własnego i swoich bliskich. Znalezienie odpowiedniej formy przestrzennej i funkcji, służących odbudowie relacji społecznych stanowi jedno z najistotniejszych zagadnień czasów powojennych. Oprócz oczywistych, funkcjonalnych odpowiedzi na te pytania pojawia się głębsza, dotykające podstaw ludzkiej tożsamości, rozumienia znaczeń form przestrzennych i kodu kulturowego."}
+            en={
                 "Each person grew up in specific conditions, in a unique cultural environment. War shatters the social structure, brings the death of family members, and forces one to make difficult and sometimes dramatic decisions about one’s and one’s loved ones’ fate. Finding an appropriate spatial form and function to rebuild social relations is one of the most crucial issues of the post-war era. In addition to the obvious, functional answers to these questions, there is a deeper one, touching on the foundations of human identity, the understanding of the meanings of spatial forms and the cultural code."
             }/>
         <Paragraph
-            text_pl={"Jaka ma przebiegać odbudowa Ukrainy?"}
-            text_en={
+            pl={"Jaka ma przebiegać odbudowa Ukrainy?"}
+            en={
                 "How should the reconstruction of Ukraine proceed?"
             }/>
         <Paragraph
-            text_pl={"Celem konferencji jest zgromadzenie wspólnoty akademickiej oraz środowisk kulturalnych, naukowych, technicznych, gospodarczych, społecznikowskich, samorządowych, rządowych i innych zaangażowanych w odbudowę Ukrainy. Tematem wspólnej dyskusji - w kontekście konsekwencji wojny w Ukrainie - będą: ochrona ocalałego oraz odbudowa utraconego dziedzictwa architektury, możliwości stworzenia nowych warunków życia, znaczenie architektury w kształtowaniu tożsamości i bezpieczeństwa. Dyskusja ta powinna wpisywać się w idee Nowego Europejskiego Bauhausu oparte na jakości przestrzeni, wspieraniu złożoności środowiska przyrodniczego oraz tworzeniu demokratycznej wspólnoty ludzkiej."}
-            text_en={
+            pl={"Celem konferencji jest zgromadzenie wspólnoty akademickiej oraz środowisk kulturalnych, naukowych, technicznych, gospodarczych, społecznikowskich, samorządowych, rządowych i innych zaangażowanych w odbudowę Ukrainy. Tematem wspólnej dyskusji - w kontekście konsekwencji wojny w Ukrainie - będą: ochrona ocalałego oraz odbudowa utraconego dziedzictwa architektury, możliwości stworzenia nowych warunków życia, znaczenie architektury w kształtowaniu tożsamości i bezpieczeństwa. Dyskusja ta powinna wpisywać się w idee Nowego Europejskiego Bauhausu oparte na jakości przestrzeni, wspieraniu złożoności środowiska przyrodniczego oraz tworzeniu demokratycznej wspólnoty ludzkiej."}
+            en={
                 "The conference aims to bring together the academic community and the cultural, scientific, technical, economic, social activists, self-governmental, governmental and other circles engaged in rebuilding Ukraine. The subjects of the common discussion - in the context of the effects of war in Ukraine - are to be: the protection of the surviving and the reconstruction of the lost architectural heritage, the possibility of creating new living conditions, the importance of architecture in shaping identity and security. This discussion should go in line with the New European Bauhaus’s ideas, basing on the quality of space, supporting the complexity of the natural environment and creating a democratic human community."
             }/>
         <TwoImages src_1={"/static/PreviousEditions/2023/DSC02234.JPG"}

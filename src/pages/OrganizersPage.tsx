@@ -6,6 +6,7 @@ import {Translation} from "../components/Translation";
 import useVertical from "../hooks/UseVertical";
 import * as React from "react";
 import {SpeakersGrid} from "../components/SpeakersGrid";
+import {Paragraph} from "../components/Paragraph";
 
 function OrganizerItem({organizer}: { organizer: Organizer }) {
     const vertical = useVertical();
@@ -45,7 +46,7 @@ function OrganizerItem({organizer}: { organizer: Organizer }) {
                         <Translation pl={organizer.name_pl} en={organizer.name_en}/>
                     </Typography>
                     <Box sx={{mt: 3}}>
-                        <Translation pl={organizer.description_pl} en={organizer.description_en}/>
+                        <Paragraph pl={organizer.description_pl} en={organizer.description_en}/>
                     </Box>
                 </Box>
             </Stack>
@@ -55,7 +56,7 @@ function OrganizerItem({organizer}: { organizer: Organizer }) {
 
 export function OrganizersPage() {
     return (
-        <PageLayout title_pl="Organizatorzy" title_en="Organizers" wide={true}>
+        <PageLayout title_pl="Organizatorzy" title_en="Organizers" wide={false}>
             <Typography variant="h3"
                         sx={{
                             mt:{

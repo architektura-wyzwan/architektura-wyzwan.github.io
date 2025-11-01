@@ -2,7 +2,7 @@ import {Translation} from "./Translation";
 import {Typography} from "@mui/material";
 import * as React from "react";
 
-export function Paragraph(props: { text_pl: string, text_en: string }) {
+export function Paragraph(props: { pl: string, en: string }) {
     return <Typography
         component="p"
         variant="regular"
@@ -11,7 +11,7 @@ export function Paragraph(props: { text_pl: string, text_en: string }) {
             textJustify: "inter-word",
         }}>
         <Translation
-            pl={props.text_pl}
-            en={props.text_en}/>
+            pl={props.pl}
+            en={props.en}/>
     </Typography>
 }

@@ -6,7 +6,7 @@ export type Organizer = {
     image: string;
     description_pl: string;
     description_en: string;
-    invertColorInDarkMode: boolean,
+    invertColorInDarkMode: boolean;
 }
 
 export const organizers: Organizer[] = [

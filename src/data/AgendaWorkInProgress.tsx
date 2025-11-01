@@ -8,5 +8,5 @@ export const agendaWorkInProgressPage: ArticleMetadata = {
 }
 
 function Content() {
-    return <Paragraph text_pl={"Program zostanie ogłoszony 5 czerwca."} text_en={"The agenda will be announced on June 5."}/>
+    return <Paragraph pl={"Program zostanie ogłoszony 5 czerwca."} en={"The agenda will be announced on June 5."}/>
 }
