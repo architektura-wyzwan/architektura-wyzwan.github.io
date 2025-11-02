@@ -10,23 +10,20 @@ interface CarouselProps {
     hideButtons?: boolean;
     numberOfSlides?: number | { xs: number, sm: number, md: number, lg: number, xl: number };
     space: number;
-    imageList: string[];
-}
-
-function getIndexAndHandles(
-    numberOfElements: number,
-    numberOfSlides: number | { xs: number, sm: number, md: number, lg: number, xl: number }) {
-
-
+    justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
+    children: React.ReactNode[];
+    containerHeight: any;
 }
 
 export function Carousel({
-                             imageList,
+                             children,
                              autoPlay = false,
                              hideButtons = false,
                              autoPlayInterval = 5000,
                              space,
+                             justifyContent = 'center',
                              numberOfSlides = 1,
+                             containerHeight,
                          }: CarouselProps) {
 
     const [activeIndex, setActiveIndex] = useState(0);
@@ -35,7 +32,7 @@ export function Carousel({
     const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
     const matchesLg = useMediaQuery(theme.breakpoints.up('lg'));
     const matchesXl = useMediaQuery(theme.breakpoints.up('xl'));
-    const numberOfElements = imageList.length;
+    const numberOfElements = children.length;
 
     let matchedNumberOfSlides: number;
     if (typeof numberOfSlides === 'number') {
@@ -67,12 +64,10 @@ export function Carousel({
         return () => clearInterval(interval);
     }, [autoPlay, autoPlayInterval, handleNext]);
 
-    const [height, setHeight] = useState(null);
     const [width, setWidth] = useState(null);
     const windowDimensions = useWindowDimensions();
     const div = useCallback((node: any) => {
         if (node !== null) {
-            setHeight(node.getBoundingClientRect().height);
             setWidth(node.getBoundingClientRect().width);
         }
     }, [windowDimensions]);
@@ -85,8 +80,8 @@ export function Carousel({
             sx={{
                 position: 'relative',
                 width: '100%',
-                height: '408px',
-                overflow: 'hidden',
+                height: containerHeight,
+                overflowX: 'hidden',
             }}
         >
             <Box
@@ -102,18 +97,15 @@ export function Carousel({
                     transform: `translateX(-${(widthOfImagePx + space) * activeIndex}px)`,
                 }}
             >
-                {imageList.map((item, _) => (
+                {children.map((item, _) => (
                     <Box sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center',
+                        justifyContent: justifyContent,
 
                         width: widthOfImagePx + 'px',
                     }}>
-                        <ImageCard sx={{
-                            objectFit: 'contain',
-                            height: '100px',
-                        }} src={item}/>
+                        {item}
                     </Box>
                 ))}
             </Box>

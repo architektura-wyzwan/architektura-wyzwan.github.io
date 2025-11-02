@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Box, Divider, Grid, Typography, useTheme} from "@mui/material";
+import {Box, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
 import Contact from "../components/Contact";
 import ImageCard from "../components/ImageCard";
 import {Translation} from "../components/Translation";
@@ -73,21 +73,38 @@ function Footer() {
                         pr: vertical ? 0 : 3,
                     }}
                 >
-                    <Carousel
-                        autoPlay={true}
-                        hideButtons={true}
-                        autoPlayInterval={1000}
-                        space={vertical ? 25 : 50}
-                        numberOfSlides={{
-                            xs: 1,
-                            sm: vertical ? 2 : 1,
-                            md: 2,
-                            lg: 5,
-                            xl: 6,
-                        }}
-                        imageList={sponsors_list.map((sponsor_list) => sponsor_list.sponsors).flat().map((sponsor) =>
-                            sponsor.image)}
-                    />
+                    <Stack justifyContent="center" spacing={vertical ? 2 : 5}>
+                        <Carousel
+                            autoPlay={true}
+                            hideButtons={true}
+                            autoPlayInterval={1000}
+                            space={vertical ? 25 : 50}
+                            numberOfSlides={{
+                                xs: 1,
+                                sm: vertical ? 2 : 1,
+                                md: 2,
+                                lg: 5,
+                                xl: 6,
+                            }}
+                            containerHeight="150px"
+                        >
+                            {sponsors_list.map((sponsor_list) => sponsor_list.sponsors.map((sponsor, id) => {
+                                return <Stack
+                                    gap={3}
+                                    sx={{
+                                        width: '100%',
+
+                                    }}>
+                                    <Translation
+                                        pl={sponsor_list.name_pl} en={sponsor_list.name_en}/>
+                                    <ImageCard sx={{
+                                        objectFit: 'contain',
+                                        height: '100px',
+                                    }} src={sponsor.image}/>
+                                </Stack>
+                            })).flat()}
+                        </Carousel>
+                    </Stack>
                 </Grid>
                 <Grid size={vertical ? 1 : "auto"} sx={{
                     pb: vertical ? 4 : 0,
