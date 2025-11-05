@@ -1,7 +1,7 @@
 import {Button} from "@mui/material";
-import {Link} from "../Link";
+import {Link} from "../../components/Link";
 import urls from "../../Urls";
-import {Translation} from "../Translation";
+import {Translation} from "../../components/Translation";
 import * as React from "react";
 
 export default function RegisterButton() {

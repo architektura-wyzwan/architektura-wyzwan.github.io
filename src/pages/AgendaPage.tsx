@@ -1,9 +1,9 @@
 import * as React from "react";
 import {Divider, Grid, Tab, Typography, useMediaQuery, useTheme} from "@mui/material";
-import {Translation} from "../common/Translation";
+import {Translation} from "../components/Translation";
 import {agenda} from "../data/Agenda";
 import {TabContext, TabList, TabPanel} from "@mui/lab";
-import PageLayout from "../common/PageLayout";
+import PageLayout from "../layout/PageLayout";
 
 export default function AgendaPage() {
     const [value, setValue] = React.useState(0);

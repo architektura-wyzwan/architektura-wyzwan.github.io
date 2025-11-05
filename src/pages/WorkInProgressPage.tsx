@@ -1,6 +1,6 @@
 import {Box, Stack, Typography} from '@mui/material';
 import * as React from 'react';
-import {Translation} from "../common/Translation";
+import {Translation} from "../components/Translation";
 import SettingsIcon from '@mui/icons-material/Settings';
 
 function WorkInProgressPage() {

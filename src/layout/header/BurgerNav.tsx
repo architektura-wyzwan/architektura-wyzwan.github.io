@@ -3,12 +3,12 @@ import {Collapse, Drawer, IconButton, List, ListItemButton, Stack, Theme} from "
 import {ExpandLess, ExpandMore} from "@mui/icons-material";
 import MenuIcon from '@mui/icons-material/Menu';
 import {menuTree, MenuTreeItem} from "../../data/Menu";
-import ThemePicker from "../../ThemePicker";
-import {LanguagePicker} from "../Translation";
+import ThemePicker from "../../components/ThemePicker";
 import {Item, MakeTextElement} from "./Common";
-import {Link} from "../Link"
+import {Link} from "../../components/Link"
 import RegisterButton from "./RegisterButton";
 import {useNavigate} from "react-router-dom";
+import LanguagePicker from "../../components/LanguagePicker";
 
 function SubMenuNav({menuItem, drawerCloseHandler}: { menuItem: MenuTreeItem, drawerCloseHandler: () => void }) {
     const [open, setOpen] = React.useState(false);

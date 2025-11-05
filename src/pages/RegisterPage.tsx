@@ -1,14 +1,14 @@
 import {Box, Card, CardContent, Skeleton, Stack, Typography} from '@mui/material';
 import * as React from 'react';
-import {useContext} from 'react';
-import {LanguageContext, Translation} from "../common/Translation";
-import useWindowDimensions from "../utils/UseWindowDimensions";
+import {Translation} from "../components/Translation";
+import useWindowDimensions from "../hooks/UseWindowDimensions";
+import {useLanguage} from "../hooks/UseLanguage";
 
 function RegisterPage() {
     const [loading, setLoading] = React.useState(true);
     const {width} = useWindowDimensions();
     const iframeWidth = Math.min(width, 640);
-    const language = useContext(LanguageContext);
+    const language = useLanguage();
     const lang_url = language === "pl" ? "pl" : "eng";
     return (
         <Stack

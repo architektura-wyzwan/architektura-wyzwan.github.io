@@ -1,13 +1,13 @@
 import * as React from "react";
 import {Grid} from "@mui/material";
-import {Translation} from "../common/Translation";
-import {StandardRectangleCard} from "../common/StandardCard";
+import {Translation} from "../components/Translation";
+import {StandardRectangleCard} from "../components/StandardCard";
 import {articles} from "../data/Articles";
-import StandardGrid from "../common/StandardGrid";
-import PageLayout from "../common/PageLayout";
+import StandardGrid from "../components/StandardGrid";
+import PageLayout from "../layout/PageLayout";
 import urls from "../Urls";
 
-function AllNewsPage() {
+function NewsPage() {
 	return (
 		<PageLayout title_pl="Aktualności" title_en="News" wide={true}>
 			<StandardGrid>
@@ -26,4 +26,4 @@ function AllNewsPage() {
 	);
 }
 
-export default AllNewsPage;
+export default NewsPage;

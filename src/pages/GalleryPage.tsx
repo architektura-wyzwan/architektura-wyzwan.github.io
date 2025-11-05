@@ -1,10 +1,10 @@
 import {ImageList, ImageListItem, Typography} from "@mui/material";
 import * as React from "react";
-import PageLayout from "../common/PageLayout";
+import PageLayout from "../layout/PageLayout";
 import {galleryList} from "../data/Gallery";
 import NotFoundPage from "./NotFoundPage";
 import {useParams} from "react-router-dom";
-import { Translation } from "../common/Translation";
+import { Translation } from "../components/Translation";
 
 function GalleryPage() {
     let params = useParams();

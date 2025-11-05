@@ -1,12 +1,12 @@
 import {Button, Menu, MenuItem, Stack} from "@mui/material";
 import {menuTree} from "../../data/Menu";
-import ThemePicker from "../../ThemePicker";
-import {LanguagePicker} from "../Translation";
+import ThemePicker from "../../components/ThemePicker";
 import * as React from "react";
-import {Link} from "../Link";
+import {Link} from "../../components/Link";
 import {Item, MakeTextElement} from "./Common";
 import RegisterButton from "./RegisterButton";
 import {useNavigate} from "react-router-dom";
+import LanguagePicker from "../../components/LanguagePicker";
 
 type MenuListItem = {
     children: React.ReactNode;
@@ -36,7 +36,6 @@ function MenuButton(props: MenuButtonProps) {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
-                // onMouseOver={handleClick}
                 sx={(theme) => ({
                     ...theme.typography.body1,
                     padding: theme.spacing(1),
@@ -84,10 +83,9 @@ export default function BrowserNav() {
                     <Button
                         disableElevation
                         id="basic-button"
-                        onClick={(event) => navigate(menuItem.navigation as string)}
+                        onClick={() => navigate(menuItem.navigation as string)}
                         sx={(theme) => ({
                             ...theme.typography.body1,
-                            // padding: 0,
                             padding: theme.spacing(1),
                             textTransform: 'none',
                             color: theme.palette.text.secondary,
@@ -97,7 +95,7 @@ export default function BrowserNav() {
                     </Button>)
             } else {
                 return (
-                    <MenuButton options={menuItem.navigation.map((subMenuItem, _) => ({
+                    <MenuButton options={menuItem.navigation.map((subMenuItem) => ({
                         children: MakeTextElement(subMenuItem),
                         ref: subMenuItem.navigation,
                     }))}>

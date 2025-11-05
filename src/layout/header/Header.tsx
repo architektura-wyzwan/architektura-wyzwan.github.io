@@ -1,11 +1,11 @@
 import * as React from "react";
 import {AppBar, Box, CardActionArea, Stack, useTheme,} from "@mui/material";
-import urls from "../Urls";
-import useWindowDimensions from "../utils/UseWindowDimensions";
-import BurgerNav from "./header/BurgerNav";
-import BrowserNav from "./header/BrowserNav";
+import urls from "../../Urls";
+import useWindowDimensions from "../../hooks/UseWindowDimensions";
+import BurgerNav from "./BurgerNav";
+import BrowserNav from "./BrowserNav";
 import {useNavigate} from "react-router-dom";
-import ImageCard from "./ImageCard";
+import ImageCard from "../../components/ImageCard";
 
 function Header() {
     const {width} = useWindowDimensions();

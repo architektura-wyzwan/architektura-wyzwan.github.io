@@ -1,12 +1,12 @@
 import * as React from "react";
 import {Grid} from "@mui/material";
-import {Translation} from "../../common/Translation";
-import {StandardRectangleCard} from "../../common/StandardCard";
+import {Translation} from "../../components/Translation";
+import {StandardRectangleCard} from "../../components/StandardCard";
 import {articles} from "../../data/Articles";
-import StandardGrid from "../../common/StandardGrid";
+import StandardGrid from "../../components/StandardGrid";
 import MainPageSection from "./MainPageSection";
 
-function NewsPage() {
+function CurrentNewsSection() {
     const numberOfNews = Math.min(articles.length, 3)
     const news = articles.slice(0, numberOfNews);
     return (
@@ -27,4 +27,4 @@ function NewsPage() {
     );
 }
 
-export default NewsPage;
+export default CurrentNewsSection;

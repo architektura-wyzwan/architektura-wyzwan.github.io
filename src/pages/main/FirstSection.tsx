@@ -1,8 +1,8 @@
 import {Box, Grid, Stack, Typography, TypographyProps, useTheme} from "@mui/material";
-import {Translation} from "../../common/Translation";
+import {Translation} from "../../components/Translation";
 import * as React from "react";
-import ImageCard from "../../common/ImageCard";
-import useWindowDimensions from "../../utils/UseWindowDimensions";
+import ImageCard from "../../components/ImageCard";
+import useWindowDimensions from "../../hooks/UseWindowDimensions";
 
 type CenteredJustifiedProps = {
     text: (string | React.ReactNode)[];
@@ -19,7 +19,7 @@ function CenteredJustified(props: CenteredJustifiedProps & TypographyProps) {
 }
 
 
-function FirstPage() {
+function FirstSection() {
     const theme = useTheme();
     const dark_mode = theme.palette.mode === "dark";
     const {height, width} = useWindowDimensions();
@@ -258,4 +258,4 @@ function FirstPage() {
     }
 }
 
-export default FirstPage;
+export default FirstSection;

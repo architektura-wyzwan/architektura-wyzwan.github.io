@@ -1,7 +1,7 @@
 import * as React from "react";
 import {Box} from "@mui/material";
-import {Translation} from "../../common/Translation";
-import SectionHeading from "../../common/SectionHeading";
+import {Translation} from "../../components/Translation";
+import SectionHeading from "../../components/SectionHeading";
 
 export type MainPageSectionProps = {
     children: React.ReactNode | React.ReactNode[],
