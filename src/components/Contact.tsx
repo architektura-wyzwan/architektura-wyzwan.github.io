@@ -3,11 +3,15 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailIcon from '@mui/icons-material/Mail';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import {List, ListItem, ListItemButton, ListItemIcon, ListItemText, Tooltip, Typography} from "@mui/material";
+import {List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Tooltip, Typography} from "@mui/material";
 import {Translation} from "./Translation";
 import theme from "../Theme";
 
-export default function Contact({inverted, light}: { inverted: boolean, light: boolean }) {
+export default function Contact({inverted, light, direction = 'column'}: {
+    inverted: boolean,
+    light: boolean,
+    direction?: 'row' | 'column'
+}) {
     const navigateTo = (url: string, new_window: boolean) => ((event: any) => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
@@ -39,7 +43,7 @@ export default function Contact({inverted, light}: { inverted: boolean, light: b
         },
     };
     return (
-        <>
+        <Stack direction={direction}>
             <Typography component="div" sx={light ? lightSx : {pl: 4}}>
                 <Translation pl={<>
                     Przewodnicząca komitetu organizacyjnego:<br/>
@@ -105,6 +109,6 @@ export default function Contact({inverted, light}: { inverted: boolean, light: b
                     </ListItemButton>
                 </ListItem>
             </List>
-        </>
+        </Stack>
     );
 }

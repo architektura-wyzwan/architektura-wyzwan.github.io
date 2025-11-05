@@ -1,44 +1,60 @@
 import * as React from "react";
-import {Box, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
+import {Box, Divider, Stack, Typography, useTheme} from "@mui/material";
 import Contact from "../components/Contact";
 import ImageCard from "../components/ImageCard";
 import {Translation} from "../components/Translation";
-import {sponsors_list, SponsorType} from "../data/Sponsors";
+import {sponsors_list} from "../data/Sponsors";
 import useVertical from "../hooks/UseVertical";
 import {Carousel} from "../components/Carousel";
 
-type SponsorsStackProps = {
-    title_pl: string,
-    title_en: string,
-    list: SponsorType[],
+function Sponsors() {
+    const vertical = useVertical();
+    return <Carousel
+        autoPlay={true}
+        hideButtons={true}
+        autoPlayInterval={1000}
+        space={vertical ? 25 : 50}
+        numberOfSlides={{
+            xs: 1,
+            sm: vertical ? 2 : 1,
+            md: 2,
+            lg: 5,
+            xl: 6,
+        }}
+        containerHeight="150px"
+        nodeList={
+        sponsors_list.map((sponsor_list) =>
+                sponsor_list.sponsors.map((sponsor, id) => {
+                    
+                })
+            .flat()
+            .map((item) => {
+            return (currentId: number, numberOfSlides: number) => {
+                const displayText = currentId === id || id === 0;
+                return <Stack
+                    gap='15px'
+                    sx={{
+                        width: '100%',
+                    }}>
+                    <Box sx={{height: '20px'}}>
+                    {displayText ? <Translation
+                        pl={sponsor_list.name_pl} en={sponsor_list.name_en}/> : <></>}
+                    </Box>
+                    <ImageCard sx={{
+                        objectFit: 'contain',
+                        height: '100px',
+                    }} src={sponsor.image}/>
+                </Stack>;
+            }
+        })}
+    />;
 }
 
-function SponsorsStack(props: SponsorsStackProps) {
-    return (
-        <Grid>
-            <Translation pl={props.title_pl} en={props.title_en}/>
-            <Grid container
-                  direction="row"
-                  width="100%"
-                  spacing={5}
-                  sx={{pt: 1}}>
-                {props.list.map((sponsor) => (
-                    <Grid><ImageCard
-                        image={sponsor.image}
-                        borderRadius={0}
-                        sx={{
-                            height: {
-                                xs: '30px',
-                                md: '3vw',
-                                lg: '2vw',
-                            },
-                            objectFit: "contain",
-                            width: "unset",
-                        }}/></Grid>
-                ))}
-            </Grid>
-        </Grid>
-    )
+function Copyright() {
+    return <Typography variant="body1">
+        Copyright © 2025 International Conference – ARCHITECTURE OF CHALLENGES – NEW EUROPEAN BAUHAUS – BUILDING
+        COMMUNITY. All rights reserved.
+    </Typography>;
 }
 
 function Footer() {
@@ -46,87 +62,38 @@ function Footer() {
     const vertical = useVertical();
     const dark_mode = theme.palette.mode === "dark";
     return (
-        <>
+        <Box sx={{
+            color: dark_mode ? theme.palette.primary.contrastText : "initial",
+            backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
+            width: '100%',
+            pl: {
+                xs: '15%',
+                sm: '10%',
+                lg: '12.5%',
+            },
+            pr: {
+                xs: '15%',
+                sm: '10%',
+                lg: '12.5%',
+            },
+        }}>
             <Box sx={{
-                color: dark_mode ? theme.palette.primary.contrastText : "initial",
-                backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
                 mt: 10,
             }}>
                 <Divider variant="middle"/>
             </Box>
-            <Grid container
-                  direction={vertical ? "column-reverse" : "row"}
-                  columns={vertical ? 1 : 12}
-                  sx={{
-                      color: dark_mode ? theme.palette.primary.contrastText : "initial",
-                      backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
-                      pt: vertical ? 1 : 4,
-                      pl: 3,
-                      pr: vertical ? 3 : 0,
-                      pb: vertical ? 5 : 3,
-                  }}
-            >
-                <Grid
-                    size={vertical ? 1 : "grow"}
-                    sx={{
-                        pl: vertical ? 0 : 3,
-                        pr: vertical ? 0 : 3,
-                    }}
-                >
-                    <Stack justifyContent="center" spacing={vertical ? 2 : 5}>
-                        <Carousel
-                            autoPlay={true}
-                            hideButtons={true}
-                            autoPlayInterval={1000}
-                            space={vertical ? 25 : 50}
-                            numberOfSlides={{
-                                xs: 1,
-                                sm: vertical ? 2 : 1,
-                                md: 2,
-                                lg: 5,
-                                xl: 6,
-                            }}
-                            containerHeight="150px"
-                        >
-                            {sponsors_list.map((sponsor_list) => sponsor_list.sponsors.map((sponsor, id) => {
-                                return <Stack
-                                    gap={3}
-                                    sx={{
-                                        width: '100%',
-
-                                    }}>
-                                    <Translation
-                                        pl={sponsor_list.name_pl} en={sponsor_list.name_en}/>
-                                    <ImageCard sx={{
-                                        objectFit: 'contain',
-                                        height: '100px',
-                                    }} src={sponsor.image}/>
-                                </Stack>
-                            })).flat()}
-                        </Carousel>
-                    </Stack>
-                </Grid>
-                <Grid size={vertical ? 1 : "auto"} sx={{
-                    pb: vertical ? 4 : 0,
-                }}>
-                    <Contact inverted={dark_mode} light={true}/>
-                </Grid>
-            </Grid>
+            <Contact inverted={dark_mode} light={true} direction='row'/>
+            <Sponsors/>
             <Box sx={{
-                color: dark_mode ? theme.palette.primary.contrastText : "initial",
-                backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
+                pt: 2,
                 pl: 3,
                 pr: 3,
                 pb: 2,
             }}>
-                <Typography variant="body1">
-                    Copyright © 2025 International Conference – ARCHITECTURE OF CHALLENGES – NEW EUROPEAN BAUHAUS –
-                    BUILDING
-                    COMMUNITY. All rights reserved.
-                </Typography>
+                <Copyright/>
             </Box>
+        </Box>
 
-        </>
     );
 }
 

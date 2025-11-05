@@ -1,7 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {Box, IconButton, useMediaQuery, useTheme} from '@mui/material';
 import {KeyboardArrowLeft, KeyboardArrowRight} from '@mui/icons-material';
-import ImageCard from "./ImageCard";
 import useWindowDimensions from "../hooks/UseWindowDimensions";
 
 interface CarouselProps {
@@ -11,12 +10,12 @@ interface CarouselProps {
     numberOfSlides?: number | { xs: number, sm: number, md: number, lg: number, xl: number };
     space: number;
     justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
-    children: React.ReactNode[];
+    nodeList: (React.ReactNode | ((currentId: number, numberOfSlides: number) => React.ReactNode))[];
     containerHeight: any;
 }
 
 export function Carousel({
-                             children,
+                             nodeList,
                              autoPlay = false,
                              hideButtons = false,
                              autoPlayInterval = 5000,
@@ -32,7 +31,7 @@ export function Carousel({
     const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
     const matchesLg = useMediaQuery(theme.breakpoints.up('lg'));
     const matchesXl = useMediaQuery(theme.breakpoints.up('xl'));
-    const numberOfElements = children.length;
+    const numberOfElements = nodeList.length;
 
     let matchedNumberOfSlides: number;
     if (typeof numberOfSlides === 'number') {
@@ -97,7 +96,7 @@ export function Carousel({
                     transform: `translateX(-${(widthOfImagePx + space) * activeIndex}px)`,
                 }}
             >
-                {children.map((item, _) => (
+                {nodeList.map((item, _) => (
                     <Box sx={{
                         display: 'flex',
                         alignItems: 'center',
@@ -105,7 +104,10 @@ export function Carousel({
 
                         width: widthOfImagePx + 'px',
                     }}>
-                        {item}
+                        {typeof item === 'function' ?
+                            item(activeIndex, matchedNumberOfSlides) :
+                            item
+                        }
                     </Box>
                 ))}
             </Box>

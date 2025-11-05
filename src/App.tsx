@@ -63,7 +63,7 @@ function App() {
                             <Route path="*" element={<NotFoundPage/>}/>
                         </Routes>
                     </Box>
-                    <Box sx={{flexShrink: 0}}>
+                    <Box component="footer" sx={{flexShrink: 0}}>
                         <Footer/>
                     </Box>
                 </Box>
