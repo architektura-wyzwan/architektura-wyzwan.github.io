@@ -1,11 +1,11 @@
 import PageLayout from "../layout/PageLayout";
 import {Box, List, ListItem, Stack, Typography, useTheme} from "@mui/material";
-import {Organizer, organizers, organizers_committee} from "../data/Organizers";
+import {Organizer, organizers, organizers_committee, chairwoman, secretary, scientific_and_organizing_committee} from "../data/Organizers";
 import ImageCard from "../components/ImageCard";
 import {Translation} from "../components/Translation";
 import useVertical from "../hooks/UseVertical";
 import * as React from "react";
-import {SpeakersGrid} from "../components/SpeakersGrid";
+import {SpeakersGrid, SpeakersGrid2} from "../components/SpeakersGrid";
 import {Paragraph} from "../components/Paragraph";
 
 function OrganizerItem({organizer}: { organizer: Organizer }) {
@@ -65,14 +65,48 @@ export function OrganizersPage() {
                             },
                             mb: 8
                         }}>
+                <Translation pl={"Przewodnicząca komitetu organizacyjnego i naukowo-organizacyjnego"} en={"Chairwoman of the conference"}/>
+            </Typography>
+            <SpeakersGrid2 items={chairwoman} wide={true}/>
+            <Typography variant="h3"
+                        sx={{
+                            mt:{
+                                xs: 0,
+                                sm: 8,
+                            },
+                            mb: 8
+                        }}>
+                <Translation pl={"Sekretarz konferencji"} en={"Secretary of the conference"}/>
+            </Typography>
+            <SpeakersGrid2 items={secretary} wide={true}/>
+            <Typography variant="h3"
+                        sx={{
+                            mt:{
+                                xs: 0,
+                                sm: 8,
+                            },
+                            mb: 8
+                        }}>
+                <Translation pl={"Komitet naukowo-organizacyjny konferecji"} en={"Scientific and organizing committee of the conference"}/>
+            </Typography>
+            <SpeakersGrid2 items={scientific_and_organizing_committee} wide={true}/>
+            <Typography variant="h3"
+                        sx={{
+                            mt:{
+                                xs: 0,
+                                sm: 8,
+                            },
+                            mb: 8
+                        }}>
                 <Translation pl={"Komitet organizacyjny konferecji"} en={"Conference organising committee"}/>
             </Typography>
-            <SpeakersGrid items={organizers_committee} wide={true}/>
+            <SpeakersGrid2 items={organizers_committee} wide={true}/>
             <Typography variant="h3"
                         sx={{
                             mt: 4,
                             mb: 8
                         }}>
+
                 <Translation pl={"Instytucje"} en={"Institutions"}/>
             </Typography>
             <List sx={{width: '100%', backgroundColor: 'background.paper'}}>
