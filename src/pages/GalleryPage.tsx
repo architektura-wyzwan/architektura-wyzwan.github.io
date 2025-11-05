@@ -1,6 +1,6 @@
 import {ImageList, ImageListItem, Typography} from "@mui/material";
 import * as React from "react";
-import PageLayout from "../layout/PageLayout";
+import ArticleLayout from "../layout/ArticleLayout";
 import {galleryList} from "../data/Gallery";
 import NotFoundPage from "./NotFoundPage";
 import {useParams} from "react-router-dom";
@@ -22,7 +22,7 @@ function GalleryPage() {
     const galleryThirdColumn = galleryItem.items.filter((_ , id) => id % 3 === 2);
     const galleryItemList = ([] as string[]).concat(galleryFirstColumn, gallerySecondColumn, galleryThirdColumn);
     return (
-        <PageLayout
+        <ArticleLayout
             title_pl={"Galeria " + galleryItem.year}
             title_en={"Gallery " + galleryItem.year}
             wide={false}>
@@ -47,7 +47,7 @@ function GalleryPage() {
                     </ImageListItem>
                 ))}
             </ImageList>
-        </PageLayout>
+        </ArticleLayout>
     );
 }
 

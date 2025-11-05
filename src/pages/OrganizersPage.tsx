@@ -1,4 +1,4 @@
-import PageLayout from "../layout/PageLayout";
+import ArticleLayout from "../layout/ArticleLayout";
 import {Box, List, ListItem, Stack, Typography, useTheme} from "@mui/material";
 import {Organizer, organizers, organizers_committee, chairwoman, secretary, scientific_and_organizing_committee} from "../data/Organizers";
 import ImageCard from "../components/ImageCard";
@@ -56,7 +56,7 @@ function OrganizerItem({organizer}: { organizer: Organizer }) {
 
 export function OrganizersPage() {
     return (
-        <PageLayout title_pl="Organizatorzy" title_en="Organizers" wide={false}>
+        <ArticleLayout title_pl="Organizatorzy" title_en="Organizers" wide={false}>
             <Typography variant="h3"
                         sx={{
                             mt:{
@@ -116,6 +116,6 @@ export function OrganizersPage() {
                     </>);
                 })}
             </List>
-        </PageLayout>
+        </ArticleLayout>
     );
 }

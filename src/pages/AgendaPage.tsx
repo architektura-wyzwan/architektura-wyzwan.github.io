@@ -3,7 +3,7 @@ import {Divider, Grid, Tab, Typography, useMediaQuery, useTheme} from "@mui/mate
 import {Translation} from "../components/Translation";
 import {agenda} from "../data/Agenda";
 import {TabContext, TabList, TabPanel} from "@mui/lab";
-import PageLayout from "../layout/PageLayout";
+import ArticleLayout from "../layout/ArticleLayout";
 
 export default function AgendaPage() {
     const [value, setValue] = React.useState(0);
@@ -13,7 +13,7 @@ export default function AgendaPage() {
     const theme = useTheme();
     const smallOrLarger = useMediaQuery(theme.breakpoints.up('sm'));
     return (
-        <PageLayout title_pl="Program" title_en="Agenda" wide={false}>
+        <ArticleLayout title_pl="Program" title_en="Agenda" wide={false}>
             <TabContext value={value}>
                 <TabList onChange={handleChange} aria-label="agenda tabs example">
                     {agenda.map((agenda, index) => (
@@ -89,6 +89,6 @@ export default function AgendaPage() {
                         </Grid>
                     </TabPanel>))}
             </TabContext>
-        </PageLayout>
+        </ArticleLayout>
     );
 }

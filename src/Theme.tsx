@@ -97,9 +97,9 @@ let theme = createTheme({
         values: {
             xs: 0,
             sm: 600,
-            md: 1100,
-            lg: 1500,
-            xl: 2000,
+            md: 800,
+            lg: 1200,
+            xl: 1536,
         },
     },
 });
@@ -109,23 +109,19 @@ theme.typography = {
     fontFamily: 'Poppins, Arial',
     title_big: {
         fontWeight: '600',
-        fontSize: '24px',
-        lineHeight: '24px',
+        fontSize: '18px',
+        lineHeight: '18px',
         [theme.breakpoints.up('sm')]: {
-            fontSize: '24px',
-            lineHeight: '24px',
+            fontSize: '27px',
+            lineHeight: '27px',
         },
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('lg')]: {
             fontSize: '36px',
             lineHeight: '36px',
         },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '48px',
-            lineHeight: '48px',
-        },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '72px',
-            lineHeight: '72px',
+            fontSize: '54px',
+            lineHeight: '54px',
         },
     },
     title_small: {
@@ -145,309 +141,129 @@ theme.typography = {
     },
     very_bold: {
         fontWeight: '700',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     bold: {
         fontWeight: '600',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     bolder: {
         fontWeight: '500',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     regular: {
         fontWeight: '400',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     lighter: {
         fontWeight: '300',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     light: {
         fontWeight: '200',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     very_light: {
         fontWeight: '100',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     link: {
         fontWeight: '600',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     body1: {
         fontWeight: 'normal',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     body2: {
         fontWeight: 'lighter',
         color: 'text.secondary',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '12px',
-            lineHeight: '18px',
-        },
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
     },
     cardTitle: {
         fontWeight: '500',
-        fontSize: '12px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px',
-            lineHeight: '24px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '24px',
-            lineHeight: '36px',
-        },
+        // fontSize: '12px',
+        // lineHeight: '18px',
+        // [theme.breakpoints.up('sm')]: {
+        //     fontSize: '16px',
+        //     lineHeight: '24px',
+        // },
+        // [theme.breakpoints.up('sm')]: {
+        //     fontSize: '16px',
+        //     lineHeight: '24px',
+        // },
+        // [theme.breakpoints.up('lg')]: {
+        //     fontSize: '16px',
+        //     lineHeight: '24px',
+        // },
+        // [theme.breakpoints.up('xl')]: {
+        //     fontSize: '24px',
+        //     lineHeight: '36px',
+        // },
     },
     h1: {
-        fontSize: '48px',
         fontWeight: '800',
-        lineHeight: '60px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '72px',
-            lineHeight: '90px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '96px',
-            lineHeight: '120px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '144px',
-            lineHeight: '180px',
-        },
     },
     h2: {
         fontWeight: '700',
-        fontSize: '36px',
-        lineHeight: '45px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '54px',
-            lineHeight: '67.5px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '72px',
-            lineHeight: '90px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '108px',
-            lineHeight: '135px',
-        },
     },
     h3: {
         fontWeight: '600',
-        fontSize: '24px',
-        lineHeight: '30px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '36px',
-            lineHeight: '45px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '48px',
-            lineHeight: '60px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '72px',
-            lineHeight: '90px',
-        },
+        // fontSize: '24px',
+        // lineHeight: '30px',
+        // [theme.breakpoints.up('sm')]: {
+        //     fontSize: '36px',
+        //     lineHeight: '45px',
+        // },
+        // [theme.breakpoints.up('lg')]: {
+        //     fontSize: '48px',
+        //     lineHeight: '60px',
+        // },
+        // [theme.breakpoints.up('xl')]: {
+        //     fontSize: '72px',
+        //     lineHeight: '90px',
+        // },
     },
     h4: {
         fontWeight: '500',
-        fontSize: '24px',
-        lineHeight: '30px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '36px',
-            lineHeight: '45px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '48px',
-            lineHeight: '60px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '72px',
-            lineHeight: '90px',
-        },
+        // fontSize: '24px',
+        // lineHeight: '30px',
+        // [theme.breakpoints.up('sm')]: {
+        //     fontSize: '36px',
+        //     lineHeight: '45px',
+        // },
+        // [theme.breakpoints.up('lg')]: {
+        //     fontSize: '48px',
+        //     lineHeight: '60px',
+        // },
+        // [theme.breakpoints.up('xl')]: {
+        //     fontSize: '72px',
+        //     lineHeight: '90px',
+        // },
     },
     h5: {
         fontWeight: '500',
-        fontSize: '18px',
-        lineHeight: '22.5px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '27px',
-            lineHeight: '33.75px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '36px',
-            lineHeight: '45px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '54px',
-            lineHeight: '67.5px',
-        },
+        // fontSize: '18px',
+        // lineHeight: '22.5px',
+        // [theme.breakpoints.up('sm')]: {
+        //     fontSize: '27px',
+        //     lineHeight: '33.75px',
+        // },
+        // [theme.breakpoints.up('lg')]: {
+        //     fontSize: '36px',
+        //     lineHeight: '45px',
+        // },
+        // [theme.breakpoints.up('xl')]: {
+        //     fontSize: '54px',
+        //     lineHeight: '67.5px',
+        // },
     },
     h6: {
         fontWeight: '400',
-        fontSize: '18px',
-        lineHeight: '22.5px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '27px',
-            lineHeight: '33.75px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '36px',
-            lineHeight: '45px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '54px',
-            lineHeight: '67.px',
-        },
+        // fontSize: '18px',
+        // lineHeight: '22.5px',
+        // [theme.breakpoints.up('sm')]: {
+        //     fontSize: '27px',
+        //     lineHeight: '33.75px',
+        // },
+        // [theme.breakpoints.up('lg')]: {
+        //     fontSize: '36px',
+        //     lineHeight: '45px',
+        // },
+        // [theme.breakpoints.up('xl')]: {
+        //     fontSize: '54px',
+        //     lineHeight: '67.px',
+        // },
     }
 }
 ;

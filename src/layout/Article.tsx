@@ -1,6 +1,6 @@
 import {Box, Stack, Typography} from "@mui/material";
 import * as React from "react";
-import PageLayout from "./PageLayout";
+import ArticleLayout from "./ArticleLayout";
 import {Translation} from "../components/Translation";
 import {useLanguage} from "../hooks/UseLanguage";
 import BigImage from "../components/BigImage";
@@ -43,12 +43,12 @@ function CoverImage(props: { image: string | undefined }) {
 export function Article(props: {article: ArticleMetadata}) {
     let metadata = props.article;
     return (
-        <PageLayout title_pl={metadata.title_pl} title_en={metadata.title_en} wide={false}>
+        <ArticleLayout title_pl={metadata.title_pl} title_en={metadata.title_en} wide={false}>
             <Stack direction="column" spacing={3}>
                 <Subtitle subtitle_pl={metadata.subtitle_pl} subtitle_en={metadata.subtitle_en}/>
                 <CoverImage image={metadata.image}/>
                 {metadata.content()}
             </Stack>
-        </PageLayout>
+        </ArticleLayout>
     )
 }

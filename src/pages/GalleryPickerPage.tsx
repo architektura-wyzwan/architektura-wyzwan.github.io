@@ -2,13 +2,13 @@ import * as React from "react";
 import {Grid} from "@mui/material";
 import {StandardRectangleCard} from "../components/StandardCard";
 import StandardGrid from "../components/StandardGrid";
-import PageLayout from "../layout/PageLayout";
+import ArticleLayout from "../layout/ArticleLayout";
 import urls from "../Urls";
 import {galleryList} from "../data/Gallery";
 
 function GalleryPickerPage() {
     return (
-        <PageLayout title_pl="Galeria" title_en="Gallery" wide={true}>
+        <ArticleLayout title_pl="Galeria" title_en="Gallery" wide={true}>
             <StandardGrid>
                 {galleryList.map((gallery, index) => (
                     <Grid size={1}>
@@ -21,7 +21,7 @@ function GalleryPickerPage() {
                     </Grid>
                 ))}
             </StandardGrid>
-        </PageLayout>
+        </ArticleLayout>
     );
 }
 

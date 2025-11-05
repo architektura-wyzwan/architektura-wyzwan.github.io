@@ -3,12 +3,12 @@ import {Grid} from "@mui/material";
 import {Translation} from "../components/Translation";
 import {StandardRectangleCard} from "../components/StandardCard";
 import {publications} from "../data/Publications";
-import PageLayout from "../layout/PageLayout";
+import ArticleLayout from "../layout/ArticleLayout";
 import StandardGrid from "../components/StandardGrid";
 import urls from "../Urls";
 
 function PublicationsPage() {
-    return (<PageLayout title_pl="Publikacje" title_en="Publications" wide={true}>
+    return (<ArticleLayout title_pl="Publikacje" title_en="Publications" wide={true}>
         <StandardGrid>
             {publications.map((publication) => (
                 <Grid size={1}>
@@ -23,7 +23,7 @@ function PublicationsPage() {
                 </Grid>
             ))}
         </StandardGrid>
-    </PageLayout>)
+    </ArticleLayout>)
 }
 
 export default PublicationsPage;

@@ -4,12 +4,12 @@ import {Translation} from "../components/Translation";
 import {StandardRectangleCard} from "../components/StandardCard";
 import {articles} from "../data/Articles";
 import StandardGrid from "../components/StandardGrid";
-import PageLayout from "../layout/PageLayout";
+import ArticleLayout from "../layout/ArticleLayout";
 import urls from "../Urls";
 
 function NewsPage() {
 	return (
-		<PageLayout title_pl="Aktualności" title_en="News" wide={true}>
+		<ArticleLayout title_pl="Aktualności" title_en="News" wide={true}>
 			<StandardGrid>
 				{articles.map((news, index) => (
 					<Grid size={1}>
@@ -22,7 +22,7 @@ function NewsPage() {
 					</Grid>
 				))}
 			</StandardGrid>
-		</PageLayout>
+		</ArticleLayout>
 	);
 }
 

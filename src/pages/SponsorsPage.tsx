@@ -1,5 +1,5 @@
 import * as React from "react";
-import PageLayout from "../layout/PageLayout";
+import ArticleLayout from "../layout/ArticleLayout";
 import {Box, Grid, List, ListItem, Stack, Typography, useTheme} from "@mui/material";
 import SectionHeading from "../components/SectionHeading";
 import {Translation} from "../components/Translation";
@@ -80,12 +80,12 @@ function SponsorsList(props: SponsorsListProps) {
 
 function SponsorsPage() {
     return (
-        <PageLayout title_pl="" title_en="" wide={false}>
+        <ArticleLayout title_pl="" title_en="" wide={false}>
             {sponsors_list.map((sponsor_list) =>
                 <SponsorsList title_pl={sponsor_list.name_pl}
                               title_en={sponsor_list.name_en}
                               list={sponsor_list.sponsors}/>)}
-        </PageLayout>
+        </ArticleLayout>
     );
 }
 

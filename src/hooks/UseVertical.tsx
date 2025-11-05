@@ -1,6 +1,10 @@
 import useWindowDimensions from "./UseWindowDimensions";
+import {useTheme} from "@mui/material";
 
-export default function useVertical(narrow?: boolean) {
+export default function useVertical() {
     const {height, width} = useWindowDimensions();
-    return width < (narrow ? 600 : 800) || (width < 1050 && height > width);
+    const theme = useTheme();
+    const isXs = width < theme.breakpoints.values.sm;
+    const isSmAndVertical = width < theme.breakpoints.values.md && height > width;
+    return isXs || isSmAndVertical;
 }
