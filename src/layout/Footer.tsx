@@ -23,30 +23,37 @@ function Sponsors() {
         }}
         containerHeight="150px"
         nodeList={
-        sponsors_list.map((sponsor_list) =>
+            sponsors_list.map((sponsor_list) =>
                 sponsor_list.sponsors.map((sponsor, id) => {
-                    
-                })
-            .flat()
-            .map((item) => {
-            return (currentId: number, numberOfSlides: number) => {
-                const displayText = currentId === id || id === 0;
-                return <Stack
-                    gap='15px'
-                    sx={{
-                        width: '100%',
-                    }}>
-                    <Box sx={{height: '20px'}}>
-                    {displayText ? <Translation
-                        pl={sponsor_list.name_pl} en={sponsor_list.name_en}/> : <></>}
-                    </Box>
-                    <ImageCard sx={{
-                        objectFit: 'contain',
-                        height: '100px',
-                    }} src={sponsor.image}/>
-                </Stack>;
-            }
-        })}
+                    return {
+                        name_pl: sponsor_list.name_pl,
+                        name_en: sponsor_list.name_en,
+                        sponsor: sponsor,
+                        id: id,
+                    };
+                }))
+                .flat()
+                .map((item) => {
+                    return (currentId: number, numberOfSlides: number) => {
+                        // const displayText = currentId === item.id || item.id === 0;
+                        const displayText = true;
+                        return <Stack
+                            gap='15px'
+                            sx={{
+                                width: '100%',
+                                alignItems: 'center',
+                            }}>
+                            <ImageCard sx={{
+                                objectFit: 'contain',
+                                height: '100px',
+                            }} src={item.sponsor.image}/>
+                            <Box sx={{height: '20px'}}>
+                                {displayText ? <Translation
+                                    pl={item.name_pl} en={item.name_en}/> : <></>}
+                            </Box>
+                        </Stack>;
+                    }
+                })}
     />;
 }
 
