@@ -55,16 +55,16 @@ let theme = createTheme({
             palette: {
                 mode: 'dark',
                 primary: {
-                    light: '#ffffff',
-                    main: '#ffffff',
-                    dark: '#ffffff',
-                    contrastText: '#000000',
+                    light: '#fafafa',
+                    main: '#f5f5f5',
+                    dark: '#efefef',
+                    contrastText: '#151515',
                 },
                 secondary: {
-                    light: '#101010',
-                    main: '#101010',
-                    dark: '#101010',
-                    contrastText: '#ffffff',
+                    light: '#535353',
+                    main: '#353535',
+                    dark: '#151515',
+                    contrastText: '#fafafa',
                 }
             },
         },
@@ -72,16 +72,16 @@ let theme = createTheme({
             palette: {
                 mode: 'light',
                 primary: {
-                    light: '#000000',
-                    main: '#000000',
-                    dark: '#000000',
-                    contrastText: '#ffffff',
+                    light: '#535353',
+                    main: '#353535',
+                    dark: '#151515',
+                    contrastText: '#fafafa',
                 },
                 secondary: {
-                    light: '#f0f0f0',
-                    main: '#f0f0f0',
-                    dark: '#f0f0f0',
-                    contrastText: '#000000',
+                    light: '#fafafa',
+                    main: '#f5f5f5',
+                    dark: '#efefef',
+                    contrastText: '#151515',
                 }
             },
         },
