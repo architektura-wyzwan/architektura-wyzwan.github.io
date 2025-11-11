@@ -4,7 +4,7 @@ import {useTheme} from "@mui/material";
 export default function useVertical() {
     const {height, width} = useWindowDimensions();
     const theme = useTheme();
-    const isXs = width < theme.breakpoints.values.sm;
-    const isSmAndVertical = width < theme.breakpoints.values.md && height > width;
-    return isXs || isSmAndVertical;
+    const isSm = width < theme.breakpoints.values.md;
+    const isMdAndVertical = width < theme.breakpoints.values.lg && height > width;
+    return isSm || isMdAndVertical;
 }

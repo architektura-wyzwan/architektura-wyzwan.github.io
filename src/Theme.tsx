@@ -104,6 +104,14 @@ let theme = createTheme({
     },
 });
 
+const standardFont = {
+    lineHeight: 1.3,
+    fontSize: '0.75rem',
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1rem',
+    },
+}
+
 theme.typography = {
     ...theme.typography,
     fontFamily: 'Poppins, Arial',
@@ -130,140 +138,145 @@ theme.typography = {
             fontSize: '12px',
         },
         [theme.breakpoints.up('md')]: {
-            fontSize: '16px'
+            fontSize: '12px'
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '22px'
+            fontSize: '16px'
         },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '32px'
+            fontSize: '22px'
         },
     },
     very_bold: {
         fontWeight: '700',
+        ...standardFont,
     },
     bold: {
         fontWeight: '600',
+        ...standardFont,
     },
     bolder: {
         fontWeight: '500',
+        ...standardFont,
     },
     regular: {
         fontWeight: '400',
+        ...standardFont,
     },
     lighter: {
         fontWeight: '300',
+        ...standardFont,
     },
     light: {
         fontWeight: '200',
+        ...standardFont,
     },
     very_light: {
         fontWeight: '100',
+        ...standardFont,
     },
     link: {
         fontWeight: '600',
+        ...standardFont,
     },
     body1: {
-        fontWeight: 'normal',
+        ...standardFont,
+        fontWeight: '400',
     },
     body2: {
-        fontWeight: 'lighter',
+        ...standardFont,
+        fontWeight: '300',
         color: 'text.secondary',
     },
+    subtitle1: {
+        ...standardFont,
+        fontWeight: '300',
+        color: 'text.secondary',
+        lineHeight: 1.5,
+    },
+    subtitle2: {
+        ...standardFont,
+        fontWeight: '300',
+        color: 'text.secondary',
+        lineHeight: 1.25,
+        fontSize: '0.75rem'
+    },
     cardTitle: {
-        fontWeight: '500',
-        // fontSize: '12px',
-        // lineHeight: '18px',
-        // [theme.breakpoints.up('sm')]: {
-        //     fontSize: '16px',
-        //     lineHeight: '24px',
-        // },
-        // [theme.breakpoints.up('sm')]: {
-        //     fontSize: '16px',
-        //     lineHeight: '24px',
-        // },
-        // [theme.breakpoints.up('lg')]: {
-        //     fontSize: '16px',
-        //     lineHeight: '24px',
-        // },
-        // [theme.breakpoints.up('xl')]: {
-        //     fontSize: '24px',
-        //     lineHeight: '36px',
-        // },
+        ...standardFont,
+        fontWeight: '550',
+        lineHeight: 1.2,
     },
     h1: {
         fontWeight: '800',
+        lineHeight: 1.2,
+        letterSpacing: "-0.02rem",
+        fontSize: '2rem',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '3rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '4rem',
+        },
     },
     h2: {
         fontWeight: '700',
+        lineHeight: 1.3,
+        letterSpacing: "-0.03rem",
+        fontSize: '1.75rem',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2.625rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '3.5rem',
+        },
     },
     h3: {
-        fontWeight: '600',
-        // fontSize: '24px',
-        // lineHeight: '30px',
-        // [theme.breakpoints.up('sm')]: {
-        //     fontSize: '36px',
-        //     lineHeight: '45px',
-        // },
-        // [theme.breakpoints.up('lg')]: {
-        //     fontSize: '48px',
-        //     lineHeight: '60px',
-        // },
-        // [theme.breakpoints.up('xl')]: {
-        //     fontSize: '72px',
-        //     lineHeight: '90px',
-        // },
+        fontWeight: '700',
+        lineHeight: 1.3,
+        letterSpacing: "-0.02rem",
+        fontSize: '1.5rem',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2.25rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '3rem',
+        },
     },
     h4: {
         fontWeight: '500',
-        // fontSize: '24px',
-        // lineHeight: '30px',
-        // [theme.breakpoints.up('sm')]: {
-        //     fontSize: '36px',
-        //     lineHeight: '45px',
-        // },
-        // [theme.breakpoints.up('lg')]: {
-        //     fontSize: '48px',
-        //     lineHeight: '60px',
-        // },
-        // [theme.breakpoints.up('xl')]: {
-        //     fontSize: '72px',
-        //     lineHeight: '90px',
-        // },
+        lineHeight: 1.3,
+        letterSpacing: "-0.04rem",
+        fontSize: '1.5rem',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2.25rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '3rem',
+        },
     },
     h5: {
-        fontWeight: '500',
-        // fontSize: '18px',
-        // lineHeight: '22.5px',
-        // [theme.breakpoints.up('sm')]: {
-        //     fontSize: '27px',
-        //     lineHeight: '33.75px',
-        // },
-        // [theme.breakpoints.up('lg')]: {
-        //     fontSize: '36px',
-        //     lineHeight: '45px',
-        // },
-        // [theme.breakpoints.up('xl')]: {
-        //     fontSize: '54px',
-        //     lineHeight: '67.5px',
-        // },
+        fontWeight: '700',
+        lineHeight: 1.2,
+        letterSpacing: "-0.02rem",
+        fontSize: '1.25rem',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.875rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '2.5rem',
+        },
     },
     h6: {
-        fontWeight: '400',
-        // fontSize: '18px',
-        // lineHeight: '22.5px',
-        // [theme.breakpoints.up('sm')]: {
-        //     fontSize: '27px',
-        //     lineHeight: '33.75px',
-        // },
-        // [theme.breakpoints.up('lg')]: {
-        //     fontSize: '36px',
-        //     lineHeight: '45px',
-        // },
-        // [theme.breakpoints.up('xl')]: {
-        //     fontSize: '54px',
-        //     lineHeight: '67.px',
-        // },
+        fontWeight: '500',
+        lineHeight: 1.2,
+        letterSpacing: "-0.02rem",
+        fontSize: '1.25rem',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.875rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '2.5rem',
+        },
     }
 }
 ;

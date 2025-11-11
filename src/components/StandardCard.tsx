@@ -5,7 +5,6 @@ import {useNavigate} from "react-router-dom";
 type StandardCardProps = {
     url?: string;
     cardWidth: any;
-    cardImageHeight: any;
     cardTitle: any;
     cardDescription: any;
     textInCenter?: boolean;
@@ -53,7 +52,6 @@ export function StandardCard(props: StandardCardProps & CardMediaProps) {
                     component="img"
                     image={props.image}
                     sx={{
-                        height: props.cardImageHeight,
                         ...props.sx
                     }}
                 />
@@ -84,12 +82,8 @@ export function StandardRectangleCard(props: StandardSpecializedCardProps & Card
                 xs: "70vw",
                 sm: "100%",
             }}
-            cardImageHeight={{
-                xs: "35vw",
-                sm: "20vw",
-                md: "15vw",
-            }}
             sx={{
+                aspectRatio: '16 / 9',
                 width: {
                     xs: "70vw",
                     sm: "100%",
@@ -107,7 +101,6 @@ export function StandardCircleCard(props: StandardSpecializedCardProps & CardMed
                 xs: "40vw",
                 sm: "100%",
             }}
-            cardImageHeight={{}}
             sx={{
                 borderRadius: '50%',
                 aspectRatio: '1 / 1',

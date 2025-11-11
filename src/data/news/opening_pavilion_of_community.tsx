@@ -20,14 +20,14 @@ function Content() {
             en={
                 "On June 29, 2025, the Community Pavilion, a unique outdoor architectural installation designed and built by students and faculty from the Warsaw University of Technology's Faculty of Architecture, was officially opened in Warsaw's Royal Łazienki Museum, just behind the historic Ermitage. This new structure marks the third installment in the 'Stawiamy_' series, initiated by Professor Anna Maria Wierzbicka."
             }/>
+        <TwoImages src_1={"/static/About/News/Opening of the Pavilion of Community/Foto-48.jpg"}
+                   src_2={"/static/About/News/Opening of the Pavilion of Community/Foto-116.jpg"}/>
         <Paragraph
             pl={
                 "Pawilon Wspólnoty to więcej niż konstrukcja – to przestrzeń, która w architektonicznej formie stawia pytania o sens wspólnoty i współistnienia ludzi, przestrzeni oraz natury. Inspiracją dla jego formy stał się „cyrk realis”, czyli egalitarna struktura, w której nie istnieje centrum dominacji, a każda część ma taką samą wagę. Kluczowym elementem kompozycji jest dwanaście drewnianych modułów, stanowiących znak jedności oraz trzy centralne donice – symbol równowagi i harmonii."}
             en={
                 "The Community Pavilion is more than just a structure; it's a space that, in architectural form, poses questions about the meaning of community and the coexistence of people, space, and nature. Its design was inspired by the 'circus realis' — an egalitarian structure with no dominant center, where every part holds equal weight. The composition's key elements are twelve wooden modules, symbolizing unity, and three central planters, representing balance and harmony."
             }/>
-        <TwoImages src_1={"/static/About/News/Opening of the Pavilion of Community/Foto-48.jpg"}
-                   src_2={"/static/About/News/Opening of the Pavilion of Community/Foto-116.jpg"}/>
         <BigImage src={"/static/About/News/Opening of the Pavilion of Community/Foto-15.jpg"}/>
         <Paragraph
             pl={

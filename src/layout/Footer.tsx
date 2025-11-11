@@ -21,7 +21,7 @@ function Sponsor(props: { name_pl: string, name_en: string, image: string }) {
         }} src={props.image}/>
         <Box sx={{height: '20px'}}>
             <Translation
-                variant="body2"
+                variant="subtitle2"
                 pl={props.name_pl}
                 en={props.name_en}/>
         </Box>
@@ -84,7 +84,6 @@ function Logo() {
     const theme = useTheme();
     const underSm = useMediaQuery(theme.breakpoints.down('sm'));
     const overXl = useMediaQuery(theme.breakpoints.up('lg'));
-    const vertical = useVertical();
     if (!(overXl || underSm)) {
         return <></>
     }

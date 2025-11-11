@@ -7,15 +7,14 @@ export type LayoutProps = {
 }
 
 export default function Layout(props: LayoutProps) {
-    // const wide = props.wide ?? true;
-    const wide = true;
+    const wide = props.wide ?? false;
     const theme = useTheme();
     const vertical = useVertical();
     const marginXs = 50;
-    const marginSm = wide ? 50 : 100;
-    const marginMd = wide ? 75 : 125;
-    const marginLg = wide ? 150 : 200;
-    const marginXl = wide ? 250 : 300;
+    const marginSm = wide ? 10 : 50;
+    const marginMd = wide ? 10 : 75;
+    const marginLg = wide ? 10 : 150;
+    const marginXl = wide ? 10 : 250;
 
     return <Grid container sx={{
         width: '100%',

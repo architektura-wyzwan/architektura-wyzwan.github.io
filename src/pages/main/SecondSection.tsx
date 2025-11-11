@@ -5,27 +5,28 @@ import {Translation} from "../../components/Translation";
 import {Link} from "../../components/Link";
 import urls from "../../Urls";
 import {Citation} from "../../components/Citation";
-import useWindowDimensions from "../../hooks/UseWindowDimensions";
-import { Paragraph } from "../../components/Paragraph";
+import {Paragraph} from "../../components/Paragraph";
+import useVertical from "../../hooks/UseVertical";
 
 function SecondSection() {
-    const {width} = useWindowDimensions();
-    const vertical = width < 900;
+    const vertical = useVertical();
     return (
         <Grid
             container
-            spacing={6}
+            columnSpacing={6}
+            rowSpacing={3}
             columns={12}
             direction={vertical ? "column-reverse" : "row"}
             sx={{
-                justifyContent: "center", alignItems: "center",
+                justifyContent: vertical ? "flex-start" : "center",
+                alignItems: "center",
             }}>
             <Grid size={{
                 xs: 10,
                 sm: vertical ? 10 : 5,
-                md: 5
+                lg: 5
             }}>
-                <Typography gutterBottom variant="h3"><Translation pl="O KONFERENCJI"
+                <Typography gutterBottom variant="h5"><Translation pl="O KONFERENCJI"
                                                                    en="ABOUT CONFERENCE"/></Typography>
                 <Citation
                     author="Denise Scott Brown"
@@ -46,19 +47,13 @@ function SecondSection() {
                     <Translation pl="Więcej..." en="Read more..."/>
                 </Link>
             </Grid>
-            <Grid size={{
-                xs: 11,
-                sm: vertical ? 11 : 6,
-                md: 6,
-            }}>
+            <Grid
+                size={{
+                    xs: 11,
+                    sm: vertical ? 11 : 6,
+                    lg: 6,
+                }}>
                 <ImageCard image="/static/MainPage/Fot-6.jpg" sx={{
-                    height: {
-                        xs: "50vh",
-                        sm: vertical ? "50vh" : "80vh",
-                        md: "60vw",
-                        lg: "40vw",
-                        xl: "30vw",
-                    },
                     objectFit: "contain",
                 }}/>
             </Grid>

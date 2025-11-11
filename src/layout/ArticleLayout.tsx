@@ -16,7 +16,7 @@ export default function ArticleLayout(props: PageLayoutProps) {
             mt: '50px',
             mb: '50px',
         }}>
-            <Typography variant="h2"
+            <Typography variant="h1"
                         gutterBottom={true}
                         sx={props.wide ? {mb: 4} : {}}
             >

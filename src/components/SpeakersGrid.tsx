@@ -20,9 +20,9 @@ export function SpeakersGrid(props: SpeakersGridProps) {
                  }}
                  columns={{
                      xs: 2,
-                     sm: vertical ? 3 : (wide ? 4 : 2),
-                     md: (wide ? 5 : 3),
-                     lg: (wide ? 6 : 4),
+                     sm: vertical ? 3 : (wide ? 3 : 2),
+                     md: (wide ? 3 : 3),
+                     lg: (wide ? 4 : 4),
                  }}
                  direction="row"
                  sx={{

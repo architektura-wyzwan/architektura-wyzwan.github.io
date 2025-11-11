@@ -9,7 +9,7 @@ import urls from "../Urls";
 
 function NewsPage() {
 	return (
-		<ArticleLayout title_pl="Aktualności" title_en="News" wide={true}>
+		<ArticleLayout title_pl="Aktualności" title_en="News" wide={false}>
 			<StandardGrid>
 				{articles.map((news, index) => (
 					<Grid size={1}>

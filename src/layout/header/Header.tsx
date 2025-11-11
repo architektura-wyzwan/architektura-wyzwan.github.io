@@ -1,30 +1,64 @@
 import * as React from "react";
-import {AppBar, Box, CardActionArea, Stack, useTheme,} from "@mui/material";
+import {AppBar, Box, CardActionArea, Stack,} from "@mui/material";
 import urls from "../../Urls";
 import useWindowDimensions from "../../hooks/UseWindowDimensions";
 import BurgerNav from "./BurgerNav";
 import BrowserNav from "./BrowserNav";
 import {useNavigate} from "react-router-dom";
 import ImageCard from "../../components/ImageCard";
+import useDarkMode from "../../hooks/UseDarkMode";
+
+export function useHeaderHeight() {
+    const {width} = useWindowDimensions();
+    return width < 2000 ? 74 : 85;
+}
+
+export function useLogoHeight() {
+    const {width} = useWindowDimensions();
+    return width < 2000 ? 40 : 57;
+}
+
+function useHeaderType() {
+    const {width} = useWindowDimensions();
+    return width < 950;
+}
+
+function useLogo() {
+    const isBurger = useHeaderType();
+    const dark_mode = useDarkMode();
+    if (isBurger) {
+        if (dark_mode) {
+            return "/static/logo/white_plain.png";
+        } else {
+            return "/static/logo/black_plain.png";
+        }
+    } else {
+        if (dark_mode) {
+            return "/static/logo/white_text_left.png";
+        } else {
+            return "/static/logo/black_text_left.png";
+        }
+    }
+}
 
 function Header() {
-    const {width} = useWindowDimensions();
-    const theme = useTheme();
-    const dark_mode = theme.palette.mode === "dark";
     let navigate = useNavigate();
-    const burger = width < 950;
-    const xl = width >= 2000;
+    const isBurger = useHeaderType();
+    const headerHeight = useHeaderHeight();
+    const logoHeight = useLogoHeight();
+    const logo = useLogo();
     return (
         <AppBar
             position="sticky"
             elevation={0}
             sx={(theme) => ({
                 backgroundColor: theme.palette.background.paper,
+                height: headerHeight,
             })}>
             <Stack
                 direction="row"
                 sx={{
-                    pt: burger ? 2 : 1,
+                    pt: isBurger ? 2 : 1,
                     pb: 1,
                     justifyContent: "space-between",
                     alignItems: "center",
@@ -35,28 +69,18 @@ function Header() {
                         window.scrollTo(0, 0);
                         navigate(urls.main as string);
                     }}>
-                        {burger
-                            ? <ImageCard
-                                image={dark_mode ? "/static/logo/white_plain.png" : "/static/logo/black_plain.png"}
-                                sx={{
-                                    height: 40,
-                                    objectFit: "contain",
-                                    width: "unset",
-                                }}
-                            />
-                            : <ImageCard
-                                image={dark_mode ? "/static/logo/white_text_left.png" : "/static/logo/black_text_left.png"}
-                                sx={{
-                                    height: xl ? 57 : 40,
-                                    objectFit: "contain",
-                                    width: "unset",
-                                }}
-                            />
-                        }
+                        <ImageCard
+                            image={logo}
+                            sx={{
+                                height: logoHeight,
+                                objectFit: "contain",
+                                width: "unset",
+                            }}
+                        />
+
                     </CardActionArea>
                 </Box>
-                {burger ? <BurgerNav/> : <BrowserNav/>}
-
+                {isBurger ? <BurgerNav/> : <BrowserNav/>}
             </Stack>
         </AppBar>
     );

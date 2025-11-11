@@ -3,6 +3,9 @@ import {Translation} from "../../components/Translation";
 import * as React from "react";
 import ImageCard from "../../components/ImageCard";
 import useWindowDimensions from "../../hooks/UseWindowDimensions";
+import useVertical from "../../hooks/UseVertical";
+import useDarkMode from "../../hooks/UseDarkMode";
+import {useHeaderHeight} from "../../layout/header/Header";
 
 type CenteredJustifiedProps = {
     text: (string | React.ReactNode)[];
@@ -18,15 +21,83 @@ function CenteredJustified(props: CenteredJustifiedProps & TypographyProps) {
     </Stack>)
 }
 
+function Logos() {
+    const vertical = useVertical();
+    const dark_mode = useDarkMode();
 
-function FirstSection() {
+    return <Stack direction="row" justifyContent="space-between" alignItems="center">
+        <ImageCard
+            image="/static/Logo_organizatorzy/pw_logo.png"
+            borderRadius={0}
+            sx={{
+                width: {
+                    xs: '40px',
+                    sm: vertical ? '60px' : '40px',
+                    md: '40px',
+                    lg: '60px',
+                    xl: '80px',
+                },
+                filter: dark_mode ? "invert(100%)" : "invert(0%)",
+            }}/>
+        <ImageCard
+            image="/static/Logo_organizatorzy/wapw_logo.png"
+            borderRadius={0}
+            sx={{
+                width: {
+                    xs: '75px',
+                    sm: vertical ? '110px' : '75px',
+                    md: '75px',
+                    lg: '110px',
+                    xl: '150px',
+                },
+                filter: dark_mode ? "invert(100%)" : "invert(0%)",
+            }}/>
+        <ImageCard
+            image="/static/Logo_organizatorzy/lazienki_logo.png"
+            borderRadius={0}
+            sx={{
+                width: {
+                    xs: '20px',
+                    sm: vertical ? '30px' : '20px',
+                    md: '20px',
+                    lg: '30px',
+                    xl: '40px',
+                },
+                filter: dark_mode ? "invert(100%)" : "invert(0%)",
+            }}/>
+        <ImageCard
+            image="/static/Logo_organizatorzy/asp_logo.png"
+            borderRadius={0}
+            sx={{
+                width: {
+                    xs: '35px',
+                    sm: vertical ? '50px' : '35px',
+                    md: '35px',
+                    lg: '50px',
+                    xl: '70px',
+                },
+                filter: dark_mode ? "invert(100%)" : "invert(0%)",
+            }}/>
+        <ImageCard
+            image="/static/Logo_organizatorzy/nid_logo.png"
+            borderRadius={0}
+            sx={{
+                width: {
+                    xs: '40px',
+                    sm: vertical ? '60px' : '40px',
+                    md: '40px',
+                    lg: '60px',
+                    xl: '80px',
+                },
+                filter: dark_mode ? "invert(100%)" : "invert(0%)",
+            }}/>
+    </Stack>;
+}
+
+function TextElement() {
     const theme = useTheme();
-    const dark_mode = theme.palette.mode === "dark";
-    const {height, width} = useWindowDimensions();
-    const vertical = width < 800;
-
-    const headerHeight = width >= 2000 ? 85 : 74;
-    const columnHeight = height - headerHeight;
+    const vertical = useVertical();
+    const dark_mode = useDarkMode();
 
     const verticalTitleSmallSx = {
         fontSize: '11px',
@@ -56,75 +127,7 @@ function FirstSection() {
         },
     };
 
-    const logos = (<Stack direction="row" justifyContent="space-between" alignItems="center">
-        <ImageCard
-            image="/static/Logo_organizatorzy/pw_logo.png"
-            borderRadius={0}
-            sx={{
-                width: {
-                    xs: '40px',
-                    sm: vertical ? '60px' : '40px',
-                    md: '60px',
-                    lg: '80px',
-                    xl: '120px',
-                },
-                filter: dark_mode ? "invert(100%)" : "invert(0%)",
-            }}/>
-        <ImageCard
-            image="/static/Logo_organizatorzy/wapw_logo.png"
-            borderRadius={0}
-            sx={{
-                width: {
-                    xs: '75px',
-                    sm: vertical ? '110px' : '75px',
-                    md: '110px',
-                    lg: '150px',
-                    xl: '220px',
-                },
-                filter: dark_mode ? "invert(100%)" : "invert(0%)",
-            }}/>
-        <ImageCard
-            image="/static/Logo_organizatorzy/lazienki_logo.png"
-            borderRadius={0}
-            sx={{
-                width: {
-                    xs: '20px',
-                    sm: vertical ? '30px' : '20px',
-                    md: '30px',
-                    lg: '40px',
-                    xl: '60px',
-                },
-                filter: dark_mode ? "invert(100%)" : "invert(0%)",
-            }}/>
-        <ImageCard
-            image="/static/Logo_organizatorzy/asp_logo.png"
-            borderRadius={0}
-            sx={{
-                width: {
-                    xs: '35px',
-                    sm: vertical ? '50px' : '35px',
-                    md: '50px',
-                    lg: '70px',
-                    xl: '100px',
-                },
-                filter: dark_mode ? "invert(100%)" : "invert(0%)",
-            }}/>
-        <ImageCard
-            image="/static/Logo_organizatorzy/nid_logo.png"
-            borderRadius={0}
-            sx={{
-                width: {
-                    xs: '40px',
-                    sm: vertical ? '60px' : '40px',
-                    md: '60px',
-                    lg: '80px',
-                    xl: '120px',
-                },
-                filter: dark_mode ? "invert(100%)" : "invert(0%)",
-            }}/>
-    </Stack>);
-
-    const textElement = (<Stack
+    return <Stack
         direction="column"
         spacing={{
             xs: 1,
@@ -134,10 +137,10 @@ function FirstSection() {
             alignItems: "stretch",
             maxWidth: {
                 xs: '280px',
-                sm: vertical ? '450px' : '300px',
-                md: '450px',
-                lg: '600px',
-                xl: '900px',
+                sm: vertical ? '450px' : '280px',
+                md: '280px',
+                lg: '450px',
+                xl: '600px',
             }
         }}>
         <Box>
@@ -146,10 +149,10 @@ function FirstSection() {
                 sx={{pb: 1}}
             />
             <Translation
-            en={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSx : {}}
-                               text={["NEW", "EUROPEAN", "BAUHAUS", "-", "BUILDING", "COMMUNITY"]}/>}
-            pl={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSxPl : horizontalTitleSmallSxPl}
-                                   text={["NOWY", "EUROPEJSKI", "BAUHAUS", "-", "BUDOWANIE", "WSPÓLNOTY"]}/>}
+                en={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSx : {}}
+                                       text={["NEW", "EUROPEAN", "BAUHAUS", "-", "BUILDING", "COMMUNITY"]}/>}
+                pl={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSxPl : horizontalTitleSmallSxPl}
+                                       text={["NOWY", "EUROPEJSKI", "BAUHAUS", "-", "BUDOWANIE", "WSPÓLNOTY"]}/>}
             />
         </Box>
         <Box>
@@ -168,8 +171,16 @@ function FirstSection() {
                     en="Palace on the Isle, Royal Łazienki Museum in Warsaw and Czapski Palace, The Academy of Fine Arts in Warsaw"/>
             </Typography>
         </Box>
-        {logos}
-    </Stack>);
+        <Logos/>
+    </Stack>;
+}
+
+function FirstSection() {
+    const vertical = useVertical();
+    const {height} = useWindowDimensions();
+
+    const headerHeight = useHeaderHeight();
+    const columnHeight = height - headerHeight;
 
     if (vertical) {
         return (
@@ -195,7 +206,7 @@ function FirstSection() {
                     />
                 </Grid>
                 <Grid>
-                    {textElement}
+                    <TextElement/>
                 </Grid>
             </Grid>
         )
@@ -205,7 +216,7 @@ function FirstSection() {
                   direction="row"
                   justifyContent={{
                       sm: "initial",
-                      md: "flex-start",
+                      lg: "flex-start",
                   }}
                   alignItems={{
                       sm: "flex-end",
@@ -214,10 +225,10 @@ function FirstSection() {
                 <Grid sx={{
                     maxWidth: {
                         sm: "55%",
-                        md: "50%",
+                        lg: "50%",
                     },
                     justifySelf: {
-                        md: "flex-start"
+                        lg: "flex-start"
                     }
                 }}>
                     <ImageCard
@@ -238,19 +249,19 @@ function FirstSection() {
                     justifyContent: "center",
                     pb: {
                         sm: "5%",
-                        lg: 10,
+                        xl: 10,
                     },
                     ml: {
                         sm: "5%",
-                        lg: "2%"
+                        xl: "2%"
                     },
                     mr: {
                         sm: "5%",
-                        lg: "2%"
+                        xl: "2%"
                     },
                 }}>
                     <Box>
-                        {textElement}
+                        <TextElement/>
                     </Box>
                 </Grid>
             </Grid>

@@ -8,7 +8,7 @@ import {galleryList} from "../data/Gallery";
 
 function GalleryPickerPage() {
     return (
-        <ArticleLayout title_pl="Galeria" title_en="Gallery" wide={true}>
+        <ArticleLayout title_pl="Galeria" title_en="Gallery" wide={false}>
             <StandardGrid>
                 {galleryList.map((gallery, index) => (
                     <Grid size={1}>
