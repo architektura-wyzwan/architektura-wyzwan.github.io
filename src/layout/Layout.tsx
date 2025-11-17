@@ -1,5 +1,4 @@
 import {Grid, useTheme} from "@mui/material";
-import useVertical from "../hooks/UseVertical";
 
 export type LayoutProps = {
     children: React.ReactNode,
@@ -9,8 +8,6 @@ export type LayoutProps = {
 export default function Layout(props: LayoutProps) {
     const wide = props.wide ?? false;
     const theme = useTheme();
-    const vertical = useVertical();
-    const marginXs = 50;
     const marginSm = wide ? 10 : 50;
     const marginMd = wide ? 10 : 75;
     const marginLg = wide ? 10 : 150;
@@ -23,20 +20,23 @@ export default function Layout(props: LayoutProps) {
         columns: 1
     }}>
         <Grid size={1}
-              sx={vertical ?
-                  {
-                      width: '100%',
-                      ml: '5%',
-                      mr: '5%',
-                  } : {
-                      width: {
-                          xs: 300 - marginXs * 2,
-                          sm: theme.breakpoints.values.sm - marginSm * 2,
-                          md: theme.breakpoints.values.md - marginMd * 2,
-                          lg: theme.breakpoints.values.lg - marginLg * 2,
-                          xl: theme.breakpoints.values.xl - marginXl * 2,
-                      },
-                  }}>
+              sx={{
+                  width: {
+                      xs: '100%',
+                      sm: theme.breakpoints.values.sm - marginSm * 2,
+                      md: theme.breakpoints.values.md - marginMd * 2,
+                      lg: theme.breakpoints.values.lg - marginLg * 2,
+                      xl: theme.breakpoints.values.xl - marginXl * 2,
+                  },
+                  ml: {
+                      xs: '5%',
+                      sm: 0,
+                  },
+                  mr: {
+                      xs: '5%',
+                      sm: 0,
+                  }
+              }}>
             {props.children}
         </Grid>
     </Grid>
