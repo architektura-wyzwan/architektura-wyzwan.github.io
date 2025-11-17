@@ -112,7 +112,7 @@ let theme = createTheme({
     },
 });
 
-const standardFont = {
+export const standardFont = {
     lineHeight: 1.3,
     fontSize: '0.75rem',
     [theme.breakpoints.up('md')]: {

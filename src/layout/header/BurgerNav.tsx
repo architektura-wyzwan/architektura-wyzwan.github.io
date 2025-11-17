@@ -9,6 +9,7 @@ import {Link} from "../../components/Link"
 import RegisterButton from "./RegisterButton";
 import {useNavigate} from "react-router-dom";
 import LanguagePicker from "../../components/LanguagePicker";
+import {standardFont} from "../../Theme";
 
 function SubMenuNav({menuItem, drawerCloseHandler}: { menuItem: MenuTreeItem, drawerCloseHandler: () => void }) {
     const [open, setOpen] = React.useState(false);
@@ -19,6 +20,7 @@ function SubMenuNav({menuItem, drawerCloseHandler}: { menuItem: MenuTreeItem, dr
     };
 
     const iconSx = (theme: Theme) => ({
+        ...standardFont,
         color: theme.palette.text.secondary,
     });
     if (typeof menuItem.navigation === "string") {
@@ -38,9 +40,17 @@ function SubMenuNav({menuItem, drawerCloseHandler}: { menuItem: MenuTreeItem, dr
                 {open ? <ExpandLess sx={iconSx}/> : <ExpandMore sx={iconSx}/>}
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
-                <List component="div">
+                <List component="div"
+                      sx={{
+                          pt: 0,
+                      }}
+                >
                     {menuItem.navigation.map((subMenuItem, _) =>
-                        (<ListItemButton sx={{pl: 4}} onClick={(event) => {
+                        (<ListItemButton sx={{
+                            pl: 4,
+                            pb: 0.5,
+                            pt: 0.5,
+                        }} onClick={() => {
                             drawerCloseHandler();
                             navigate(subMenuItem.navigation);
                         }}>
@@ -97,7 +107,8 @@ export default function BurgerNav() {
                     <Item sx={{scale: 1}}><ThemePicker/></Item>
                 </Stack>
                 <List sx={{minWidth: 200}}>
-                    {menuTree.map((menuItem, _) => <SubMenuNav menuItem={menuItem} drawerCloseHandler={handleDrawerClose}/>)}
+                    {menuTree.map((menuItem, _) => <SubMenuNav menuItem={menuItem}
+                                                               drawerCloseHandler={handleDrawerClose}/>)}
                 </List>
             </Drawer>
         </>
