@@ -2,10 +2,11 @@ import {Grid} from "@mui/material";
 
 export default function StandardGrid(props: { elements: React.ReactNode[] }) {
     return (<Grid container
-                  spacing={{
+                  rowSpacing={{
                       xs: 2,
                       md: 3,
                   }}
+                  columnSpacing={2}
                   columns={{
                       xs: 1,
                       sm: 2,

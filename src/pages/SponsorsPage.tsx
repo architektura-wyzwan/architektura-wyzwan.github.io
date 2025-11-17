@@ -1,12 +1,10 @@
 import * as React from "react";
 import ArticleLayout from "../layout/ArticleLayout";
-import {Box, Grid, List, ListItem, Stack, Typography, useTheme} from "@mui/material";
+import {Box, List, ListItem, Stack, useTheme} from "@mui/material";
 import SectionHeading from "../components/SectionHeading";
 import {Translation} from "../components/Translation";
-import {StandardCard} from "../components/StandardCard";
 import {sponsors_list, SponsorType} from "../data/Sponsors";
 import useVertical from "../hooks/UseVertical";
-import {Organizer, organizers} from "../data/Organizers";
 import ImageCard from "../components/ImageCard";
 import {Paragraph} from "../components/Paragraph";
 

@@ -6,7 +6,6 @@ import {
     CardContent,
     CardMedia,
     CardMediaProps,
-    PaletteColor,
     Typography
 } from "@mui/material";
 import {useNavigate} from "react-router-dom";
@@ -46,7 +45,7 @@ function WrapInNavigateAction(props: WrapInNavigateActionProps) {
     return (<>{props.children}</>);
 }
 
-export function StandardCard(props: StandardCardProps & CardMediaProps) {
+function StandardCard(props: StandardCardProps & CardMediaProps) {
     const textInCenter = props.textInCenter !== undefined ? props.textInCenter : false;
     return <WrapInNavigateAction url={props.url}>
         <Card
@@ -62,6 +61,7 @@ export function StandardCard(props: StandardCardProps & CardMediaProps) {
                 component="img"
                 image={props.image}
                 sx={{
+                    width: props.cardWidth,
                     ...props.sx
                 }}
             />
@@ -78,7 +78,6 @@ export function StandardCard(props: StandardCardProps & CardMediaProps) {
                     </Typography>
                     <Typography variant="body2" component="div" sx={(theme) => {
                         const backgroundColor = theme.palette.background.default;
-                        const textColor = theme.typography.body2.color;
                         const backgroundColorOpacityFull = "color-mix(in srgb, " + backgroundColor + ", transparent 100%)";
                         return {
                             textAlign: textInCenter ? "center" : "justify",
@@ -107,6 +106,15 @@ export function StandardCard(props: StandardCardProps & CardMediaProps) {
     </WrapInNavigateAction>;
 }
 
+// This is a component defining a "standard" rectangle grid with a rectangular image, a title and a description.
+// This component is used to display a short description of an article, a publication, etc.
+// Width is derived from a parent component (StandardGrid), and height is set constant to display up to 5 lines of
+// description and then fade-away any leftover text.
+//
+// aspectRatio defines the aspect ratio of the displayed image.
+//
+// If there is any clipping at the end of the description, change the cardHeight value by a couple pixels.
+// To change the number of lines displayed at a certain screen width, also adjust the cardHeight value carefully.
 export function StandardRectangleCard(props: StandardSpecializedCardProps & CardMediaProps) {
     return (
         <StandardCard
@@ -114,16 +122,15 @@ export function StandardRectangleCard(props: StandardSpecializedCardProps & Card
                 xs: "70vw",
                 sm: "100%",
             }}
-            cardHeight={{
-                xs: "40vw",
-                xl: "310px",
+            cardHeight={props.cardDescription === "" ? undefined : {
+                xs: "200px",
+                sm: "249px",
+                md: "322px",
+                lg: "308px",
+                xl: "332px",
             }}
             sx={{
                 aspectRatio: '16 / 9',
-                width: {
-                    xs: "70vw",
-                    sm: "100%",
-                },
             }}
             {...props}
         />
@@ -140,10 +147,6 @@ export function StandardCircleCard(props: StandardSpecializedCardProps & CardMed
             sx={{
                 borderRadius: '50%',
                 aspectRatio: '1 / 1',
-                width: {
-                    xs: "40vw",
-                    sm: "100%",
-                },
             }}
             {...props}
         />

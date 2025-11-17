@@ -76,8 +76,8 @@ let theme = createTheme({
             palette: {
                 mode: 'light',
                 background: {
-                    default: '#fafafa',
-                    paper: '#fafafa',
+                    default: '#ffffff',
+                    paper: '#ffffff',
                 },
                 primary: {
                     light: '#535353',
