@@ -1,6 +1,6 @@
 import {Grid} from "@mui/material";
 
-export default function StandardGrid({children}: { children?: React.ReactNode }) {
+export default function StandardGrid(props: { elements: React.ReactNode[] }) {
     return (<Grid container
                   spacing={{
                       xs: 2,
@@ -15,6 +15,6 @@ export default function StandardGrid({children}: { children?: React.ReactNode })
                   sx={{
                       mt: 4,
                   }}>
-        {children}
+        {props.elements.map((element) => <Grid size={1}>{element}</Grid>)}
     </Grid>);
 }

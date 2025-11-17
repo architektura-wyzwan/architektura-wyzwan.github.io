@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Grid} from "@mui/material";
 import {Translation} from "../components/Translation";
 import {StandardRectangleCard} from "../components/StandardCard";
 import {publications} from "../data/Publications";
@@ -9,20 +8,16 @@ import urls from "../Urls";
 
 function PublicationsPage() {
     return (<ArticleLayout title_pl="Publikacje" title_en="Publications" wide={false}>
-        <StandardGrid>
-            {publications.map((publication) => (
-                <Grid size={1}>
-                    <a href={publication.url} download style={{textDecoration: "none"}}>
-                    <StandardRectangleCard
-                        url={urls.publications}
-                        image={publication.image}
-                        cardTitle={publication.title}
-                        cardDescription={<Translation pl={publication.description_pl} en={publication.description_en}/>}
-                    />
-                    </a>
-                </Grid>
-            ))}
-        </StandardGrid>
+        <StandardGrid elements={publications.map((publication) =>
+            <a href={publication.url} download style={{textDecoration: "none"}}>
+                <StandardRectangleCard
+                    url={urls.publications}
+                    image={publication.image}
+                    cardTitle={publication.title}
+                    cardDescription={<Translation pl={publication.description_pl} en={publication.description_en}/>}
+                />
+            </a>
+        )}/>
     </ArticleLayout>)
 }
 

@@ -54,6 +54,10 @@ let theme = createTheme({
         dark: {
             palette: {
                 mode: 'dark',
+                background: {
+                    default: '#151515',
+                    paper: '#151515',
+                },
                 primary: {
                     light: '#fafafa',
                     main: '#f5f5f5',
@@ -71,6 +75,10 @@ let theme = createTheme({
         light: {
             palette: {
                 mode: 'light',
+                background: {
+                    default: '#fafafa',
+                    paper: '#fafafa',
+                },
                 primary: {
                     light: '#535353',
                     main: '#353535',
