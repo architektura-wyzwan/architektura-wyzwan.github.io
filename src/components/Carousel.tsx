@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {Box, IconButton, useMediaQuery, useTheme} from '@mui/material';
+import {Box, IconButton, Stack, useMediaQuery, useTheme} from '@mui/material';
 import {KeyboardArrowLeft, KeyboardArrowRight} from '@mui/icons-material';
 import useWindowDimensions from "../hooks/UseWindowDimensions";
 
@@ -11,7 +11,6 @@ interface CarouselProps {
     space: number;
     justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
     nodeList: (React.ReactNode | ((currentId: number, numberOfSlides: number) => React.ReactNode))[];
-    containerHeight: any;
 }
 
 export function Carousel({
@@ -22,7 +21,6 @@ export function Carousel({
                              space,
                              justifyContent = 'center',
                              numberOfSlides = 1,
-                             containerHeight,
                          }: CarouselProps) {
 
     const [activeIndex, setActiveIndex] = useState(0);
@@ -79,7 +77,6 @@ export function Carousel({
             sx={{
                 position: 'relative',
                 width: '100%',
-                height: containerHeight,
                 overflowX: 'hidden',
             }}
         >
@@ -94,6 +91,8 @@ export function Carousel({
                     alignItems: 'center',
                     transition: 'transform 0.5s ease-in-out',
                     transform: `translateX(-${(widthOfImagePx + space) * activeIndex}px)`,
+                    overflow: 'hidden',
+                    // pointerEvents: 'none',
                 }}
             >
                 {nodeList.map((item, _) => (
@@ -111,6 +110,19 @@ export function Carousel({
                     </Box>
                 ))}
             </Box>
+            <Stack
+                direction="row"
+                sx={{
+                    opacity: 0,
+                    overflow: 'hidden',
+                }}>
+                {
+                    nodeList.map((item) =>
+                        typeof item === 'function' ?
+                            item(activeIndex, matchedNumberOfSlides) :
+                            item)
+                }
+            </Stack>
 
             <IconButton
                 sx={{

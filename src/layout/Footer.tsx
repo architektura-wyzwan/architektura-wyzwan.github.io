@@ -19,7 +19,7 @@ function Sponsor(props: { name_pl: string, name_en: string, image: string }) {
             objectFit: 'contain',
             height: '100px',
         }} src={props.image}/>
-        <Box sx={{height: '20px'}}>
+        <Box sx={{height: '40px'}}>
             <Translation
                 variant="subtitle2"
                 pl={props.name_pl}
@@ -59,10 +59,6 @@ function Sponsors() {
                     md: 3,
                     lg: 4,
                     xl: 5,
-                }}
-                containerHeight={{
-                    xs: "150px",
-                    xl: "135px",
                 }}
                 nodeList={
                     sponsors_list.map((sponsor_list) =>
@@ -122,7 +118,6 @@ function Copyright() {
 
 function Footer() {
     const theme = useTheme();
-    const vertical = useVertical();
     const dark_mode = theme.palette.mode === "dark";
     const underSm = useMediaQuery(theme.breakpoints.down('sm'));
     return (
