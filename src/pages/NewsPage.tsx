@@ -8,7 +8,7 @@ import urls from "../Urls";
 
 function NewsPage() {
     return (
-        <ArticleLayout title_pl="Aktualności" title_en="News" wide={false}>
+        <ArticleLayout title_pl="Aktualności" title_en="News" wide={true}>
             <StandardGrid elements={
                 articles.map((news, index) => (
                     <StandardRectangleCard

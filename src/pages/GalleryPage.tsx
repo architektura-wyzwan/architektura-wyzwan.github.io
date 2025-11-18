@@ -25,7 +25,7 @@ function GalleryPage() {
         <ArticleLayout
             title_pl={"Galeria " + galleryItem.year}
             title_en={"Gallery " + galleryItem.year}
-            wide={false}>
+            wide={true}>
             <Typography variant="body2" sx={{mb: 2}}>
                 <Translation pl={"Fotografie autorstwa: "} en={"Photos by: "}/>
                 {galleryItem.authors}

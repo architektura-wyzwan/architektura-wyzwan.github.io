@@ -28,8 +28,21 @@ export default function Layout(props: LayoutProps) {
     };
 
     const narrowSx = {
-        ml: '10%',
-        mr: '10%',
+        width: {
+            xs: '100%',
+            sm: theme.breakpoints.values.sm - 50 * 2,
+            md: theme.breakpoints.values.md - 75 * 2,
+            lg: theme.breakpoints.values.lg - 150 * 2,
+            xl: theme.breakpoints.values.xl - 250 * 2,
+        },
+        ml: {
+            xs: '5%',
+            sm: 0,
+        },
+        mr: {
+            xs: '5%',
+            sm: 0,
+        }
     };
 
     return <Grid container sx={{

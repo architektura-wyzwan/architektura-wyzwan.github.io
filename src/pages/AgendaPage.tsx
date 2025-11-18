@@ -108,7 +108,7 @@ export default function AgendaPage() {
         setDayNumber(newValue);
     };
     return (
-        <ArticleLayout title_pl="Program" title_en="Agenda" wide={false}>
+        <ArticleLayout title_pl="Program" title_en="Agenda" wide={true}>
             <TabContext value={dayNumber}>
                 <TabList onChange={handleChange} aria-label="agenda tabs">
                     {agenda.map((agenda, index) =>

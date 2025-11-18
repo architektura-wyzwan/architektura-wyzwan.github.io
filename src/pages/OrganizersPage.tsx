@@ -56,7 +56,7 @@ function OrganizerItem({organizer}: { organizer: Organizer }) {
 
 export function OrganizersPage() {
     return (
-        <ArticleLayout title_pl="Organizatorzy" title_en="Organizers" wide={false}>
+        <ArticleLayout title_pl="Organizatorzy" title_en="Organizers" wide={true}>
             <Typography variant="h3"
                         sx={{
                             mt:{
