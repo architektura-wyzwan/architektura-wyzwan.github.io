@@ -6,12 +6,31 @@ export type LayoutProps = {
 }
 
 export default function Layout(props: LayoutProps) {
-    const wide = props.wide ?? false;
+    const wide = props.wide ?? true;
     const theme = useTheme();
-    const marginSm = wide ? 10 : 50;
-    const marginMd = wide ? 10 : 75;
-    const marginLg = wide ? 10 : 150;
-    const marginXl = wide ? 10 : 250;
+
+    const wideSx = {
+        width: {
+            xs: '100%',
+            sm: theme.breakpoints.values.sm - 50 * 2,
+            md: theme.breakpoints.values.md - 75 * 2,
+            lg: theme.breakpoints.values.lg - 150 * 2,
+            xl: theme.breakpoints.values.xl - 250 * 2,
+        },
+        ml: {
+            xs: '5%',
+            sm: 0,
+        },
+        mr: {
+            xs: '5%',
+            sm: 0,
+        }
+    };
+
+    const narrowSx = {
+        ml: '10%',
+        mr: '10%',
+    };
 
     return <Grid container sx={{
         width: '100%',
@@ -20,23 +39,7 @@ export default function Layout(props: LayoutProps) {
         columns: 1
     }}>
         <Grid size={1}
-              sx={{
-                  width: {
-                      xs: '100%',
-                      sm: theme.breakpoints.values.sm - marginSm * 2,
-                      md: theme.breakpoints.values.md - marginMd * 2,
-                      lg: theme.breakpoints.values.lg - marginLg * 2,
-                      xl: theme.breakpoints.values.xl - marginXl * 2,
-                  },
-                  ml: {
-                      xs: '5%',
-                      sm: 0,
-                  },
-                  mr: {
-                      xs: '5%',
-                      sm: 0,
-                  }
-              }}>
+              sx={wide ? wideSx : narrowSx}>
             {props.children}
         </Grid>
     </Grid>

@@ -7,7 +7,7 @@ type ArticlePageProps = {
     articleList: ArticleMetadata[],
 }
 
-function ArticlePage(props: ArticlePageProps) {
+function ArticleRouter(props: ArticlePageProps) {
     let params = useParams();
     const articleId = params.articleId as string;
     const articleNumber = parseInt(articleId);
@@ -22,4 +22,4 @@ function ArticlePage(props: ArticlePageProps) {
     )
 }
 
-export default ArticlePage;
+export default ArticleRouter;

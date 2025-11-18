@@ -13,7 +13,7 @@ import WorkInProgressPage from "./pages/WorkInProgressPage";
 import NotFoundPage from './pages/NotFoundPage';
 import ScrollTop from "./components/ScrollToTop";
 import PublicationsPage from "./pages/PublicationsPage";
-import ArticlePage from "./pages/ArticlePage";
+import ArticleRouter from "./pages/ArticleRouter";
 import NewsPage from "./pages/NewsPage";
 import {aboutPage} from "./data/CurrentEdition";
 import {previousEditions} from "./data/PreviousEditions";
@@ -51,7 +51,7 @@ function App() {
                                 <Route path={urls.news} element={<NewsPage/>}/>
                                 <Route path={urls.current_edition} element={<Article article={aboutPage}/>}/>
                                 <Route path={urls.previous_editions()}
-                                       element={<ArticlePage articleList={previousEditions}/>}/>
+                                       element={<ArticleRouter articleList={previousEditions}/>}/>
                                 <Route path={urls.all_galleries} element={<GalleryPickerPage/>}/>
                                 <Route path={urls.gallery()} element={<GalleryPage/>}/>
                                 <Route path={urls.agenda} element={
@@ -64,7 +64,7 @@ function App() {
                                                      disabled={<WorkInProgressPage/>}/>}/>
                                 <Route path={urls.contact} element={<ContactPage/>}/>
                                 <Route path={urls.register} element={<RegisterPage/>}/>
-                                <Route path={urls.article()} element={<ArticlePage articleList={articles}/>}/>
+                                <Route path={urls.article()} element={<ArticleRouter articleList={articles}/>}/>
                                 <Route path={urls.organizers} element={<OrganizersPage/>}/>
                                 <Route path={urls.sponsors} element={<SponsorsPage/>}/>
                                 <Route path={"text_test"} element={<Test/>}/>
