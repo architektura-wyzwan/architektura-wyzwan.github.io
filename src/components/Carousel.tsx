@@ -10,11 +10,11 @@ interface CarouselProps {
     numberOfSlides?: number | { xs: number, sm: number, md: number, lg: number, xl: number };
     space: number;
     justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
-    nodeList: (React.ReactNode | ((currentId: number, numberOfSlides: number) => React.ReactNode))[];
+    children: React.ReactNode[];
 }
 
 export function Carousel({
-                             nodeList,
+                             children,
                              autoPlay = false,
                              hideButtons = false,
                              autoPlayInterval = 5000,
@@ -29,7 +29,7 @@ export function Carousel({
     const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
     const matchesLg = useMediaQuery(theme.breakpoints.up('lg'));
     const matchesXl = useMediaQuery(theme.breakpoints.up('xl'));
-    const numberOfElements = nodeList.length;
+    const numberOfElements = children.length;
 
     let matchedNumberOfSlides: number;
     if (typeof numberOfSlides === 'number') {
@@ -95,18 +95,14 @@ export function Carousel({
                     // pointerEvents: 'none',
                 }}
             >
-                {nodeList.map((item, _) => (
+                {children.map((item) => (
                     <Box sx={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: justifyContent,
-
                         width: widthOfImagePx + 'px',
                     }}>
-                        {typeof item === 'function' ?
-                            item(activeIndex, matchedNumberOfSlides) :
-                            item
-                        }
+                        {item}
                     </Box>
                 ))}
             </Box>
@@ -116,12 +112,7 @@ export function Carousel({
                     opacity: 0,
                     overflow: 'hidden',
                 }}>
-                {
-                    nodeList.map((item) =>
-                        typeof item === 'function' ?
-                            item(activeIndex, matchedNumberOfSlides) :
-                            item)
-                }
+                {children}
             </Stack>
 
             <IconButton

@@ -60,18 +60,15 @@ function Sponsors() {
                     lg: 4,
                     xl: 5,
                 }}
-                nodeList={
-                    sponsors_list.map((sponsor_list) =>
-                        sponsor_list.sponsors.map((sponsor) => {
-                            return <Sponsor
-                                name_pl={sponsor_list.name_pl}
-                                name_en={sponsor_list.name_en}
-                                image={sponsor.image}
-                            />;
-                        }))
-                        .flat()
-                }
-            />
+            >
+                {sponsors_list.map((sponsor_list) =>
+                    sponsor_list.sponsors.map((sponsor) => <Sponsor
+                        name_pl={sponsor_list.name_pl}
+                        name_en={sponsor_list.name_en}
+                        image={sponsor.image}
+                    />))
+                    .flat()}
+            </Carousel>
         </Box>
     </Box>;
 }
