@@ -14,8 +14,20 @@ export default function StandardGrid(props: { elements: React.ReactNode[] }) {
                   }}
                   direction="row"
                   sx={{
-                      mt: 4,
+                      justifyContent: {
+                          xs: "center", // For columns=1 only
+                          sm: "initial",
+                      }
                   }}>
-        {props.elements.map((element) => <Grid size={1}>{element}</Grid>)}
+        {props.elements.map((element) =>
+            <Grid size={1}
+                  sx={{
+                      maxWidth: {
+                          xs: "300px",
+                          sm: "initial",
+                      }
+                  }}>
+                {element}
+            </Grid>)}
     </Grid>);
 }

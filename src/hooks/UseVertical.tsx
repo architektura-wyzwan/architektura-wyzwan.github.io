@@ -10,3 +10,9 @@ export default function useVertical() {
     // return isSm || isMdAndVertical;
     return isXs;
 }
+
+export function useIsXs() {
+    const {width} = useWindowDimensions();
+    const theme = useTheme();
+    return width < theme.breakpoints.values.sm;
+}

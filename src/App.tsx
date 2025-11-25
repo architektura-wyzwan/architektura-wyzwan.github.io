@@ -67,7 +67,7 @@ function App() {
                                 <Route path={urls.article()} element={<ArticleRouter articleList={articles}/>}/>
                                 <Route path={urls.organizers} element={<OrganizersPage/>}/>
                                 <Route path={urls.sponsors} element={<SponsorsPage/>}/>
-                                <Route path={"text_test"} element={<Test/>}/>
+                                <Route path={"text_test"} element={<WorkInProgressPage/>}/>
                                 <Route path="*" element={<NotFoundPage/>}/>
                             </Routes>
                         </Box>

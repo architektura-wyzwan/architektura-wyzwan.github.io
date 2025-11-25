@@ -9,14 +9,17 @@ import {
     Typography
 } from "@mui/material";
 import {useNavigate} from "react-router-dom";
+import { useIsXs } from "../hooks/UseVertical";
 
 type StandardCardProps = {
     url?: string;
     cardWidth: any;
+    cardMaxWidth?: any;
     cardHeight?: any;
     cardTitle: any;
     cardDescription: any;
     textInCenter?: boolean;
+    hideOverflowText?: boolean;
 }
 
 type StandardSpecializedCardProps = {
@@ -70,8 +73,9 @@ function StandardCard(props: StandardCardProps & CardMediaProps) {
                 justifyContent: textInCenter ? "center" : "initial",
                 alignItems: textInCenter ? "center" : "initial",
                 flexDirection: "column",
+                width: props.cardWidth,
             }}>
-                <Box sx={{flex: 1}}>
+                {/*<Box sx={{flex: 1}}>*/}
                     <Typography gutterBottom variant="cardTitle" component="div"
                                 sx={{textAlign: textInCenter ? "center" : "initial"}}>
                         {props.cardTitle}
@@ -82,14 +86,16 @@ function StandardCard(props: StandardCardProps & CardMediaProps) {
                         return {
                             textAlign: textInCenter ? "center" : "justify",
                             textJustify: textInCenter ? "initial" : "inter-word",
+                            textWrap: textInCenter ? "balance" : "initial",
 
                             display: "block",
-                            overflow: "hidden",
+                            width: "100%",
+                            // overflow: "hidden",
 
                             "::before": {
                                 background: "linear-gradient(to right, " + backgroundColorOpacityFull + " 0%, " + backgroundColor + " 50%)",
                                 content: "'\u00A0'",
-                                display: "block",
+                                display: props.hideOverflowText ? "block" : "hidden",
                                 position: "absolute",
                                 right: 0,
                                 bottom: 0,
@@ -100,7 +106,7 @@ function StandardCard(props: StandardCardProps & CardMediaProps) {
                     }}>
                         {props.cardDescription}
                     </Typography>
-                </Box>
+                {/*</Box>*/}
             </CardContent>
         </Card>
     </WrapInNavigateAction>;
@@ -116,19 +122,20 @@ function StandardCard(props: StandardCardProps & CardMediaProps) {
 // If there is any clipping at the end of the description, change the cardHeight value by a couple pixels.
 // To change the number of lines displayed at a certain screen width, also adjust the cardHeight value carefully.
 export function StandardRectangleCard(props: StandardSpecializedCardProps & CardMediaProps) {
+    const isXs = useIsXs();
     return (
         <StandardCard
             cardWidth={{
-                xs: "70vw",
-                sm: "100%",
+                xs: "100%",
             }}
             cardHeight={props.cardDescription === "" ? undefined : {
-                xs: "200px",
+                xs: "initial",
                 sm: "249px",
                 md: "322px",
                 lg: "308px",
                 xl: "332px",
             }}
+            hideOverflowText={!isXs}
             sx={{
                 aspectRatio: '16 / 9',
             }}
@@ -141,13 +148,13 @@ export function StandardCircleCard(props: StandardSpecializedCardProps & CardMed
     return (
         <StandardCard
             cardWidth={{
-                xs: "40vw",
-                sm: "100%",
+                xs: "100%",
             }}
             sx={{
                 borderRadius: '50%',
                 aspectRatio: '1 / 1',
             }}
+            hideOverflowText={false}
             {...props}
         />
     )

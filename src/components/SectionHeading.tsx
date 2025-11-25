@@ -3,7 +3,7 @@ import {Typography} from "@mui/material";
 
 export default function SectionHeading({children}: { children: React.ReactNode }) {
     return (
-        <Typography variant="h5"
+        <Typography variant="h3"
                     display={{
                         xs: "flex",
                         sm: "normal",

@@ -18,11 +18,11 @@ export default function Layout(props: LayoutProps) {
             xl: theme.breakpoints.values.xl - 250 * 2,
         },
         ml: {
-            xs: '5%',
+            xs: '15%',
             sm: 0,
         },
         mr: {
-            xs: '5%',
+            xs: '15%',
             sm: 0,
         }
     };
@@ -49,7 +49,7 @@ export default function Layout(props: LayoutProps) {
         width: '100%',
         height: '100%',
         justifyContent: 'center',
-        columns: 1
+        columns: 1,
     }}>
         <Grid size={1}
               sx={wide ? wideSx : narrowSx}>
