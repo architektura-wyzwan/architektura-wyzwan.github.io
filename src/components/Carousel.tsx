@@ -46,6 +46,7 @@ export function Carousel({
         matchedNumberOfSlides = numberOfSlides?.xs;
     }
 
+// eslint-disable-next-line react-hooks/exhaustive-deps
     const handleNext = () => {
         setActiveIndex((prev) => (prev + 1) % (numberOfElements - matchedNumberOfSlides + 1));
     };
@@ -67,6 +68,7 @@ export function Carousel({
         if (node !== null) {
             setWidth(node.getBoundingClientRect().width);
         }
+// eslint-disable-next-line react-hooks/exhaustive-deps
     }, [windowDimensions]);
     // @ts-ignore
     const widthOfImagePx = (width - space * (matchedNumberOfSlides - 1)) / matchedNumberOfSlides;
