@@ -1,132 +1,157 @@
 import * as React from "react";
-import {Box, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
-import Contact from "../components/Contact";
+import {Box, Divider, Stack, Typography, useMediaQuery, useTheme} from "@mui/material";
+import {Address, SocialLinks} from "../components/Contact";
 import ImageCard from "../components/ImageCard";
 import {Translation} from "../components/Translation";
-import {sponsors_list, SponsorType} from "../data/Sponsors";
-import useVertical from "../hooks/UseVertical";
+import {sponsors_list} from "../data/Sponsors";
+import {useIsXs} from "../hooks/UseDimensionHooks";
 import {Carousel} from "../components/Carousel";
+import Layout from "./Layout";
 
-type SponsorsStackProps = {
-    title_pl: string,
-    title_en: string,
-    list: SponsorType[],
+function Sponsor(props: { name_pl: string, name_en: string, image: string }) {
+    return <Stack
+        gap='15px'
+        sx={{
+            maxWidth: {
+                xs: "210px",
+                sm: "initial",
+            },
+            width: {
+                xs: 'initial',
+                sm: '100%',
+            },
+            alignItems: 'center',
+        }}>
+        <ImageCard sx={{
+            objectFit: 'contain',
+            height: '100px',
+        }} src={props.image}/>
+        <Box sx={{height: '40px'}}>
+            <Translation
+                variant="subtitle2"
+                pl={props.name_pl}
+                en={props.name_en}/>
+        </Box>
+    </Stack>;
 }
 
-function SponsorsStack(props: SponsorsStackProps) {
-    return (
-        <Grid>
-            <Translation pl={props.title_pl} en={props.title_en}/>
-            <Grid container
-                  direction="row"
-                  width="100%"
-                  spacing={5}
-                  sx={{pt: 1}}>
-                {props.list.map((sponsor) => (
-                    <Grid><ImageCard
+function Sponsors() {
+    const isXs = useIsXs();
+    return <Box sx={{
+        display: "flex",
+        justifyContent: {
+            xs: 'center',
+            sm: 'initial',
+        }
+    }}>
+        <Box sx={{
+            pt: {
+                xs: 2,
+                sm: 0,
+            },
+            maxWidth: {
+                xs: '100%',
+                sm: '100%',
+            },
+        }}>
+            <Box sx={{
+                pb: {
+                    xs: 2,
+                    sm: 1,
+                },
+            }}>
+                <Translation variant="cardTitle" pl={"Sponsorzy i partnerzy"} en={"Sponsors and partners"}/>
+            </Box>
+            <Carousel
+                autoPlay={true}
+                hideButtons={true}
+                autoPlayInterval={1500}
+                space={isXs ? 25 : 50}
+                numberOfSlides={{
+                    xs: 1,
+                    sm: 2,
+                    md: 3,
+                    lg: 4,
+                    xl: 5,
+                }}
+            >
+                {sponsors_list.map((sponsor_list) =>
+                    sponsor_list.sponsors.map((sponsor) => <Sponsor
+                        name_pl={sponsor_list.name_pl}
+                        name_en={sponsor_list.name_en}
                         image={sponsor.image}
-                        borderRadius={0}
-                        sx={{
-                            height: {
-                                xs: '30px',
-                                md: '3vw',
-                                lg: '2vw',
-                            },
-                            objectFit: "contain",
-                            width: "unset",
-                        }}/></Grid>
-                ))}
-            </Grid>
-        </Grid>
-    )
+                    />))
+                    .flat()}
+            </Carousel>
+        </Box>
+    </Box>;
+}
+
+function Logo() {
+    const theme = useTheme();
+    const underSm = useMediaQuery(theme.breakpoints.down('sm'));
+    const overXl = useMediaQuery(theme.breakpoints.up('lg'));
+    if (!(overXl || underSm)) {
+        return <></>
+    }
+    return <Box sx={{
+        pt: 2,
+    }}>
+        <ImageCard
+            image={"/static/logo/black_text_bottom.png"}
+            sx={{
+                height: '125px',
+                objectFit: "contain",
+            }}
+        />
+    </Box>;
+}
+
+function FooterDivider() {
+    return <Box sx={{
+        mb: 2,
+    }}>
+        <Divider variant="fullWidth"/>
+    </Box>;
+}
+
+function Copyright() {
+    return <Box sx={{
+        pt: 2,
+        pb: 2,
+    }}>
+        <Typography variant="body2">
+            Copyright © 2025 International Conference – ARCHITECTURE OF CHALLENGES – NEW EUROPEAN BAUHAUS – BUILDING
+            COMMUNITY. All rights reserved.
+        </Typography>
+    </Box>;
 }
 
 function Footer() {
     const theme = useTheme();
-    const vertical = useVertical();
     const dark_mode = theme.palette.mode === "dark";
+    const underSm = useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <>
-            <Box sx={{
-                color: dark_mode ? theme.palette.primary.contrastText : "initial",
-                backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
-                mt: 10,
-            }}>
-                <Divider variant="middle"/>
-            </Box>
-            <Grid container
-                  direction={vertical ? "column-reverse" : "row"}
-                  columns={vertical ? 1 : 12}
-                  sx={{
-                      color: dark_mode ? theme.palette.primary.contrastText : "initial",
-                      backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
-                      pt: vertical ? 1 : 4,
-                      pl: 3,
-                      pr: vertical ? 3 : 0,
-                      pb: vertical ? 5 : 3,
-                  }}
-            >
-                <Grid
-                    size={vertical ? 1 : "grow"}
-                    sx={{
-                        pl: vertical ? 0 : 3,
-                        pr: vertical ? 0 : 3,
-                    }}
-                >
-                    <Stack justifyContent="center" spacing={vertical ? 2 : 5}>
-                        <Carousel
-                            autoPlay={true}
-                            hideButtons={true}
-                            autoPlayInterval={1000}
-                            space={vertical ? 25 : 50}
-                            numberOfSlides={{
-                                xs: 1,
-                                sm: vertical ? 2 : 1,
-                                md: 2,
-                                lg: 5,
-                                xl: 6,
-                            }}
-                            containerHeight="150px"
-                        >
-                            {sponsors_list.map((sponsor_list) => sponsor_list.sponsors.map((sponsor, id) => {
-                                return <Stack
-                                    gap={3}
-                                    sx={{
-                                        width: '100%',
-
-                                    }}>
-                                    <Translation
-                                        pl={sponsor_list.name_pl} en={sponsor_list.name_en}/>
-                                    <ImageCard sx={{
-                                        objectFit: 'contain',
-                                        height: '100px',
-                                    }} src={sponsor.image}/>
-                                </Stack>
-                            })).flat()}
-                        </Carousel>
-                    </Stack>
-                </Grid>
-                <Grid size={vertical ? 1 : "auto"} sx={{
-                    pb: vertical ? 4 : 0,
-                }}>
-                    <Contact inverted={dark_mode} light={true}/>
-                </Grid>
-            </Grid>
-            <Box sx={{
-                color: dark_mode ? theme.palette.primary.contrastText : "initial",
-                backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
-                pl: 3,
-                pr: 3,
-                pb: 2,
-            }}>
-                <Typography variant="body1">
-                    Copyright © 2025 International Conference – ARCHITECTURE OF CHALLENGES – NEW EUROPEAN BAUHAUS –
-                    BUILDING
-                    COMMUNITY. All rights reserved.
-                </Typography>
-            </Box>
-
-        </>
+        <Box sx={{
+            mt: 10,
+            color: dark_mode ? theme.palette.primary.contrastText : "initial",
+            backgroundColor: dark_mode ? theme.palette.primary.main : "initial",
+        }}>
+            <Layout>
+                <FooterDivider/>
+                <Stack
+                    justifyContent={underSm ? "flex-start" : "space-between"}
+                    alignItems={underSm ? "center" : "initial"}
+                    gap={underSm ? 5 : 0}
+                    direction={underSm ? "column" : "row"}>
+                    <Logo/>
+                    <Address light={true} dense={true}/>
+                    <SocialLinks inverted={dark_mode} dense={true}/>
+                </Stack>
+                <Sponsors/>
+                <Copyright/>
+            </Layout>
+        </Box>
     );
 }
 

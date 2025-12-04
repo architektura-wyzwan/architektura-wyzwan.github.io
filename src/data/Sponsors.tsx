@@ -42,7 +42,7 @@ export const sponsors_list: SponsorsListType[] = [
                 invertColorInDarkMode: false,
             },
             {
-                name_pl: "Uniwersytet Narodowy Politechnikа Lwowskа",
+                name_pl: "Uniwersytet Narodowy Politechnikа Lwowska",
                 name_en: "Lviv Polytechnic National University",
                 image: "/static/Logo_sponsorzy/Lviv.png",
                 description_pl: "Uniwersytet Narodowy „Politechnika Lwowska” to jedna z najstarszych i najbardziej prestiżowych uczelni technicznych w Europie Środkowo-Wschodniej, której początki sięgają 1844 roku. Jest ważnym ośrodkiem naukowym i akademickim, kształcącym inżynierów, architektów, informatyków, specjalistów w dziedzinie automatyki, energetyki, chemii, transportu oraz wielu innych dziedzin związanych z nowoczesną techniką i technologią. Politechnika słynie z wysokiego poziomu nauczania, cenionej kadry profesorskiej i bogatej historii wkładu w rozwój nauki i inżynierii. Jest także znana ze swojej architektonicznie imponującej, historycznej głównej siedziby we Lwowie, będącej symbolem tradycji i prestiżu uczelni.",

@@ -19,7 +19,7 @@ function Content() {
             en={
                 "On June 17-18, 2024, a conference dedicated to innovative building materials and their impact on the development of contemporary architecture was held at the Royal Łazienki Museum and Czapski Palace in Warsaw. The main theme was their role in shaping the aesthetics and functionality of spaces, as well as the challenges associated with technological development and a sustainable approach to construction."}
         />
-        <BigImage src={"/static/POSTER_2024.jpg"}/>
+        <BigImage src={"/static/PreviousEditions/2024/POSTER.png"}/>
         <Paragraph
             pl={
                 "Materiał budowlany stanowi podstawowy element w procesie kreacji architektonicznej. W epoce nieustannego rozwoju technologii i poszukiwania nowych ścieżek innowacji pragniemy zgłębiać osiągnięcia oraz stawić czoła wyzwaniom, które, uwzględniając szerszy kontekst kulturowy, wpłyną na przyszły rozwój architektury. Obserwujemy już teraz, że innowacyjne materiały budowlane stanowią nie tylko istotę struktury, lecz także inspirujące narzędzie do tworzenia nowoczesnej estetyki architektonicznej. Rozpoznanie ich właściwości otwiera drogę do pełnego zrozumienia, jak nowoczesne technologie mogą napędzać ewolucje zmiany w estetyce architektonicznej. Wprowadzają one nowe wymiary do doświadczeń wizualnych, funkcjonalnych i społecznych o w przestrzeni architektonicznej, w skali zarówno budynku jak i miasta. Zaproponowany podział zagadnień na pięć obszarów tematycznych obejmuje następujące aspekty:"}

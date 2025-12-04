@@ -1,21 +1,33 @@
 import {Grid} from "@mui/material";
 
-export default function StandardGrid({children}: { children?: React.ReactNode }) {
+export default function StandardGrid(props: { elements: React.ReactNode[] }) {
     return (<Grid container
-                  spacing={{
+                  rowSpacing={{
                       xs: 2,
-                      sm: 3,
                       md: 3,
                   }}
+                  columnSpacing={2}
                   columns={{
                       xs: 1,
                       sm: 2,
-                      md: 3,
+                      lg: 3,
                   }}
                   direction="row"
                   sx={{
-                      mt: 4,
+                      justifyContent: {
+                          xs: "center", // For columns=1 only
+                          sm: "initial",
+                      }
                   }}>
-        {children}
+        {props.elements.map((element) =>
+            <Grid size={1}
+                  sx={{
+                      maxWidth: {
+                          xs: "300px",
+                          sm: "initial",
+                      }
+                  }}>
+                {element}
+            </Grid>)}
     </Grid>);
 }

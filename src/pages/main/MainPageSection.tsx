@@ -1,7 +1,7 @@
 import * as React from "react";
-import {Box} from "@mui/material";
 import {Translation} from "../../components/Translation";
 import SectionHeading from "../../components/SectionHeading";
+import Layout from "../../layout/Layout";
 
 export type MainPageSectionProps = {
     children: React.ReactNode | React.ReactNode[],
@@ -11,23 +11,11 @@ export type MainPageSectionProps = {
 }
 
 export default function MainPageSection(props: MainPageSectionProps) {
-    const wide = props.wide !== undefined ? props.wide : false;
     return (
-        <Box sx={{
-            pl: {
-                xs: wide ? '5%' : '15%',
-                sm: wide ? '5%' : '10%',
-                lg: wide ? '5%' : '12.5%',
-            },
-            pr: {
-                xs: wide ? '5%' : '15%',
-                sm: wide ? '5%' : '10%',
-                lg: wide ? '5%' : '12.5%',
-            },
-        }}>
+        <Layout>
             <SectionHeading>
                 <Translation pl={props.title_pl} en={props.title_en}/>
             </SectionHeading>
             {props.children}
-        </Box>);
+        </Layout>);
 }

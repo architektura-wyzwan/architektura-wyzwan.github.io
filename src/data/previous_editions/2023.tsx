@@ -19,7 +19,7 @@ function Content() {
             en={
                 "On July 3–4, 2023, the international conference titled Architecture of Challenges – Rebuilding Ukraine was held at the Royal Łazienki Museum in Warsaw. The event was organized by the Faculty of Architecture of the Warsaw University of Technology, the Royal Łazienki Museum in Warsaw, and the National Heritage Board of Poland. The conference served as a platform for the exchange of ideas on the role of architecture, spatial planning, and landscape design in the context of war-related destruction and future reconstruction. Its aim was to collectively seek answers to the questions of how to shape living environments in the face of wartime threats and what kind of future Ukraine should have after the end of military operations."
             }/>
-        <BigImage src={"/static/POSTER_2023.png"}/>
+        <BigImage src={"/static/PreviousEditions/2023/POSTER.png"}/>
         <Paragraph
             pl={"24 lutego 2022 r. Ukraina znów została zaatakowana przez Rosję – wojna dotknęła cały kraj"}
             en={

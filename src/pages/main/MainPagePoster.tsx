@@ -3,6 +3,9 @@ import {Translation} from "../../components/Translation";
 import * as React from "react";
 import ImageCard from "../../components/ImageCard";
 import useWindowDimensions from "../../hooks/UseWindowDimensions";
+import {useIsSm} from "../../hooks/UseDimensionHooks";
+import useDarkMode from "../../hooks/UseDarkMode";
+import {useHeaderHeight} from "../../layout/header/Header";
 
 type CenteredJustifiedProps = {
     text: (string | React.ReactNode)[];
@@ -18,55 +21,20 @@ function CenteredJustified(props: CenteredJustifiedProps & TypographyProps) {
     </Stack>)
 }
 
+function Logos() {
+    const dark_mode = useDarkMode();
 
-function FirstSection() {
-    const theme = useTheme();
-    const dark_mode = theme.palette.mode === "dark";
-    const {height, width} = useWindowDimensions();
-    const vertical = width < 800;
-
-    const headerHeight = width >= 2000 ? 85 : 74;
-    const columnHeight = height - headerHeight;
-
-    const verticalTitleSmallSx = {
-        fontSize: '11px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-        },
-    };
-    const verticalTitleSmallSxPl = {
-        fontSize: '10px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
-        },
-    };
-    const horizontalTitleSmallSxPl = {
-        fontSize: '6px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '10px',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '16px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '22px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '32px',
-        },
-    };
-
-    const logos = (<Stack direction="row" justifyContent="space-between" alignItems="center">
+    return <Stack direction="row" justifyContent="space-between" alignItems="center">
         <ImageCard
             image="/static/Logo_organizatorzy/pw_logo.png"
             borderRadius={0}
             sx={{
                 width: {
                     xs: '40px',
-                    sm: vertical ? '60px' : '40px',
-                    md: '60px',
-                    lg: '80px',
-                    xl: '120px',
+                    sm: '60px',
+                    md: '40px',
+                    lg: '60px',
+                    xl: '80px',
                 },
                 filter: dark_mode ? "invert(100%)" : "invert(0%)",
             }}/>
@@ -76,10 +44,10 @@ function FirstSection() {
             sx={{
                 width: {
                     xs: '75px',
-                    sm: vertical ? '110px' : '75px',
-                    md: '110px',
-                    lg: '150px',
-                    xl: '220px',
+                    sm: '110px',
+                    md: '75px',
+                    lg: '110px',
+                    xl: '150px',
                 },
                 filter: dark_mode ? "invert(100%)" : "invert(0%)",
             }}/>
@@ -89,10 +57,10 @@ function FirstSection() {
             sx={{
                 width: {
                     xs: '20px',
-                    sm: vertical ? '30px' : '20px',
-                    md: '30px',
-                    lg: '40px',
-                    xl: '60px',
+                    sm: '30px',
+                    md: '20px',
+                    lg: '30px',
+                    xl: '40px',
                 },
                 filter: dark_mode ? "invert(100%)" : "invert(0%)",
             }}/>
@@ -102,10 +70,10 @@ function FirstSection() {
             sx={{
                 width: {
                     xs: '35px',
-                    sm: vertical ? '50px' : '35px',
-                    md: '50px',
-                    lg: '70px',
-                    xl: '100px',
+                    sm: '50px',
+                    md: '35px',
+                    lg: '50px',
+                    xl: '70px',
                 },
                 filter: dark_mode ? "invert(100%)" : "invert(0%)",
             }}/>
@@ -115,29 +83,100 @@ function FirstSection() {
             sx={{
                 width: {
                     xs: '40px',
-                    sm: vertical ? '60px' : '40px',
-                    md: '60px',
-                    lg: '80px',
-                    xl: '120px',
+                    sm: '60px',
+                    md: '40px',
+                    lg: '60px',
+                    xl: '80px',
                 },
                 filter: dark_mode ? "invert(100%)" : "invert(0%)",
             }}/>
-    </Stack>);
+    </Stack>;
+}
 
-    const textElement = (<Stack
+function TextElement() {
+    const theme = useTheme();
+    const dark_mode = useDarkMode();
+
+    const title_big = {
+        fontSize: '12px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '16px',
+            lineHeight: 1.5,
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '12px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '16px'
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '22px'
+        },
+    };
+    const title_big_pl = {
+        fontSize: '10px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '16px',
+            lineHeight: 1.5,
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '12px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '16px'
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '22px'
+        },
+    };
+    const title_small = {
+        fontSize: '12px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '16px',
+            lineHeight: 1.5,
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '12px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '16px'
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '22px'
+        },
+    };
+    const title_small_pl = {
+        fontSize: '11px',
+        lineHeight: '18px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '16px',
+            lineHeight: 1.5,
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '12px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '16px'
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '22px'
+        },
+    }
+
+    return <Stack
         direction="column"
         spacing={{
             xs: 1,
-            sm: vertical ? 3 : 5
+            sm: 5
         }}
         sx={{
             alignItems: "stretch",
             maxWidth: {
                 xs: '280px',
-                sm: vertical ? '450px' : '300px',
-                md: '450px',
-                lg: '600px',
-                xl: '900px',
+                sm: '450px',
+                md: '280px',
+                lg: '450px',
+                xl: '600px',
             }
         }}>
         <Box>
@@ -146,32 +185,44 @@ function FirstSection() {
                 sx={{pb: 1}}
             />
             <Translation
-            en={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSx : {}}
-                               text={["NEW", "EUROPEAN", "BAUHAUS", "-", "BUILDING", "COMMUNITY"]}/>}
-            pl={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSxPl : horizontalTitleSmallSxPl}
-                                   text={["NOWY", "EUROPEJSKI", "BAUHAUS", "-", "BUDOWANIE", "WSPÓLNOTY"]}/>}
+                pl={<CenteredJustified sx={title_big_pl}
+                                       text={["NOWY", "EUROPEJSKI", "BAUHAUS", "-", "BUDOWANIE", "WSPÓLNOTY"]}/>}
+                en={<CenteredJustified sx={title_big}
+                                       text={["NEW", "EUROPEAN", "BAUHAUS", "-", "BUILDING", "COMMUNITY"]}/>}
             />
         </Box>
         <Box>
             <Translation
-                pl={<CenteredJustified variant="title_small" sx={vertical ? verticalTitleSmallSx : {fontWeight: "bold"}}
+                pl={<CenteredJustified sx={title_small_pl}
                                        text={["30.06", "-", "1.07.2025", "-", "III", "Międzynarodowa", "Konferencja"]}/>}
-                en={<CenteredJustified variant="title_small" sx={vertical ? verticalTitleSmallSx : {fontWeight: "bold"}}
+                en={<CenteredJustified sx={title_small}
                                        text={["30.06", "-", "1.07.2025", "-", "III", "International", "Conference"]}/>}
             />
             <Typography variant="lighter" component="p" sx={{
                 textAlign: "justify",
                 textJustify: "inter-word",
+                fontSize: {
+                    sx: '12px',
+                    sm: '16px',
+                }
             }}>
                 <Translation
                     pl="Pałac na Wyspie, Muzeum Łazienki Królewskie w Warszawie i Pałac Czapskich, Akademia Sztuk Pięknych w Warszawie"
                     en="Palace on the Isle, Royal Łazienki Museum in Warsaw and Czapski Palace, The Academy of Fine Arts in Warsaw"/>
             </Typography>
         </Box>
-        {logos}
-    </Stack>);
+        <Logos/>
+    </Stack>;
+}
 
-    if (vertical) {
+function MainPagePoster() {
+    const isSm = useIsSm();
+    const {height} = useWindowDimensions();
+
+    const headerHeight = useHeaderHeight();
+    const columnHeight = height - headerHeight;
+
+    if (isSm) {
         return (
             <Grid container
                   direction="column"
@@ -195,7 +246,7 @@ function FirstSection() {
                     />
                 </Grid>
                 <Grid>
-                    {textElement}
+                    <TextElement/>
                 </Grid>
             </Grid>
         )
@@ -205,7 +256,7 @@ function FirstSection() {
                   direction="row"
                   justifyContent={{
                       sm: "initial",
-                      md: "flex-start",
+                      lg: "flex-start",
                   }}
                   alignItems={{
                       sm: "flex-end",
@@ -214,10 +265,10 @@ function FirstSection() {
                 <Grid sx={{
                     maxWidth: {
                         sm: "55%",
-                        md: "50%",
+                        lg: "50%",
                     },
                     justifySelf: {
-                        md: "flex-start"
+                        lg: "flex-start"
                     }
                 }}>
                     <ImageCard
@@ -238,19 +289,19 @@ function FirstSection() {
                     justifyContent: "center",
                     pb: {
                         sm: "5%",
-                        lg: 10,
+                        xl: 10,
                     },
                     ml: {
                         sm: "5%",
-                        lg: "2%"
+                        xl: "2%"
                     },
                     mr: {
                         sm: "5%",
-                        lg: "2%"
+                        xl: "2%"
                     },
                 }}>
                     <Box>
-                        {textElement}
+                        <TextElement/>
                     </Box>
                 </Grid>
             </Grid>
@@ -258,4 +309,4 @@ function FirstSection() {
     }
 }
 
-export default FirstSection;
+export default MainPagePoster;

@@ -1,7 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {Box, IconButton, useMediaQuery, useTheme} from '@mui/material';
+import {Box, IconButton, Stack, useMediaQuery, useTheme} from '@mui/material';
 import {KeyboardArrowLeft, KeyboardArrowRight} from '@mui/icons-material';
-import ImageCard from "./ImageCard";
 import useWindowDimensions from "../hooks/UseWindowDimensions";
 
 interface CarouselProps {
@@ -12,7 +11,6 @@ interface CarouselProps {
     space: number;
     justifyContent?: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around';
     children: React.ReactNode[];
-    containerHeight: any;
 }
 
 export function Carousel({
@@ -23,7 +21,6 @@ export function Carousel({
                              space,
                              justifyContent = 'center',
                              numberOfSlides = 1,
-                             containerHeight,
                          }: CarouselProps) {
 
     const [activeIndex, setActiveIndex] = useState(0);
@@ -80,7 +77,6 @@ export function Carousel({
             sx={{
                 position: 'relative',
                 width: '100%',
-                height: containerHeight,
                 overflowX: 'hidden',
             }}
         >
@@ -95,20 +91,29 @@ export function Carousel({
                     alignItems: 'center',
                     transition: 'transform 0.5s ease-in-out',
                     transform: `translateX(-${(widthOfImagePx + space) * activeIndex}px)`,
+                    overflow: 'hidden',
+                    // pointerEvents: 'none',
                 }}
             >
-                {children.map((item, _) => (
+                {children.map((item) => (
                     <Box sx={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: justifyContent,
-
                         width: widthOfImagePx + 'px',
                     }}>
                         {item}
                     </Box>
                 ))}
             </Box>
+            <Stack
+                direction="row"
+                sx={{
+                    opacity: 0,
+                    overflow: 'hidden',
+                }}>
+                {children}
+            </Stack>
 
             <IconButton
                 sx={{

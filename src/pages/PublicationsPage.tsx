@@ -1,29 +1,24 @@
 import * as React from 'react';
-import {Grid} from "@mui/material";
 import {Translation} from "../components/Translation";
 import {StandardRectangleCard} from "../components/StandardCard";
 import {publications} from "../data/Publications";
-import PageLayout from "../layout/PageLayout";
+import ArticleLayout from "../layout/ArticleLayout";
 import StandardGrid from "../components/StandardGrid";
 import urls from "../Urls";
 
 function PublicationsPage() {
-    return (<PageLayout title_pl="Publikacje" title_en="Publications" wide={true}>
-        <StandardGrid>
-            {publications.map((publication) => (
-                <Grid size={1}>
-                    <a href={publication.url} download style={{textDecoration: "none"}}>
-                    <StandardRectangleCard
-                        url={urls.publications}
-                        image={publication.image}
-                        cardTitle={publication.title}
-                        cardDescription={<Translation pl={publication.description_pl} en={publication.description_en}/>}
-                    />
-                    </a>
-                </Grid>
-            ))}
-        </StandardGrid>
-    </PageLayout>)
+    return (<ArticleLayout title_pl="Publikacje" title_en="Publications">
+        <StandardGrid elements={publications.map((publication) =>
+            <a href={publication.url} download style={{textDecoration: "none"}}>
+                <StandardRectangleCard
+                    url={urls.publications}
+                    image={publication.image}
+                    cardTitle={publication.title}
+                    cardDescription={<Translation pl={publication.description_pl} en={publication.description_en}/>}
+                />
+            </a>
+        )}/>
+    </ArticleLayout>)
 }
 
 export default PublicationsPage;
