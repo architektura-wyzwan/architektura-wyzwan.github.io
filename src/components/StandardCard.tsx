@@ -88,7 +88,6 @@ function StandardCard(props: StandardCardProps & CardMediaProps) {
 
                             display: "block",
                             width: "100%",
-                            // overflow: "hidden",
 
                             "::before": {
                                 background: "linear-gradient(to right, " + backgroundColorOpacityFull + " 0%, " + backgroundColor + " 50%)",
@@ -130,7 +129,7 @@ export function StandardRectangleCard(props: StandardSpecializedCardProps & Card
                 sm: "249px",
                 md: "322px",
                 lg: "308px",
-                xl: "332px",
+                xl: "326px",
             }}
             hideOverflowText={!isXs}
             sx={{
