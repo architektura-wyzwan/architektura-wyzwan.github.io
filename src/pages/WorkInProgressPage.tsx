@@ -1,18 +1,21 @@
 import {Box, Stack, Typography} from '@mui/material';
 import * as React from 'react';
-import {Translation} from "../common/Translation";
+import {Translation} from "../components/Translation";
 import SettingsIcon from '@mui/icons-material/Settings';
+import Layout from "../layout/Layout";
 
 function WorkInProgressPage() {
     return (
         <div
             style={{
-                position: 'absolute',
+                position: 'relative',
                 left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)'
+                transform: 'translate(-50%, -50%)',
+                marginTop: '40vh',
+                marginBottom: '30vh',
             }}
         >
+            <Layout>
             <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
                 <SettingsIcon
                     sx={{
@@ -38,6 +41,7 @@ function WorkInProgressPage() {
                     </Typography>
                 </Box>
             </Stack>
+            </Layout>
         </div>
     )
 }

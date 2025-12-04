@@ -5,6 +5,7 @@ import {opening_pavilion_of_future} from "./news/opening_pavilion_of_future";
 import {pavilion_of_future_new_location} from "./news/pavilion_of_future_new_location";
 import {opening_pavilion_of_community} from "./news/opening_pavilion_of_community";
 import {conference_2025} from "./news/conference_2025";
+import {ArticleMetadata} from "../layout/Article";
 
 export type ArticleContent = {
     title_pl: string;
@@ -16,7 +17,7 @@ export type ArticleContent = {
 }
 
 // Last 3 articles will be displayed on the main page
-export const articles: ArticleContent[] = [
+export const articles: ArticleMetadata[] = [
     opening_pavilion_of_freedom,
     pavilion_of_freedom_award,
     opening_pavilion_of_future,

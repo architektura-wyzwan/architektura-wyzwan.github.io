@@ -1,15 +1,16 @@
 import {Stack, Typography} from '@mui/material';
 import * as React from 'react';
-import {Translation} from "../common/Translation";
+import {Translation} from "../components/Translation";
 
 function NotFoundPage() {
     return (
         <div
             style={{
-                position: 'absolute',
-                left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)'
+                position: 'relative',
+                left: '50vw',
+                transform: 'translate(-50%, -50%)',
+                marginTop: '40vh',
+                marginBottom: '30vh',
             }}
         >
             <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
