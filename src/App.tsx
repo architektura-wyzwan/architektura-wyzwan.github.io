@@ -22,14 +22,13 @@ import ContactPage from './pages/ContactPage';
 import {agenda_experiment, ExperimentGuard, publications_experiment} from "./Experiments";
 import {agendaWorkInProgressPage} from "./data/AgendaWorkInProgress";
 import {articles} from "./data/Articles";
-import {Box, Typography, useMediaQuery} from "@mui/material";
+import {Box, useMediaQuery} from "@mui/material";
 import SponsorsPage from "./pages/SponsorsPage";
 import {OrganizersPage} from "./pages/OrganizersPage";
 import GalleryPickerPage from "./pages/GalleryPickerPage";
 import GalleryPage from "./pages/GalleryPage";
 import {LanguageContextProvider} from './hooks/UseLanguage';
 import {Article} from './layout/Article';
-import Layout from "./layout/Layout";
 import theme from "./Theme";
 
 function App() {
@@ -79,30 +78,6 @@ function App() {
                 </LanguageContextProvider>
             </ThemeProvider>
         </HashRouter>
-    );
-}
-
-function Test() {
-    return (
-        <Layout>
-            <Typography variant="h1">Responsive h1</Typography>
-            <Typography variant="h2">Responsive h2</Typography>
-            <Typography variant="h3">Responsive h3</Typography>
-            <Typography variant="h4">Responsive h4</Typography>
-            <Typography variant="h5">Responsive h5</Typography>
-            <Typography variant="h6">Responsive h6</Typography>
-            <Typography variant="subtitle1">Responsive subtitle1</Typography>
-            <Typography variant="subtitle2">Responsive subtitle2</Typography>
-            <Typography variant="body1">Responsive body1</Typography>
-            <Typography variant="body2">Responsive body2</Typography>
-            <Typography variant="very_bold">Responsive very_bold</Typography><br/>
-            <Typography variant="bold">Responsive bold</Typography><br/>
-            <Typography variant="bolder">Responsive bolder</Typography><br/>
-            <Typography variant="regular">Responsive regular</Typography><br/>
-            <Typography variant="lighter">Responsive lighter</Typography><br/>
-            <Typography variant="light">Responsive light</Typography><br/>
-            <Typography variant="very_light">Responsive very_light</Typography><br/>
-        </Layout>
     );
 }
 
