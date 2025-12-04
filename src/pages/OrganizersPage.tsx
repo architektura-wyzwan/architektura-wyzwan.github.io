@@ -103,7 +103,7 @@ function BreakDescriptionAtEmailCircleGrid(props: { items: Speaker[] }) {
 
 export function OrganizersPage() {
     return (
-        <ArticleLayout title_pl="Organizatorzy" title_en="Organizers" wide={true}>
+        <ArticleLayout title_pl="Organizatorzy" title_en="Organizers">
             <Typography variant="h3"
                         sx={{
                             mt: {

@@ -3,7 +3,7 @@ import {Translation} from "../../components/Translation";
 import * as React from "react";
 import ImageCard from "../../components/ImageCard";
 import useWindowDimensions from "../../hooks/UseWindowDimensions";
-import useVertical from "../../hooks/UseVertical";
+import {useIsSm} from "../../hooks/UseDimensionHooks";
 import useDarkMode from "../../hooks/UseDarkMode";
 import {useHeaderHeight} from "../../layout/header/Header";
 
@@ -22,7 +22,6 @@ function CenteredJustified(props: CenteredJustifiedProps & TypographyProps) {
 }
 
 function Logos() {
-    const vertical = useVertical();
     const dark_mode = useDarkMode();
 
     return <Stack direction="row" justifyContent="space-between" alignItems="center">
@@ -32,7 +31,7 @@ function Logos() {
             sx={{
                 width: {
                     xs: '40px',
-                    sm: vertical ? '60px' : '40px',
+                    sm: '60px',
                     md: '40px',
                     lg: '60px',
                     xl: '80px',
@@ -45,7 +44,7 @@ function Logos() {
             sx={{
                 width: {
                     xs: '75px',
-                    sm: vertical ? '110px' : '75px',
+                    sm: '110px',
                     md: '75px',
                     lg: '110px',
                     xl: '150px',
@@ -58,7 +57,7 @@ function Logos() {
             sx={{
                 width: {
                     xs: '20px',
-                    sm: vertical ? '30px' : '20px',
+                    sm: '30px',
                     md: '20px',
                     lg: '30px',
                     xl: '40px',
@@ -71,7 +70,7 @@ function Logos() {
             sx={{
                 width: {
                     xs: '35px',
-                    sm: vertical ? '50px' : '35px',
+                    sm: '50px',
                     md: '35px',
                     lg: '50px',
                     xl: '70px',
@@ -84,7 +83,7 @@ function Logos() {
             sx={{
                 width: {
                     xs: '40px',
-                    sm: vertical ? '60px' : '40px',
+                    sm: '60px',
                     md: '40px',
                     lg: '60px',
                     xl: '80px',
@@ -96,48 +95,85 @@ function Logos() {
 
 function TextElement() {
     const theme = useTheme();
-    const vertical = useVertical();
     const dark_mode = useDarkMode();
 
-    const verticalTitleSmallSx = {
-        fontSize: '11px',
+    const title_big = {
+        fontSize: '12px',
         [theme.breakpoints.up('sm')]: {
             fontSize: '16px',
+            lineHeight: 1.5,
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '12px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '16px'
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '22px'
         },
     };
-    const verticalTitleSmallSxPl = {
+    const title_big_pl = {
         fontSize: '10px',
         [theme.breakpoints.up('sm')]: {
             fontSize: '16px',
-        },
-    };
-    const horizontalTitleSmallSxPl = {
-        fontSize: '6px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '10px',
+            lineHeight: 1.5,
         },
         [theme.breakpoints.up('md')]: {
-            fontSize: '16px',
+            fontSize: '12px'
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '22px',
+            fontSize: '16px'
         },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '32px',
+            fontSize: '22px'
         },
     };
+    const title_small = {
+        fontSize: '12px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '16px',
+            lineHeight: 1.5,
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '12px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '16px'
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '22px'
+        },
+    };
+    const title_small_pl = {
+        fontSize: '11px',
+        lineHeight: '18px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '16px',
+            lineHeight: 1.5,
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '12px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '16px'
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '22px'
+        },
+    }
 
     return <Stack
         direction="column"
         spacing={{
             xs: 1,
-            sm: vertical ? 3 : 5
+            sm: 5
         }}
         sx={{
             alignItems: "stretch",
             maxWidth: {
                 xs: '280px',
-                sm: vertical ? '450px' : '280px',
+                sm: '450px',
                 md: '280px',
                 lg: '450px',
                 xl: '600px',
@@ -149,22 +185,26 @@ function TextElement() {
                 sx={{pb: 1}}
             />
             <Translation
-                en={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSx : {}}
-                                       text={["NEW", "EUROPEAN", "BAUHAUS", "-", "BUILDING", "COMMUNITY"]}/>}
-                pl={<CenteredJustified variant={vertical ? "regular" : "title_small"} sx={vertical ? verticalTitleSmallSxPl : horizontalTitleSmallSxPl}
+                pl={<CenteredJustified sx={title_big_pl}
                                        text={["NOWY", "EUROPEJSKI", "BAUHAUS", "-", "BUDOWANIE", "WSPÓLNOTY"]}/>}
+                en={<CenteredJustified sx={title_big}
+                                       text={["NEW", "EUROPEAN", "BAUHAUS", "-", "BUILDING", "COMMUNITY"]}/>}
             />
         </Box>
         <Box>
             <Translation
-                pl={<CenteredJustified variant="title_small" sx={vertical ? verticalTitleSmallSx : {fontWeight: "bold"}}
+                pl={<CenteredJustified sx={title_small_pl}
                                        text={["30.06", "-", "1.07.2025", "-", "III", "Międzynarodowa", "Konferencja"]}/>}
-                en={<CenteredJustified variant="title_small" sx={vertical ? verticalTitleSmallSx : {fontWeight: "bold"}}
+                en={<CenteredJustified sx={title_small}
                                        text={["30.06", "-", "1.07.2025", "-", "III", "International", "Conference"]}/>}
             />
             <Typography variant="lighter" component="p" sx={{
                 textAlign: "justify",
                 textJustify: "inter-word",
+                fontSize: {
+                    sx: '12px',
+                    sm: '16px',
+                }
             }}>
                 <Translation
                     pl="Pałac na Wyspie, Muzeum Łazienki Królewskie w Warszawie i Pałac Czapskich, Akademia Sztuk Pięknych w Warszawie"
@@ -175,14 +215,14 @@ function TextElement() {
     </Stack>;
 }
 
-function FirstSection() {
-    const vertical = useVertical();
+function MainPagePoster() {
+    const isSm = useIsSm();
     const {height} = useWindowDimensions();
 
     const headerHeight = useHeaderHeight();
     const columnHeight = height - headerHeight;
 
-    if (vertical) {
+    if (isSm) {
         return (
             <Grid container
                   direction="column"
@@ -269,4 +309,4 @@ function FirstSection() {
     }
 }
 
-export default FirstSection;
+export default MainPagePoster;

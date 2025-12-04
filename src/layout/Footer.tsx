@@ -4,7 +4,7 @@ import {Address, SocialLinks} from "../components/Contact";
 import ImageCard from "../components/ImageCard";
 import {Translation} from "../components/Translation";
 import {sponsors_list} from "../data/Sponsors";
-import useVertical from "../hooks/UseVertical";
+import {useIsXs} from "../hooks/UseDimensionHooks";
 import {Carousel} from "../components/Carousel";
 import Layout from "./Layout";
 
@@ -12,7 +12,14 @@ function Sponsor(props: { name_pl: string, name_en: string, image: string }) {
     return <Stack
         gap='15px'
         sx={{
-            width: '100%',
+            maxWidth: {
+                xs: "210px",
+                sm: "initial",
+            },
+            width: {
+                xs: 'initial',
+                sm: '100%',
+            },
             alignItems: 'center',
         }}>
         <ImageCard sx={{
@@ -29,7 +36,7 @@ function Sponsor(props: { name_pl: string, name_en: string, image: string }) {
 }
 
 function Sponsors() {
-    const vertical = useVertical();
+    const isXs = useIsXs();
     return <Box sx={{
         display: "flex",
         justifyContent: {
@@ -42,20 +49,27 @@ function Sponsors() {
                 xs: 2,
                 sm: 0,
             },
-            width: {
-                xs: '300px',
+            maxWidth: {
+                xs: '100%',
                 sm: '100%',
             },
         }}>
-            <Translation variant="cardTitle" pl={"Sponsorzy i partnerzy"} en={"Sponsors and partners"}/>
+            <Box sx={{
+                pb: {
+                    xs: 2,
+                    sm: 1,
+                },
+            }}>
+                <Translation variant="cardTitle" pl={"Sponsorzy i partnerzy"} en={"Sponsors and partners"}/>
+            </Box>
             <Carousel
                 autoPlay={true}
                 hideButtons={true}
                 autoPlayInterval={1500}
-                space={vertical ? 25 : 50}
+                space={isXs ? 25 : 50}
                 numberOfSlides={{
                     xs: 1,
-                    sm: vertical ? 3 : 2,
+                    sm: 2,
                     md: 3,
                     lg: 4,
                     xl: 5,

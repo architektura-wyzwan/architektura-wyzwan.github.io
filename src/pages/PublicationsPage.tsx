@@ -7,7 +7,7 @@ import StandardGrid from "../components/StandardGrid";
 import urls from "../Urls";
 
 function PublicationsPage() {
-    return (<ArticleLayout title_pl="Publikacje" title_en="Publications" wide={true}>
+    return (<ArticleLayout title_pl="Publikacje" title_en="Publications">
         <StandardGrid elements={publications.map((publication) =>
             <a href={publication.url} download style={{textDecoration: "none"}}>
                 <StandardRectangleCard

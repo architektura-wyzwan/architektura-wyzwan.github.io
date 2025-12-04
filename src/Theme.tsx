@@ -3,8 +3,6 @@ import React from "react";
 
 declare module '@mui/material/styles' {
     interface TypographyVariants {
-        title_big: React.CSSProperties;
-        title_small: React.CSSProperties;
         very_bold: React.CSSProperties;
         bold: React.CSSProperties;
         bolder: React.CSSProperties;
@@ -18,8 +16,6 @@ declare module '@mui/material/styles' {
 
     // allow configuration using `createTheme()`
     interface TypographyVariantsOptions {
-        title_big?: React.CSSProperties;
-        title_small?: React.CSSProperties;
         very_bold?: React.CSSProperties;
         bold?: React.CSSProperties;
         bolder?: React.CSSProperties;
@@ -35,8 +31,6 @@ declare module '@mui/material/styles' {
 // Update the Typography's variant prop options
 declare module '@mui/material/Typography' {
     interface TypographyPropsVariantOverrides {
-        title_big: true;
-        title_small: true;
         very_bold: true;
         bold: true;
         bolder: true;
@@ -106,8 +100,8 @@ let theme = createTheme({
             xs: 0,
             sm: 600,
             md: 800,
-            lg: 1200,
-            xl: 1536,
+            lg: 1100,
+            xl: 1500,
         },
     },
 });
@@ -123,38 +117,6 @@ export const standardFont = {
 theme.typography = {
     ...theme.typography,
     fontFamily: 'Poppins, Arial',
-    title_big: {
-        fontWeight: '600',
-        fontSize: '18px',
-        lineHeight: '18px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '27px',
-            lineHeight: '27px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '36px',
-            lineHeight: '36px',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '54px',
-            lineHeight: '54px',
-        },
-    },
-    title_small: {
-        fontSize: '12px',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '12px',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '12px'
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '16px'
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '22px'
-        },
-    },
     very_bold: {
         fontWeight: '700',
         ...standardFont,
@@ -271,7 +233,7 @@ theme.typography = {
             fontSize: '1.875rem',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '2.5rem',
+            fontSize: '2rem',
         },
     },
     h6: {
@@ -283,7 +245,7 @@ theme.typography = {
             fontSize: '1.875rem',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '2.5rem',
+            fontSize: '2rem',
         },
     }
 }

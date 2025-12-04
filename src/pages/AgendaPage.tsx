@@ -4,7 +4,7 @@ import {Agenda, agenda, AgendaBlock, AgendaItem} from "../data/Agenda";
 import {TabContext, TabList, TabPanel} from "@mui/lab";
 import ArticleLayout from "../layout/ArticleLayout";
 import {SyntheticEvent, useState} from "react";
-import useVertical from "../hooks/UseVertical";
+import {useIsXs} from "../hooks/UseDimensionHooks";
 
 // The block title consists of the hours and the blocks title side by side
 function BlockTitle(props: {item: AgendaBlock}) {
@@ -32,7 +32,7 @@ function BlockTitle(props: {item: AgendaBlock}) {
 //
 // On larger screens, the lecture title, speaker name and the institution name are displayed in one row.
 function LectureItem(props: {item: AgendaItem}) {
-    const isXs = useVertical();
+    const isXs = useIsXs();
     return <>
         <Grid size={{
             xs: 3,
@@ -108,7 +108,7 @@ export default function AgendaPage() {
         setDayNumber(newValue);
     };
     return (
-        <ArticleLayout title_pl="Program" title_en="Agenda" wide={true}>
+        <ArticleLayout title_pl="Program" title_en="Agenda">
             <TabContext value={dayNumber}>
                 <TabList onChange={handleChange} aria-label="agenda tabs">
                     {agenda.map((agenda, index) =>

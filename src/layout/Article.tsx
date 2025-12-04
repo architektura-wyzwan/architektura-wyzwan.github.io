@@ -43,7 +43,7 @@ function CoverImage(props: { image: string | undefined }) {
 export function Article(props: {article: ArticleMetadata}) {
     let metadata = props.article;
     return (
-        <ArticleLayout title_pl={metadata.title_pl} title_en={metadata.title_en} wide={true}>
+        <ArticleLayout title_pl={metadata.title_pl} title_en={metadata.title_en}>
             <Stack direction="column" spacing={3}>
                 <Subtitle subtitle_pl={metadata.subtitle_pl} subtitle_en={metadata.subtitle_en}/>
                 <CoverImage image={metadata.image}/>

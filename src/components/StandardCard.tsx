@@ -1,6 +1,5 @@
 import * as React from "react";
 import {
-    Box,
     Card,
     CardActionArea,
     CardContent,
@@ -9,7 +8,7 @@ import {
     Typography
 } from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import { useIsXs } from "../hooks/UseVertical";
+import { useIsXs } from "../hooks/UseDimensionHooks";
 
 type StandardCardProps = {
     url?: string;
@@ -75,7 +74,6 @@ function StandardCard(props: StandardCardProps & CardMediaProps) {
                 flexDirection: "column",
                 width: props.cardWidth,
             }}>
-                {/*<Box sx={{flex: 1}}>*/}
                     <Typography gutterBottom variant="cardTitle" component="div"
                                 sx={{textAlign: textInCenter ? "center" : "initial"}}>
                         {props.cardTitle}
@@ -95,7 +93,7 @@ function StandardCard(props: StandardCardProps & CardMediaProps) {
                             "::before": {
                                 background: "linear-gradient(to right, " + backgroundColorOpacityFull + " 0%, " + backgroundColor + " 50%)",
                                 content: "'\u00A0'",
-                                display: props.hideOverflowText ? "block" : "hidden",
+                                display: props.hideOverflowText ? "block" : "none",
                                 position: "absolute",
                                 right: 0,
                                 bottom: 0,
@@ -106,7 +104,6 @@ function StandardCard(props: StandardCardProps & CardMediaProps) {
                     }}>
                         {props.cardDescription}
                     </Typography>
-                {/*</Box>*/}
             </CardContent>
         </Card>
     </WrapInNavigateAction>;

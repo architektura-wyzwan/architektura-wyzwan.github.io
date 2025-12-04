@@ -30,8 +30,6 @@ export type TypographyVariant =
 	| 'lighter'
 	| 'light'
 	| 'very_light'
-	| 'title_small'
-	| 'title_big'
 	| 'cardTitle';
 export function Translation(props: TranslationProps) {
 	const language = useLanguage();

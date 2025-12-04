@@ -99,7 +99,7 @@ function SponsorsList(props: SponsorsListProps) {
 
 function SponsorsPage() {
     return (
-        <ArticleLayout title_pl="Sponsorzy i partnerzy" title_en="Sponsors and partners" wide={true}>
+        <ArticleLayout title_pl="Sponsorzy i partnerzy" title_en="Sponsors and partners">
             {sponsors_list.map((sponsor_list) =>
                 <SponsorsList title_pl={sponsor_list.name_pl}
                               title_en={sponsor_list.name_en}

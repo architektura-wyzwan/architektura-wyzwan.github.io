@@ -7,18 +7,17 @@ export type PageLayoutProps = {
     children: React.ReactNode | React.ReactNode[],
     title_pl: string,
     title_en: string,
-    wide: boolean,
 }
 
 export default function ArticleLayout(props: PageLayoutProps) {
-    return (<Layout wide={props.wide}>
+    return (<Layout>
         <Box sx={{
             mt: '50px',
             mb: '50px',
         }}>
             <Typography variant="h1"
                         gutterBottom={true}
-                        sx={props.wide ? {mb: 4} : {}}
+                        sx={{mb: 4}}
             >
                 <Translation pl={props.title_pl} en={props.title_en}/>
             </Typography>

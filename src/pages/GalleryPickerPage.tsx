@@ -7,7 +7,7 @@ import {galleryList} from "../data/Gallery";
 
 function GalleryPickerPage() {
     return (
-        <ArticleLayout title_pl="Galeria" title_en="Gallery" wide={true}>
+        <ArticleLayout title_pl="Galeria" title_en="Gallery">
             <StandardGrid elements={galleryList.map((gallery, index) =>
                     <StandardRectangleCard
                         url={urls.gallery(index)}

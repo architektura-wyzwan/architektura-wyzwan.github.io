@@ -7,9 +7,9 @@ import {Stack} from "@mui/material";
 // url: https://architectureofchallenges.pl/contact
 //
 // The contact page displays in a column the address and links to social accounts.
-export default function AgendaPage() {
+export default function ContactPage() {
     return (
-        <ArticleLayout title_pl="Kontakt" title_en="Contact" wide={false}>
+        <ArticleLayout title_pl="Kontakt" title_en="Contact">
             <Stack direction="column">
                 <Address light={false} dense={false}/>
                 <SocialLinks inverted={false} dense={false}/>
