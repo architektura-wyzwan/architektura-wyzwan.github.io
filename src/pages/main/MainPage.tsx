@@ -5,7 +5,7 @@ import MainPageDescription from "./MainPageDescription";
 import SpeakersSection from "./SpeakersSection";
 import ImportantDatesSection from "./ImportantDatesSection";
 import CurrentNewsSection from "./CurrentNewsSection";
-import {ExperimentGuard, speakers_experiment} from "../../Experiments";
+import {ExperimentGuard, important_dates_experiment, speakers_experiment} from "../../Experiments";
 
 function MainPage() {
 	return (
@@ -23,7 +23,7 @@ function MainPage() {
 			<MainPagePoster/>
 			<MainPageDescription/>
 			<ExperimentGuard experiment={speakers_experiment} enabled={<SpeakersSection/>}/>
-			<ImportantDatesSection/>
+			<ExperimentGuard experiment={important_dates_experiment} enabled={<ImportantDatesSection/>}/>
 			<CurrentNewsSection/>
 		</Stack>);
 }

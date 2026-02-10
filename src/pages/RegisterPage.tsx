@@ -40,7 +40,7 @@ function RegisterPage() {
                             <Skeleton variant="rectangular" animation="wave" width={iframeWidth}
                                       height={1370}/> : <></>}
                         <iframe title="Form title"
-                                src={"https://forms.office.com/pages/responsepage.aspx?id=nCJQO3jNiEWbz5e3Yp4vD6l0XybC_ddMh6Dj0fUQYOxUQkRSVlRDMVlNRzFGMkZLRDhITTUxVEpENC4u&embed=true&lang=" + lang_url}
+                                src={"https://forms.office.com/pages/responsepage.aspx?id=nCJQO3jNiEWbz5e3Yp4vD6l0XybC_ddMh6Dj0fUQYOxUODJMNzNPSFNHSlZVTDhGODIyMUJXS0xPUS4u&embed=true&lang=" + lang_url}
                                 width={iframeWidth} height="1371"
                                 onLoad={() => setLoading(false)}
                                 style={{

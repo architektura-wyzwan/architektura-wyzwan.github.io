@@ -22,8 +22,11 @@ export const publications_experiment: Experiment = {
     enabled: true,
 }
 export const speakers_experiment: Experiment = {
-    enabled: true,
+    enabled: false,
+}
+export const important_dates_experiment: Experiment = {
+    enabled: false,
 }
 export const agenda_experiment: Experiment = {
-    enabled: true,
+    enabled: false,
 }

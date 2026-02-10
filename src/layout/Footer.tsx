@@ -121,8 +121,7 @@ function Copyright() {
         pb: 2,
     }}>
         <Typography variant="body2">
-            Copyright © 2025 International Conference – ARCHITECTURE OF CHALLENGES – NEW EUROPEAN BAUHAUS – BUILDING
-            COMMUNITY. All rights reserved.
+            Copyright © 2026 International Conference – ARCHITECTURE OF CHALLENGES – EXPERIMENT IN SPACE – THE SPACE OF EXPERIMENT. All rights reserved.
         </Typography>
     </Box>;
 }
