@@ -114,19 +114,19 @@ function TextElement() {
         },
     };
     const title_big_pl = {
-        fontSize: '10px',
+        fontSize: '8px',
         [theme.breakpoints.up('sm')]: {
-            fontSize: '16px',
+            fontSize: '14px',
             lineHeight: 1.5,
         },
         [theme.breakpoints.up('md')]: {
-            fontSize: '12px'
+            fontSize: '10px'
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '16px'
+            fontSize: '14px'
         },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '22px'
+            fontSize: '20px'
         },
     };
     const title_small = {
@@ -186,17 +186,17 @@ function TextElement() {
             />
             <Translation
                 pl={<CenteredJustified sx={title_big_pl}
-                                       text={["NOWY", "EUROPEJSKI", "BAUHAUS", "-", "BUDOWANIE", "WSPÓLNOTY"]}/>}
+                                       text={["EKSPERYMENT", "W", "PRZESTRZENI", "-", "PRZESTRZEŃ", "EKSPERYMENTU"]}/>}
                 en={<CenteredJustified sx={title_big}
-                                       text={["NEW", "EUROPEAN", "BAUHAUS", "-", "BUILDING", "COMMUNITY"]}/>}
+                                       text={["EXPERIMENT", "IN", "SPACE", "-", "THE", "SPACE", "OF", "EXPERIMENT"]}/>}
             />
         </Box>
         <Box>
             <Translation
                 pl={<CenteredJustified sx={title_small_pl}
-                                       text={["30.06", "-", "1.07.2025", "-", "III", "Międzynarodowa", "Konferencja"]}/>}
+                                       text={["29.06", "-", "30.06.2026", "-", "IV", "Międzynarodowa", "Konferencja"]}/>}
                 en={<CenteredJustified sx={title_small}
-                                       text={["30.06", "-", "1.07.2025", "-", "III", "International", "Conference"]}/>}
+                                       text={["29.06", "-", "30.06.2026", "-", "IV", "International", "Conference"]}/>}
             />
             <Typography variant="lighter" component="p" sx={{
                 textAlign: "justify",

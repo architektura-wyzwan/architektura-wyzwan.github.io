@@ -61,10 +61,16 @@ export const menuTree: MenuTreeItem[] = [
                 name_pl: "2023",
                 name_en: "2023",
                 navigation: urls.previous_editions(0),
-            },            {
+            },
+            {
                 name_pl: "2024",
                 name_en: "2024",
                 navigation: urls.previous_editions(1),
+            },
+            {
+                name_pl: "2025",
+                name_en: "2025",
+                navigation: urls.previous_editions(2),
             },
         ],
     },
