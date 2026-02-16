@@ -186,17 +186,17 @@ function TextElement() {
             />
             <Translation
                 pl={<CenteredJustified sx={title_big_pl}
-                                       text={["EKSPERYMENT", "W", "PRZESTRZENI", "-", "PRZESTRZEŃ", "EKSPERYMENTU"]}/>}
+                                       text={["EKSPERYMENT", "W", "PRZESTRZENI", "—", "PRZESTRZEŃ", "EKSPERYMENTU"]}/>}
                 en={<CenteredJustified sx={title_big}
-                                       text={["EXPERIMENT", "IN", "SPACE", "-", "THE", "SPACE", "OF", "EXPERIMENT"]}/>}
+                                       text={["EXPERIMENT", "IN", "SPACE", "—", "THE", "SPACE", "OF", "EXPERIMENT"]}/>}
             />
         </Box>
         <Box>
             <Translation
                 pl={<CenteredJustified sx={title_small_pl}
-                                       text={["29.06", "-", "30.06.2026", "-", "IV", "Międzynarodowa", "Konferencja"]}/>}
+                                       text={["29.06", "—", "30.06.2026", "—", "IV", "Międzynarodowa", "Konferencja"]}/>}
                 en={<CenteredJustified sx={title_small}
-                                       text={["29.06", "-", "30.06.2026", "-", "IV", "International", "Conference"]}/>}
+                                       text={["29.06", "—", "30.06.2026", "—", "IV", "International", "Conference"]}/>}
             />
             <Typography variant="lighter" component="p" sx={{
                 textAlign: "justify",
@@ -242,7 +242,7 @@ function MainPagePoster() {
                     alignItems="center"
                     size={11}>
                     <ImageCard
-                        image="/static/MainPage/Main page_poster.png"
+                        image="/static/MainPage/Main page_poster.jpg"
                     />
                 </Grid>
                 <Grid>
@@ -273,15 +273,12 @@ function MainPagePoster() {
                 }}>
                     <ImageCard
                         sx={{
-                            ml: {
-                                sm: "5%",
-                                lg: "2%",
-                            },
+                            pl: "2%",
                             maxHeight: {
                                 lg: Math.max(columnHeight, 850),
-                            }
+                            },
                         }}
-                        image="/static/MainPage/Main page_poster.png"
+                        image="/static/MainPage/Main page_poster.jpg"
                     />
                 </Grid>
                 <Grid size="grow" sx={{
