@@ -1,11 +1,10 @@
 import * as React from "react";
-import {Grid, Stack, Typography} from "@mui/material";
+import {Stack, Typography} from "@mui/material";
 import ImageCard from "../../components/ImageCard";
 import {Translation} from "../../components/Translation";
 import {Link} from "../../components/Link";
 import urls from "../../Urls";
 import {Paragraph} from "../../components/Paragraph";
-import {useIsMd} from "../../hooks/UseDimensionHooks";
 import Layout from "../../layout/Layout";
 
 function Text() {
@@ -48,34 +47,16 @@ function Image() {
 }
 
 function MainPageDescription() {
-    const isMd = useIsMd();
-    if (isMd) {
-        return <Layout>
-            <Stack spacing={3}>
-                <Image/>
-                <Text/>
-            </Stack>
-        </Layout>;
-    }
-    return (
-        <Grid
-            container
-            columnSpacing={6}
-            rowSpacing={3}
-            columns={12}
-            direction="row"
+    return <Layout>
+        <Stack
+            spacing={3}
             sx={{
-                justifyContent: "center",
-                alignItems: "center",
-            }}>
-            <Grid size={5}>
-                <Text/>
-            </Grid>
-            <Grid size={6}>
-                <Image/>
-            </Grid>
-        </Grid>
-    );
+                pt: 5
+        }}>
+            <Text/>
+            <Image/>
+        </Stack>
+    </Layout>;
 }
 
 export default MainPageDescription;
