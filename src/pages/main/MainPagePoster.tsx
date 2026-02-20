@@ -24,30 +24,50 @@ function CenteredJustified(props: CenteredJustifiedProps & TypographyProps) {
 function Logos() {
     const dark_mode = useDarkMode();
 
+    // Sum of logos in each size must be less than
+    // xs: '280px',
+    // sm: '450px',
+    // md: '280px',
+    // lg: '450px',
+    // xl: '600px',
+
     return <Stack direction="row" justifyContent="space-between" alignItems="center">
         <ImageCard
-            image="/static/Logo_organizatorzy/pw_logo.png"
+            image="/static/Logo_organizatorzy/200-lecie_PW_logo_bez_rozety.png"
             borderRadius={0}
             sx={{
                 width: {
-                    xs: '40px',
-                    sm: '60px',
-                    md: '40px',
-                    lg: '60px',
-                    xl: '80px',
+                    xs: '60px',
+                    sm: '88px',
+                    md: '60px',
+                    lg: '88px',
+                    xl: '120px',
+                },
+                filter: dark_mode ? "grayscale(100%) invert(100%)" : "invert(0%)",
+            }}/>
+        <ImageCard
+            image="/static/Logo_organizatorzy/logo-PW.png"
+            borderRadius={0}
+            sx={{
+                width: {
+                    xs: '35px',
+                    sm: '50px',
+                    md: '35px',
+                    lg: '50px',
+                    xl: '70px',
                 },
                 filter: dark_mode ? "invert(100%)" : "invert(0%)",
             }}/>
         <ImageCard
-            image="/static/Logo_organizatorzy/wapw_logo.png"
+            image="/static/Logo_organizatorzy/8_wapw-logo.png"
             borderRadius={0}
             sx={{
                 width: {
-                    xs: '75px',
-                    sm: '110px',
-                    md: '75px',
-                    lg: '110px',
-                    xl: '150px',
+                    xs: '50px',
+                    sm: '73px',
+                    md: '50px',
+                    lg: '73px',
+                    xl: '100px',
                 },
                 filter: dark_mode ? "invert(100%)" : "invert(0%)",
             }}/>
@@ -82,11 +102,11 @@ function Logos() {
             borderRadius={0}
             sx={{
                 width: {
-                    xs: '40px',
-                    sm: '60px',
-                    md: '40px',
-                    lg: '60px',
-                    xl: '80px',
+                    xs: '32px',
+                    sm: '48px',
+                    md: '32px',
+                    lg: '48px',
+                    xl: '64px',
                 },
                 filter: dark_mode ? "invert(100%)" : "invert(0%)",
             }}/>
@@ -153,7 +173,7 @@ function TextElement() {
             lineHeight: 1.5,
         },
         [theme.breakpoints.up('md')]: {
-            fontSize: '12px'
+            fontSize: '11px'
         },
         [theme.breakpoints.up('lg')]: {
             fontSize: '16px'
@@ -186,7 +206,7 @@ function TextElement() {
             />
             <Translation
                 pl={<CenteredJustified sx={title_big_pl}
-                                       text={["EKSPERYMENT", "W", "PRZESTRZENI", "—", "PRZESTRZEŃ", "EKSPERYMENTU"]}/>}
+                                       text={["EKSPERYMENT", "W", "PRZESTRZENI", "-", "PRZESTRZEŃ", "EKSPERYMENTU"]}/>}
                 en={<CenteredJustified sx={title_big}
                                        text={["EXPERIMENT", "IN", "SPACE", "—", "THE", "SPACE", "OF", "EXPERIMENT"]}/>}
             />
@@ -194,9 +214,9 @@ function TextElement() {
         <Box>
             <Translation
                 pl={<CenteredJustified sx={title_small_pl}
-                                       text={["29.06", "—", "30.06.2026", "—", "IV", "Międzynarodowa", "Konferencja"]}/>}
+                                       text={["29 – 30.06.2026", "—", "IV", "Międzynarodowa", "Konferencja"]}/>}
                 en={<CenteredJustified sx={title_small}
-                                       text={["29.06", "—", "30.06.2026", "—", "IV", "International", "Conference"]}/>}
+                                       text={["29 – 30.06.2026", "—", "IV", "International", "Conference"]}/>}
             />
             <Typography variant="lighter" component="p" sx={{
                 textAlign: "justify",

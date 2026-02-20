@@ -14,9 +14,9 @@ function Text() {
             en="ABOUT CONFERENCE"/></Typography>
         <Stack>
             <Typography sx={{fontStyle: "italic"}}>
-                "<Translation
+                <Translation
                 pl="Architektura powstaje z pamięci, eksperymentu i wyobraźni."
-                en="Architecture emerges from memory, experiment, and imagination."/>"
+                en="Architecture emerges from memory, experiment, and imagination."/>
             </Typography>
             <Typography variant="bolder" sx={{alignSelf: "flex-end", fontStyle: "italic"}}>
                 <Translation
