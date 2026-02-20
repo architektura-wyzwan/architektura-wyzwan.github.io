@@ -2,10 +2,12 @@ import {ArticleMetadata} from "../layout/Article";
 import {Paragraph} from "../components/Paragraph";
 import * as React from "react";
 import {Translation} from "../components/Translation";
+import {Stack, Typography} from "@mui/material";
 
 export const aboutPage: ArticleMetadata = {
     title_pl: "Obecna edycja",
     title_en: "Current edition",
+    image: "/static/MainPage/Main page_poster.jpg",
     subtitle_pl: "",
     subtitle_en: "",
     content: Content,
@@ -13,6 +15,19 @@ export const aboutPage: ArticleMetadata = {
 
 function Content() {
     return (<>
+        <Stack>
+            <Typography sx={{fontStyle: "italic"}}>
+                <Translation
+                pl="Architektura powstaje z pamięci, eksperymentu i wyobraźni."
+                en="Architecture emerges from memory, experiment, and imagination."/>
+            </Typography>
+            <Typography variant="bolder" sx={{alignSelf: "flex-end", fontStyle: "italic"}}>
+                <Translation
+                    pl="w duchu myśli Aldo Rossiego, inspirowane A Scientific Autobiography (1981)"
+                    en="In the spirit of Aldo Rossi’s thought, inspired by A Scientific Autobiography (1981)."/>
+            </Typography>
+        </Stack>
+        <br/>
         <Paragraph
             pl={"Architektura to jedna z najbardziej złożonych dziedzin sztuk użytkowych. Nie sprowadza się wyłącznie do kształtowania formy i rozmieszczenia funkcji; obejmuje również testowanie relacji między przestrzenią, działaniem a użytkownikiem. W działaniach projektowych w centrum zawsze znajduje się człowiek, a każdy projekt – w pewnym stopniu – stanowi proces eksperymentalny."}
             en={"Architecture is one of the most complex fields of applied arts. It cannot be reduced merely to shaping form and arranging functions; it also involves testing the relationships between space, action, and the user. In design practice, the human being is always at the center, and every project – to some extent – constitutes an experimental process."}
