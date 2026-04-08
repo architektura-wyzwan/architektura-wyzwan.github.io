@@ -2,7 +2,8 @@ import {ArticleMetadata} from "../layout/Article";
 import {Paragraph} from "../components/Paragraph";
 import * as React from "react";
 import {Translation} from "../components/Translation";
-import {Stack, Typography} from "@mui/material";
+import {Box, Stack, Typography} from "@mui/material";
+import {StandardList} from "../components/StandardList";
 
 export const aboutPage: ArticleMetadata = {
     title_pl: "Obecna edycja",
@@ -145,5 +146,268 @@ function Content() {
                 "This enables the city to adapt to the changing needs of its inhabitants while preserving its legible structure and the quality of public spaces. The social dimension of experimentation opens a space for reflection, research, and the presentation of new design approaches and new models for co-creating urban environments."
             }
         />
+
+        <Box>
+            <Translation pl={"KOMITET NAUKOWY KONFERENCJI"} en={"CONFERENCE SCIENTIFIC COMMITTEE"}/>
+            <StandardList>
+                <Translation
+                    pl={"Anna Maria Wierzbicka – dr hab. inż. arch., prof. PW; Wydział Architektury Politechniki Warszawskiej – przewodnicząca komitetu naukowego"}
+                    en={"Anna Maria Wierzbicka – DSc, PhD, Eng. Arch., Associate Professor; Faculty of Architecture, Warsaw University of Technology – chairwoman of the Scientific Committee"}/>
+                <Translation
+                    pl={"Agata Bonenberg – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Poznańskiej"}
+                    en={"Agata Bonenberg – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Poznan University of Technology"}/>
+                <Translation
+                    pl={"Wojciech Bonenberg – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Poznańskiej"}
+                    en={"Wojciech Bonenberg – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Poznan University of Technology"}/>
+                <Translation
+                    pl={"Bohdan Cherkes – prof. dr hab. inż. аrch.; Instytut Architektury i Designu, Narodowy Uniwersytet „Politechnika Lwowska\"(Lwów, Ukraina)"}
+                    en={"Bohdan Cherkes – Professor, DSc, PhD, Eng. Arch.; Institute of Architecture and Design, Lviv Polytechnic National University"}
+                />
+                < Translation
+                    pl={"Yurii Dyba – prof. dr hab. inż. аrch.; Dyrektor Instytutu Architektury i Designu, Uniwersytet Narodowy Politechnika Lwowska (Lwów, Ukraina)"}
+                    en={"Yurii Dyba – Professor, DSc, PhD, Eng. Arch.; Director of the Institute of Architecture and Design, Lviv Polytechnic National University"}
+                />
+                <Translation
+                    pl={"Viktor Greshta – prof. dr. hab. inż.; Rektor, Narodowy Uniwersytet „Politechnika Zaporoska (Zaporoże, Ukraina)"}
+                    en={"Viktor Greshta – Professor, DSc, PhD, Eng.; Rector of Zaporizhzhia Polytechnic National University"}
+                />
+                <Translation
+                    pl={"Barbara Gronostajska – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Wrocławskiej"}
+                    en={"Barbara Gronostajska – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Wrocław University of Science and Technology"}/>
+                <Translation
+                    pl={"Sławomir Gzell – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Sławomir Gzell – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Krzysztof Ingarden – prof. dr hab. inż. arch.; Wydział Architektury i Sztuk Pięknych, Uniwersytet Andrzeja Frycza Modrzewskiego"}
+                    en={"Krzysztof Ingarden – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture and Fine Arts, Andrzej Frycz Modrzewski Krakow University"}/>
+                <Translation
+                    pl={"Magdalena Maria Jagiełło – Kowalczyk – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Krakowskiej"}
+                    en={"Magdalena Maria Jagiełło–Kowalczyk – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Cracow University of Technology"}/>
+                <Translation
+                    pl={"Prot Jarnuszkiewicz – profesor sztuk plastycznych; Akademia Sztuk Pięknych w Warszawie"}
+                    en={"Prot Jarnuszkiewicz – Professor, DSc, PhD; Academy of Fine Arts in Warsaw"}/>
+                <Translation
+                    pl={"Oleksandr Kashchenko – prof. dr hab. inż. arch.; Dziekan Wydziału Architektury, Kijowski Narodowy Uniwersytet Budownictwa i Architektury (Kijów, Ukraina)"}
+                    en={"Oleksandr Kashchenko – Professor, DSc, PhD, Eng. Arch.; Institute of Architecture and Design, Lviv Polytechnic National University"}/>
+                <Translation
+                    pl={"Magdalena Kozień-Woźniak – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Krakowskiej"}
+                    en={"Magdalena Kozień-Woźniak – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Cracow University of Technology"}/>
+                <Translation
+                    pl={"Tomasz Kozłowski – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Krakowskiej"}
+                    en={"Tomasz Kozłowski – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Cracow University of Technology"}/>
+                <Translation
+                    pl={"Yuriy Kryvoruchko – prof. dr hab. inż. arch.; Instytut Architektury i Designu, Narodowy Uniwersytet, Politechnika Lwowska (Lwów, Ukraina)"}
+                    en={"Yuriy Kryvoruchko – Professor, DSc, PhD, Eng. Arch.; Institute of Architecture and Design, Lviv Polytechnic National University"}/>
+                <Translation
+                    pl={"Konrad Kucza-Kuczyński – prof. dr hab. inż. arch; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Konrad Kucza-Kuczyński – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Krzysztof Olszewski – prof. dr hab.; arch.; Wydział Sztuki Mediów, Akademia Sztuk Pięknych w Warszawie"}
+                    en={"Krzysztof Olszewski – Professor, DSc, PhD; Arch.; Faculty of Media Art, Academy of Fine Arts in Warsaw"}/>
+                <Translation
+                    pl={"Błażej Ostoja Lniski – prof. dr hab.; Rektor Akademii Sztuk Pięknych w Warszawie"}
+                    en={"Błażej Ostoja Lniski – Professor, DSc, PhD; Rector of Academy of Fine Arts in Warsaw"}/>
+                <Translation
+                    pl={"Piotr Lorens – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Gdańskiej"}
+                    en={"Piotr Lorens – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Gdańsk University of Technology"}/>
+                <Translation
+                    pl={"Marek Pabich – prof. dr hab. inż. arch.; Wydział Budownictwa, Architektury i Inżynierii Środowiska Politechniki Łódzkiej"}
+                    en={"Marek Pabich – Professor, DSc, PhD, Eng. Arch.; Faculty of Civil, Architecture, and Environmental Engineering, Lodz University of Technology"}/>
+                <Translation
+                    pl={"Jan Rabiej – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Śląskiej"}
+                    en={"Jan Rabiej – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Silesian University of Technology"}/>
+                <Translation
+                    pl={"Krystyna Solarek – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Krystyna Solarek – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Bolesław Stelmach – prof. dr hab. inż. arch.; Dyrektor Narodowego Instytutu Architektury i Urbanistyki"}
+                    en={"Bolesław Stelmach – Professor, DSc, PhD, Eng. Arch.; Director of the National Institute of Architecture and Urban Planning"}/>
+                <Translation
+                    pl={"Viktor Shtets – prof. dr art.; Instytut Architektury i Designu, Narodowy Uniwersytet, Politechnika Lwowska (Lwów, Ukraina)"}
+                    en={"Viktor Shtets – Professor, DSc in Art; Institute of Architecture and Design, Lviv Polytechnic National University"}/>
+                <Translation
+                    pl={"Valeriy Tovbych – prof. dr hab. inż. arch.; Wydział Architektury, Kijowski Narodowy Uniwersytet Budownictwa i Architektury (Kijów, Ukraina)"}
+                    en={"Valeriy Tovbych – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Kyiv National University of Building and Architecture"}/>
+                <Translation
+                    pl={"Beata Joanna Gawryszewska – dr hab. inż. arch. kraj., prof. SGGW; Szkoła Główna Gospodarstwa Wiejskiego w Warszawie"}
+                    en={"Beata Joanna Gawryszewska – DSc, PhD, Eng. in landscape arch., Associate Professor. Warsaw University of Life Sciences"}/>
+                <Translation
+                    pl={"Marcin Goncikowski – dr hab. inż. arch.; prof. PW; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Marcin Goncikowski – DSc, PhD, Eng. Arch., Associate Professor; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Jerzy Grochulski, dr hab. inż. arch.; prof. PW; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Jerzy Grochulski – DSc, PhD, Eng. Arch., Associate Professor; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Janina Zaczek-Peplinska - dr inż. hab. profesor PW, Wydział Geodezji i Kartografii Politechniki Warszawskiej"}
+                    en={"Janina Zaczek-Peplinska - DSc, PhD, Eng., Associate Professor, Faculty of Geodesy and Cartography, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Krzysztof Koszewski – dr hab. inż. arch.; Dziekan Wydziału Architektury Politechniki Warszawskiej"}
+                    en={"Krzysztof Koszewski – DSc, PhD, Eng. Arch., Dean of the Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Andrij Markovskyi – dr hab. arch.; Narodowa Akademia Sztuk Pięknych i Architektury Ukrainy (Kijów, Ukraina)"}
+                    en={"Andrij Markovskyi – DSc, PhD, Arch., National Academy of Fine Arts and Architecture, Kyiv, Ukraine"}/>
+                <Translation
+                    pl={"Grzegorz Nawrot – dr hab. inż. arch., prof. WAPŚ; Wydział Architektury Politechniki Śląskiej"}
+                    en={"Grzegorz Nawrot – DSc, PhD, Eng. Arch., Associate Professor; Faculty of Architecture, Silesian University of Technology"}/>
+                <Translation
+                    pl={"Mirosław Orzechowski – dr hab. inż. arch., prof. PW; Prodziekan ds. Studiów Wydziału Architektury Politechniki Warszawskiej"}
+                    en={"Mirosław Orzechowski – DSc, PhD, Eng. Arch., Associate Professor; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Bogusław Podhalański – dr hab. inż. arch. prof. ANS; Akademia Nauk Stosowanych w Nowym Targu"}
+                    en={"Bogusław Podhalański – DSc, PhD, Eng. Arch., Associate Professor; University of Applied Sciences in Nowy Targ"}/>
+                <Translation
+                    pl={"Kinga Racoń-Leja – dr hab. inż. arch., prof. PK; Wydział Architektury Politechniki Krakowskiej"}
+                    en={"Kinga Racoń-Leja – DSc, PhD, Eng. Arch., Associate Professor; Faculty of Architecture, Cracow University of Technology"}/>
+                <Translation
+                    pl={"Karolina Tulkowska-Słyk– dr hab. inż. arch., prof. PW; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Karolina Tulkowska-Słyk – DSc, PhD, Eng. Arch., Associate Professor; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Oleksandr Chyzhevsky – dr inż. arch.; Przewodniczący Narodowego Związku Architektów Ukrainy (Kijów, Ukraina)"}
+                    en={"Oleksandr Chyzhevsky – PhD, Eng. Arch.; Chairman of the National Union of Architects of Ukraine"}/>
+                <Translation
+                    pl={"Ewelina Gawell – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Ewelina Gawell – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Michał Gołębiewski – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Michał Gołębiewski – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Renata Jóźwik – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Renata Jóźwik – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Jerzy Łątka – dr inż. arch.; Wydział Architektury Politechniki Wrocławskiej"}
+                    en={"Jerzy Łątka – PhD, Eng. Arch.; Faculty of Architecture, Wrocław University of Science and Technology"}/>
+                <Translation
+                    pl={"Maciej Miłobędzki - dr inż. arch.; Prodziekan ds. Rozwoju Wydziału Architektury Politechniki Warszawskiej"}
+                    en={"Maciej Miłobędzki - PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Anita Orchowska – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Anita Orchowska – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Marianna Otmianowska – dr; dyrektor Muzeum Łazienki Królewskie w Warszawie"}
+                    en={"Marianna Otmianowska – PhD; director of the Royal Łazienki Museum in Warsaw"}/>
+                <Translation
+                    pl={"Andrzej Skalimowski – dr, kierownik Działu Naukowego Narodowego Instytutu Architektury i Urbanistyki"}
+                    en={"Andrzej Skalimowski – PhD, Head of the Scientific Department of the National Institute of Architecture and Urban Planning"}/>
+                <Translation
+                    pl={"Maciej Skaza - dr inż. arch.; Wydział Architektury Politechniki Krakowskiej"}
+                    en={"Maciej Skaza - PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Anna Tofiluk – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Anna Tofiluk – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Paweł Trębacz – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Paweł Trębacz – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Justyna Zdunek-Wielgołaska – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Justyna Zdunek-Wielgołaska – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Kinga Zinowiec-Cieplik – dr inż. arch. krajobrazu; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Kinga Zinowiec-Cieplik – PhD, Eng. in landscape arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Oleksandr Baranovskyi – architekt, koordynator projektów Narodowego Stowarzyszenia Architektów Ukrainy (Kijów, Ukraina)"}
+                    en={"Oleksandr Baranovskyi – architect, project coordinator of the National Union of Architects of Ukraine"}/>
+                <Translation
+                    pl={"Kamilla Pereta – zastępca dyr. Muzeum Łazienki Królewskie w Warszawie"}
+                    en={"Kamilla Pereta – deputy director of the Royal Łazienki Museum in Warsaw"}/>
+            </StandardList>
+        </Box>
+        <Box>
+            <Translation pl={"KOMITET ORGANIZACYJNY KONFERENCJI"} en={"CONFERENCE ORGANISING COMMITTEE"}/>
+            <StandardList>
+                <Translation
+                    pl={"Anna Maria Wierzbicka – dr hab. inż. arch., prof. PW; Wydział Architektury Politechniki Warszawskiej – przewodnicząca komitetu organizacyjnego"}
+                    en={"Anna Maria Wierzbicka – DSc, PhD, Eng. Arch., Associate Professor; Faculty of Architecture, Warsaw University of Technology – chairwoman of the Scientific Committee"}/>
+                <Translation
+                    pl={"Konrad Kucza-Kuczyński – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Konrad Kucza-Kuczyński – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Krzysztof Olszewski – prof. dr hab.; arch.; Wydział Sztuki Mediów, Akademia Sztuk Pięknych w Warszawie"}
+                    en={"Krzysztof Olszewski – Professor, DSc, PhD; Arch.; Faculty of Media Art, Academy of Fine Arts in Warsaw"}/>
+                <Translation
+                    pl={"Anita Orchowska – dr inż. arch.; Prodziekan ds. Studenckich Wydziału Architektury Politechniki Warszawskiej"}
+                    en={"Anita Orchowska – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Michał Gołębiewski – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Michał Gołębiewski – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Renata Jóźwik – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Renata Jóźwik – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Paulina Lis-Meldner – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Paulina Lis-Meldner – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Hanna Malik-Trocha – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Hanna Malik-Trocha – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Mateusz Płoszaj-Mazurek – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Mateusz Płoszaj-Mazurek – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Marcin Strzała - dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Marcin Strzała – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Anna Tofiluk – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Anna Tofiluk – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Paweł Trębacz – dr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Paweł Trębacz – PhD, Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Kinga Zinowiec-Cieplik – dr inż. arch.; krajobrazu; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Kinga Zinowiec-Cieplik – PhD, Eng. in landscape arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Małgorzata Benedek – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                en={"Małgorzata Benedek – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Magdalena Duda – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej, sekretarz konferencji"}
+                    en={"Magdalena Duda – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology, Conference Secretary"}/>
+                <Translation
+                    pl={"Wiktor Gago – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Wiktor Gago – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Paweł Grobelny – dr; Wydział Wzornictwa, Akademia Sztuk Pięknych w Warszawie"}
+                    en={"Paweł Grobelny – PhD in Arts; Faculty of Graphic Arts, Academy of Fine Arts in Warsaw"}/>
+                <Translation
+                    pl={"Anita Kacprzyk – Kierowniczka Działu Marketingu, Muzeum Łazienki Królewskie w Warszawie"}
+                    en={"Anita Kacprzyk – Head of the Marketing Department, Royal Łazienki Museum in Warsaw"}/>
+                <Translation
+                    pl={"Martyna Kędrzyńska – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Martyna Kędrzyńska – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Iwona Kalenik – dr sztuki, inż. arch.; Wydział Architektury Wnętrz, Akademia Sztuk Pięknych w Warszawie"}
+                    en={"Iwona Kalenik – PhD in Arts, MSc. Eng. Arch.; Faculty of Interior Design, Academy of Fine Arts in Warsawy"}/>
+                <Translation
+                    pl={"Ewa Maniak – studentka Wydziału Architektury Politechniki Warszawskiej"}
+                    en={"Ewa Maniak – Student at the Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Emilian Nagiel – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Emilian Nagiel – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Marta Nawrocka – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Marta Nawrocka – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Małgorzata Neumann - mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Małgorzata Neumann - MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Małgorzata Nowak-Pieńkowska – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Małgorzata Nowak-Pieńkowska – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Jakub Pieńkowski – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Jakub Pieńkowski – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Ewa Rombalska – mgr inż. arch.; pełnomocnik Dyrektora Narodowego Instytutu Architektury i Urbanistyki"}
+                    en={"Ewa Rombalska – MSc. Eng. Arch.; Director’s Proxy, National Institute of Architecture and Urban Planning"}/>
+                <Translation
+                    pl={"Martyna Rowicka-Michałowska – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Martyna Rowicka-Michałowska – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Filip Strzelecki – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Filip Strzelecki – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Lech Szymborski – mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej"}
+                    en={"Lech Szymborski – MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology"}/>
+                <Translation
+                    pl={"Milena Żakowska – specjalista ds. organizacji wydarzeń w Muzeum Łazienki Królewskie w Warszawie"}
+                    en={"Milena Żakowska – Event Organization Specialist, Royal Łazienki Museum in Warsaw"}/>
+            </StandardList>
+        </Box>
     </>);
 }
