@@ -132,7 +132,7 @@ export const organizers_committee: Speaker[] = [
         description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology, filip.strzelecki@pw.edu.pl",
     },
     {
-        image: "/static/About/Organizers/brak_zdjecia.jpg",
+        image: "/static/About/Organizers/Pieńkowski_Jakub.jpg",
         name: "Jakub Pieńkowski",
         description_pl: "mgr inż. arch.; Wydział Architektury Politechniki Warszawskiej, jakub.pienkowski@pw.edu.pl",
         description_en: "MSc. Eng. Arch.; Faculty of Architecture, Warsaw University of Technology, jakub.pienkowski@pw.edu.pl",
