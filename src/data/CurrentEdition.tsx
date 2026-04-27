@@ -226,6 +226,9 @@ function Content() {
                     pl={"Viktor Shtets – prof. dr art.; Instytut Architektury i Designu, Narodowy Uniwersytet, Politechnika Lwowska (Lwów, Ukraina)"}
                     en={"Viktor Shtets – Professor, DSc in Art; Institute of Architecture and Design, Lviv Polytechnic National University"}/>
                 <Translation
+                    pl={"Jerzy Uścinowicz – prof. dr hab. inż. arch.; Wydział Architektury Politechniki Białostockiej"}
+                    en={"Jerzy Uścinowicz – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Bialystok University of Technology"}/>
+                <Translation
                     pl={"Valeriy Tovbych – prof. dr hab. inż. arch.; Wydział Architektury, Kijowski Narodowy Uniwersytet Budownictwa i Architektury (Kijów, Ukraina)"}
                     en={"Valeriy Tovbych – Professor, DSc, PhD, Eng. Arch.; Faculty of Architecture, Kyiv National University of Building and Architecture"}/>
                 <Translation
