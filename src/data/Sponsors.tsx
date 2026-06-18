@@ -175,6 +175,22 @@ export const sponsors_list: SponsorsListType[] = [
                 description_en: "The Łukasiewicz Center is part of the Łukasiewicz Research Network – one of the largest research and development networks in Europe. It works to connect science and business, supporting innovation, technology transfer, and the development of modern solutions for the economy. The Center coordinates collaboration between the network's member institutes and provides them with organizational, communication, and strategic support. The Łukasiewicz Center's mission is to bridge the gap between science and business by providing practical, competitive technologies and supporting the development of a knowledge-based economy. It operates in areas such as engineering, new materials, energy, medicine, and digital technologies.",
                 invertColorInDarkMode: false,
             },
+            {
+                name_pl: "Centrum Łukasiewicz",
+                name_en: "Łukasiewicz Centre",
+                image: "/static/Logo_sponsorzy/Holiday_in_Express_Warsaw_2_v3.png",
+                description_pl: "Holiday Inn Express Warsaw - Mokotow to nowoczesny hotel oferujący komfortowe noclegi w duchu idei „Simple Smart Travel”. Dzięki doskonałej lokalizacji w sercu biznesowego Mokotowa, obiekt zdobył uznanie gości korporacyjnych i turystów, ceniących bliskość lotniska i centrum. Misją hotelu jest dostarczanie bezstresowego wypoczynku poprzez udostępnianie funkcjonalnych przestrzeni, które wspierają zarówno efektywną pracę, jak i pełny relaks.",
+                description_en: "Holiday Inn Express Warsaw - Mokotow is a modern hotel offering comfortable accommodation in the spirit of the 'Simple Smart Travel' concept. Thanks to its excellent location in the heart of the Mokotów business district, the property has earned the appreciation of both corporate guests and tourists who value its proximity to the airport and the city center. The hotel's mission is to provide a stress-free stay by offering functional spaces that support both effective work and complete relaxation.",
+                invertColorInDarkMode: false,
+            },
+            {
+                name_pl: "Fancy Fence",
+                name_en: "Fancy Fence",
+                image: "/static/Logo_sponsorzy/Fancy_fence.jpg",
+                description_pl: "Fancy Fence to polska marka specjalizująca się w produkcji innowacyjnych, chowanych w ziemi bram i systemów ogrodzeniowych, tworzonych z inżynieryjną pasją i dbałością o najwyższą estetykę. Firma czerpie z ponad dziesięcioletniego doświadczenia w branży zautomatyzowanych rozwiązań wjazdowych, a jej produkty zdobyły uznanie zarówno w Polsce, jak i za granicą – stając się wyborem czołowych architektów i inwestorów na całym świecie. Misją marki Fancy Fence jest zapewnianie bezpieczeństwa poprzez tworzenie dyskretnych, niezawodnych i funkcjonalnych bram, które wspierają wizję architektoniczną projektu i pozwalają otaczającej przestrzeni grać pierwsze skrzypce.",
+                description_en: "Fancy Fence is a Polish brand specializing in the production of innovative, in-ground retractable gates and fencing systems, created with engineering passion and attention to the highest aesthetics. The company draws on over a decade of experience in the automated entrance solutions industry, and its products have gained recognition both in Poland and abroad—becoming the choice of leading architects and investors worldwide. The mission of the Fancy Fence brand is to ensure security by creating discreet, reliable, and functional gates that support the architectural vision of the project and allow the surrounding space to take center stage.",
+                invertColorInDarkMode: false,
+            },
         ],
     },
     {

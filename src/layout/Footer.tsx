@@ -8,7 +8,7 @@ import {useIsXs} from "../hooks/UseDimensionHooks";
 import {Carousel} from "../components/Carousel";
 import Layout from "./Layout";
 
-function Sponsor(props: { name_pl: string, name_en: string, image: string }) {
+function Sponsor(props: { image: string }) {
     return <Stack
         gap='15px'
         sx={{
@@ -26,12 +26,6 @@ function Sponsor(props: { name_pl: string, name_en: string, image: string }) {
             objectFit: 'contain',
             height: '100px',
         }} src={props.image}/>
-        <Box sx={{height: '40px'}}>
-            <Translation
-                variant="subtitle2"
-                pl={props.name_pl}
-                en={props.name_en}/>
-        </Box>
     </Stack>;
 }
 
@@ -77,8 +71,6 @@ function Sponsors() {
             >
                 {sponsors_list.map((sponsor_list) =>
                     sponsor_list.sponsors.map((sponsor) => <Sponsor
-                        name_pl={sponsor_list.name_pl}
-                        name_en={sponsor_list.name_en}
                         image={sponsor.image}
                     />))
                     .flat()}
