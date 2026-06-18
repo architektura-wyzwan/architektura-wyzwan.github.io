@@ -1,7 +1,6 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Box, IconButton, Stack, useMediaQuery, useTheme} from '@mui/material';
 import {KeyboardArrowLeft, KeyboardArrowRight} from '@mui/icons-material';
-import useWindowDimensions from "../hooks/UseWindowDimensions";
 
 interface CarouselProps {
     autoPlay?: boolean;
@@ -54,7 +53,6 @@ export function Carousel({
         setActiveIndex((prev) => (prev - 1 + numberOfElements - matchedNumberOfSlides + 1) % (numberOfElements - matchedNumberOfSlides + 1));
     };
 
-
     useEffect(() => {
         if (!autoPlay) return;
 
@@ -62,20 +60,29 @@ export function Carousel({
         return () => clearInterval(interval);
     }, [autoPlay, autoPlayInterval, handleNext]);
 
-    const [width, setWidth] = useState(null);
-    const windowDimensions = useWindowDimensions();
-    const div = useCallback((node: any) => {
-        if (node !== null) {
-            setWidth(node.getBoundingClientRect().width);
+    const [width, setWidth] = useState(0);
+    const containerRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const observer = new ResizeObserver((entries) => {
+            if (entries[0]) {
+                setWidth(entries[0].contentRect.width);
+            }
+        });
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
         }
-// eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [windowDimensions]);
-    // @ts-ignore
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
     const widthOfImagePx = (width - space * (matchedNumberOfSlides - 1)) / matchedNumberOfSlides;
 
     return (
         <Box
-            ref={div}
+            ref={containerRef}
             sx={{
                 position: 'relative',
                 width: '100%',
@@ -94,7 +101,7 @@ export function Carousel({
                     transition: 'transform 0.5s ease-in-out',
                     transform: `translateX(-${(widthOfImagePx + space) * activeIndex}px)`,
                     overflow: 'hidden',
-                    // pointerEvents: 'none',
+                    pointerEvents: 'none',
                 }}
             >
                 {children.map((item) => (

@@ -7,7 +7,7 @@ import {SyntheticEvent, useState} from "react";
 import {useIsXs} from "../hooks/UseDimensionHooks";
 
 // The block title consists of the hours and the blocks title side by side
-function BlockTitle(props: {item: AgendaBlock}) {
+function BlockTitle(props: { item: AgendaBlock }) {
     return (<>
         <Grid size={{
             xs: 3,
@@ -31,7 +31,7 @@ function BlockTitle(props: {item: AgendaBlock}) {
 // empty), the speaker name and their institution name are displayed.
 //
 // On larger screens, the lecture title, speaker name and the institution name are displayed in one row.
-function LectureItem(props: {item: AgendaItem}) {
+function LectureItem(props: { item: AgendaItem }) {
     const isXs = useIsXs();
     return <>
         <Grid size={{
@@ -63,7 +63,12 @@ function LectureItem(props: {item: AgendaItem}) {
             xs: 7,
             sm: 4,
         }}>
-            <Translation variant="body1" pl={props.item.institution_pl} en={props.item.institution_en}/>
+            <Typography variant="body1">
+                {props.item.institution !== undefined ?
+                    props.item.institution :
+                    <Translation pl={props.item.institution_pl} en={props.item.institution_en}/>
+                }
+            </Typography>
         </Grid>
     </>;
 }

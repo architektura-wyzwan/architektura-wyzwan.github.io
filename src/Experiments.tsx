@@ -28,5 +28,5 @@ export const important_dates_experiment: Experiment = {
     enabled: true,
 }
 export const agenda_experiment: Experiment = {
-    enabled: false,
+    enabled: true,
 }
