@@ -8,6 +8,13 @@ export type Publication = {
 
 export const publications: Publication[] = [
     {
+        url: "/static/About/Publications/TOM 2026 Experiment In Space -The Space of Experiment.pdf",
+        image: "/static/About/Publications/2026_okladka.png",
+        title: "Architecture of Challenges - Experiment In Space - The Space of Experiment",
+        description_pl: "Współczesna architektura funkcjonuje w rzeczywistości ukształtowanej przez głęboką transformację cywilizacyjną. Zmieniające się wzorce życia społecznego, przyspieszony rozwój technologii, kryzys klimatyczny, nowe sposoby mobilności i komunikacji, a także rosnąca świadomość psychologicznego i kulturowego wymiaru przestrzeni sprawiają, że projektowanie nie może już opierać się na stabilnych i trwale ugruntowanych modelach. Architektura stoi dziś przed ciągłą koniecznością redefiniowania własnych narzędzi, metod i sposobów rozumienia relacji między człowiekiem a środowiskiem zabudowanym. W tym kontekście koncepcja eksperymentu nabiera szczególnego znaczenia, rozumianego nie jako czysto formalny przejaw nowości, lecz jako proces poznawczy i eksploracyjny, poprzez który można poszerzyć granice istniejącej wiedzy o przestrzeni i jej społecznych konsekwencjach.",
+        description_en: "Contemporary architecture operates within a reality shaped by profound civilizational transformation. Changing patterns of social life, the accelerating development of technology,the climate crisis, new modes of mobility and communication, together with an increasing awareness of the psychological and cultural dimensions of space, mean that design can no longer rely on stable or permanently established models. Architecture today faces the ongoing necessity of redefining its own tools, methods, and ways of understanding the relationship between human beings and the built environment. Within this context,the concept of experiment acquires particular importance, understood not as a purely formal manifestation of novelty, but rather as a cognitive and exploratory process through which the boundaries of existing knowledge about space and its social consequences may be expanded.",
+    },
+    {
         url: "/static/About/Publications/Tom 2025 Building Community.pdf",
         image: "/static/About/Publications/2025_okladka.png",
         title: "Architecture of Challenges - New European Bauhaus - Building Community",
